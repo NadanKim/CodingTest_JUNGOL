@@ -1,9 +1,9 @@
 ﻿#include "Base.h"
+#include "Language_Coder/출력/자가진단/BasicPrint01.h"
 
 int main()
 {
-    // 이 부분에서 생성하는 클래스만 변경한다.
-    Base* codeBase = new Base();
+    Base* codeBase = new BasicPrint01();
     codeBase->Run();
 
     delete codeBase;

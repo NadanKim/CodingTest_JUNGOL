@@ -3,6 +3,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -20,5 +23,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint01.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
