@@ -1,10 +1,10 @@
 #include "BasicPrint06.h"
 
 /// <summary>
-/// ¹®Á¦
-/// ´ÙÀ½°ú °°ÀÌ Ãâ·ÂµÇ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
+/// ë¬¸ì œ
+/// ë‹¤ìŒê³¼ ê°™ì´ ì¶œë ¥ë˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼.
 /// 
-/// Ãâ·Â ¿¹
+/// ì¶œë ¥ ì˜ˆ
 /// My height
 /// 170
 /// My weight
@@ -15,7 +15,7 @@
 void BasicPrint06::Code()
 {
 	std::cout <<"My height\n"
-				"170\n"
-				"My weight\n"
-				"68.600000";
+		"170\n"
+		"My weight\n"
+		"68.600000";
 }
