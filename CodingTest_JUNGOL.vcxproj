@@ -140,11 +140,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint02.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint03.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint04.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint05.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint06.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint07.cpp" />
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint08.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint01.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint02.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint03.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint04.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint05.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint06.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint07.h" />
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint08.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

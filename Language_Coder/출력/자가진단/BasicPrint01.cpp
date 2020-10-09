@@ -9,7 +9,7 @@
 /// 
 /// http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=138&sca=1010
 /// </summary>
-void CodingTest::Code()
+void BasicPrint01::Code()
 {
 	std::cout << "Fun Programming!";
 }

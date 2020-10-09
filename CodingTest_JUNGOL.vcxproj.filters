@@ -5,6 +5,27 @@
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp">
       <Filter>Language_Coder\출력\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint02.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint03.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint04.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint05.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint06.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint07.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint08.cpp">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -23,6 +44,27 @@
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint01.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint02.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint03.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint04.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint05.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint06.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint07.h">
+      <Filter>Language_Coder\출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint08.h">
       <Filter>Language_Coder\출력\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
