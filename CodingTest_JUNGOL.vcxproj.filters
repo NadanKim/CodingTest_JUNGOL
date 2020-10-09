@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Base.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp">
       <Filter>Language_Coder\출력\자가진단</Filter>
     </ClCompile>

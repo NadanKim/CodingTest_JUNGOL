@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Base.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

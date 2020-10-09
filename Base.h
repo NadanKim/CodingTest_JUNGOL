@@ -3,8 +3,5 @@
 class Base
 {
 public:
-	void Run();
-
-protected:
 	virtual void Code() = 0;
 };

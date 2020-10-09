@@ -3,7 +3,7 @@
 
 #include "../../../Base.h"
 
-class BasicPrint01 : public Base
+class CodingTest : public Base
 {
 protected:
 	void Code() override;
