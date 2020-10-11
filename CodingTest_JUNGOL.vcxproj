@@ -139,6 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput01.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput02.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput03.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput04.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput05.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput06.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput07.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput08.cpp" />
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput09.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint02.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint03.cpp" />
@@ -156,6 +165,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput01.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput02.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput03.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput04.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput05.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput06.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput07.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput08.h" />
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput09.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint01.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint02.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint03.h" />

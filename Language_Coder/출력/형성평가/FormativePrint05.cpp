@@ -21,9 +21,10 @@
 void FormativePrint05::Code()
 {
 	std::cout.setf(std::ios::right);
-	std::cout << std::setw(15) << "Seoul" << std::setw(15) << "10,312,545" << std::setw(15) << "+91,375" << "\n"
-		<< std::setw(15) << "Pusan" << std::setw(15) << "3,567,910" << std::setw(15) << "+5,868" << "\n"
-		<< std::setw(15) << "Incheon" << std::setw(15) << "2,758,296" << std::setw(15) << "+64,888" << "\n"
-		<< std::setw(15) << "Daegu" << std::setw(15) << "2,511,676" << std::setw(15) << "+17,230" << "\n"
+
+	std::cout << std::setw(15) << "Seoul" << std::setw(15) << "10,312,545" << std::setw(15) << "+91,375" << '\n'
+		<< std::setw(15) << "Pusan" << std::setw(15) << "3,567,910" << std::setw(15) << "+5,868" << '\n'
+		<< std::setw(15) << "Incheon" << std::setw(15) << "2,758,296" << std::setw(15) << "+64,888" << '\n'
+		<< std::setw(15) << "Daegu" << std::setw(15) << "2,511,676" << std::setw(15) << "+17,230" << '\n'
 		<< std::setw(15) << "Gwangju" << std::setw(15) << "1,454,636" << std::setw(15) << "+29,774";
 }

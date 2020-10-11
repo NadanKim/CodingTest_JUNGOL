@@ -41,10 +41,46 @@
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint05.cpp">
       <Filter>Language_Coder\출력\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput01.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput02.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput03.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput04.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput05.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput06.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput07.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput08.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\자가진단\BasicInput09.cpp">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
       <UniqueIdentifier>{bdfd9225-9801-4952-9e98-2b61531a3466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\입력">
+      <UniqueIdentifier>{fc046526-7ef8-4844-b7cb-76ba292138d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\입력\형성평가">
+      <UniqueIdentifier>{5f4fd5a5-ed1a-4446-b0a8-5c8c2e86e691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\입력\자가진단">
+      <UniqueIdentifier>{1fb12062-f756-465e-b00d-94e3745b2077}</UniqueIdentifier>
     </Filter>
     <Filter Include="Language_Coder\출력">
       <UniqueIdentifier>{9012a62e-bcfd-4316-9cfd-c907e3257e33}</UniqueIdentifier>
@@ -96,6 +132,33 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint05.h">
       <Filter>Language_Coder\출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput01.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput02.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput03.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput04.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput05.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput06.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput07.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput08.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\자가진단\BasicInput09.h">
+      <Filter>Language_Coder\입력\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
