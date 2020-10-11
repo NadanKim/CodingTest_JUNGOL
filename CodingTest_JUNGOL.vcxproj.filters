@@ -68,6 +68,7 @@
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput09.cpp">
       <Filter>Language_Coder\입력\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -160,5 +161,8 @@
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput09.h">
       <Filter>Language_Coder\입력\자가진단</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig.inferred" />
   </ItemGroup>
 </Project>
