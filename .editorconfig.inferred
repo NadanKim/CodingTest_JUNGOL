@@ -1,5 +1,0 @@
-﻿# Editorconfig 사용 방법은 아래 링크 확인
-# https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
-
-[*]
-charset = utf-8-bom

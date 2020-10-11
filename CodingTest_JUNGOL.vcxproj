@@ -162,7 +162,6 @@
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint04.cpp" />
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint05.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
@@ -188,9 +187,6 @@
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint03.h" />
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint04.h" />
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint05.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".editorconfig.inferred" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
