@@ -68,6 +68,21 @@
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput09.cpp">
       <Filter>Language_Coder\입력\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput01.cpp">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput02.cpp">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput03.cpp">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput04.cpp">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput05.cpp">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -159,6 +174,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput09.h">
       <Filter>Language_Coder\입력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput01.h">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput02.h">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput03.h">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput04.h">
+      <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput05.h">
+      <Filter>Language_Coder\입력\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

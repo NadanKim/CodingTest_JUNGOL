@@ -148,6 +148,11 @@
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput07.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput08.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput09.cpp" />
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput01.cpp" />
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput02.cpp" />
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput03.cpp" />
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput04.cpp" />
+    <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput05.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint01.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint02.cpp" />
     <ClCompile Include="Language_Coder\출력\자가진단\BasicPrint03.cpp" />
@@ -174,6 +179,11 @@
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput07.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput08.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput09.h" />
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput01.h" />
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput02.h" />
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput03.h" />
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput04.h" />
+    <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput05.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint01.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint02.h" />
     <ClInclude Include="Language_Coder\출력\자가진단\BasicPrint03.h" />
