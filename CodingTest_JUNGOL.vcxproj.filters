@@ -83,6 +83,30 @@
     <ClCompile Include="Language_Coder\입력\형성평가\FormativeInput05.cpp">
       <Filter>Language_Coder\입력\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator01.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator02.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator03.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator04.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator05.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator06.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator07.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator08.cpp">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -105,6 +129,15 @@
     </Filter>
     <Filter Include="Language_Coder\출력\자가진단">
       <UniqueIdentifier>{d22544b0-dfc5-4d24-adf1-17926dc6a607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\연산자">
+      <UniqueIdentifier>{c9956701-c38f-45d7-82d4-e589b8d23284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\연산자\자가진단">
+      <UniqueIdentifier>{f5684010-9d86-465b-849f-c5d8f628c550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\연산자\형성평가">
+      <UniqueIdentifier>{44bc1b68-7ce3-482d-9ffa-660a55f6d010}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +222,30 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\입력\형성평가\FormativeInput05.h">
       <Filter>Language_Coder\입력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator01.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator02.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator03.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator04.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator05.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator06.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator07.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator08.h">
+      <Filter>Language_Coder\연산자\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

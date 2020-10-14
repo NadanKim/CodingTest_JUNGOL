@@ -139,6 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator01.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator02.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator03.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator04.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator05.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator06.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator07.cpp" />
+    <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator08.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput01.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput02.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput03.cpp" />
@@ -170,6 +178,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator01.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator02.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator03.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator04.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator05.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator06.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator07.h" />
+    <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator08.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput01.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput02.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput03.h" />
