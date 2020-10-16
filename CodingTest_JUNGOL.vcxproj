@@ -147,6 +147,11 @@
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator06.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator07.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator08.cpp" />
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator01.cpp" />
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator02.cpp" />
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator03.cpp" />
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator04.cpp" />
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator05.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput01.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput02.cpp" />
     <ClCompile Include="Language_Coder\입력\자가진단\BasicInput03.cpp" />
@@ -186,6 +191,11 @@
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator06.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator07.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator08.h" />
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator01.h" />
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator02.h" />
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator03.h" />
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator04.h" />
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator05.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput01.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput02.h" />
     <ClInclude Include="Language_Coder\입력\자가진단\BasicInput03.h" />

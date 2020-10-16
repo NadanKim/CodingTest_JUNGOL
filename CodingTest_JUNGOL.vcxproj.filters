@@ -107,6 +107,21 @@
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator08.cpp">
       <Filter>Language_Coder\연산자\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator01.cpp">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator02.cpp">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator03.cpp">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator04.cpp">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator05.cpp">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -246,6 +261,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator08.h">
       <Filter>Language_Coder\연산자\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator01.h">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator02.h">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator03.h">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator04.h">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator05.h">
+      <Filter>Language_Coder\연산자\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
