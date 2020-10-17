@@ -122,6 +122,12 @@
     <ClCompile Include="Language_Coder\연산자\형성평가\FormativeOperator05.cpp">
       <Filter>Language_Coder\연산자\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug01.cpp">
+      <Filter>Language_Coder\디버깅\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug02.cpp">
+      <Filter>Language_Coder\디버깅\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -153,6 +159,12 @@
     </Filter>
     <Filter Include="Language_Coder\연산자\형성평가">
       <UniqueIdentifier>{44bc1b68-7ce3-482d-9ffa-660a55f6d010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\디버깅">
+      <UniqueIdentifier>{1ef4950c-9f0b-46a1-aacd-e1d82f5f3615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\디버깅\자가진단">
+      <UniqueIdentifier>{a829d5b0-bc0c-4ae5-8da0-2f48f730c544}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +288,12 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\연산자\형성평가\FormativeOperator05.h">
       <Filter>Language_Coder\연산자\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug01.h">
+      <Filter>Language_Coder\디버깅\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug02.h">
+      <Filter>Language_Coder\디버깅\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

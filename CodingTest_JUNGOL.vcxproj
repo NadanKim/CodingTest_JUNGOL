@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug01.cpp" />
+    <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug02.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator01.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator02.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator03.cpp" />
@@ -183,6 +185,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug01.h" />
+    <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug02.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator01.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator02.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator03.h" />
