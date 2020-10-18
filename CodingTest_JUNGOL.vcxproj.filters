@@ -128,6 +128,18 @@
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug02.cpp">
       <Filter>Language_Coder\디버깅\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug01.cpp">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug02.cpp">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug03.cpp">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug04.cpp">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -165,6 +177,9 @@
     </Filter>
     <Filter Include="Language_Coder\디버깅\자가진단">
       <UniqueIdentifier>{a829d5b0-bc0c-4ae5-8da0-2f48f730c544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\디버깅\형성평가">
+      <UniqueIdentifier>{e172938a-01c7-4bd6-978e-5b7da18c3f8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +309,18 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug02.h">
       <Filter>Language_Coder\디버깅\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug01.h">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug02.h">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug03.h">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug04.h">
+      <Filter>Language_Coder\디버깅\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

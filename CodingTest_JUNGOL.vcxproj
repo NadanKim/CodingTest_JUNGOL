@@ -141,6 +141,10 @@
   <ItemGroup>
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug01.cpp" />
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug02.cpp" />
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug01.cpp" />
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug02.cpp" />
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug03.cpp" />
+    <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug04.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator01.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator02.cpp" />
     <ClCompile Include="Language_Coder\연산자\자가진단\BasicOperator03.cpp" />
@@ -187,6 +191,10 @@
     <ClInclude Include="Base.h" />
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug01.h" />
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug02.h" />
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug01.h" />
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug02.h" />
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug03.h" />
+    <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug04.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator01.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator02.h" />
     <ClInclude Include="Language_Coder\연산자\자가진단\BasicOperator03.h" />
