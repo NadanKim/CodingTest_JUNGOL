@@ -140,6 +140,33 @@
     <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug04.cpp">
       <Filter>Language_Coder\디버깅\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional01.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional02.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional03.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional04.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional05.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional06.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional07.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional08.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional09.cpp">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -180,6 +207,15 @@
     </Filter>
     <Filter Include="Language_Coder\디버깅\형성평가">
       <UniqueIdentifier>{e172938a-01c7-4bd6-978e-5b7da18c3f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\선택제어문">
+      <UniqueIdentifier>{81370f40-eb3a-4621-b317-f4e3c59f147b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\선택제어문\자가진단">
+      <UniqueIdentifier>{73759cec-8c48-4103-a1b5-4c6242ee26d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\선택제어문\형성평가">
+      <UniqueIdentifier>{db0cfe35-aad5-4159-9ad4-0736a0eda68c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -321,6 +357,33 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug04.h">
       <Filter>Language_Coder\디버깅\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional01.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional02.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional03.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional04.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional05.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional06.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional07.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional08.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional09.h">
+      <Filter>Language_Coder\선택제어문\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
