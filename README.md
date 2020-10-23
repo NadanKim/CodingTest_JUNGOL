@@ -29,5 +29,5 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
     > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%94%94%EB%B2%84%EA%B9%85/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
     > [형성평가](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%94%94%EB%B2%84%EA%B9%85/%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80)   
   * 선택제어문
-    > 자가진단   
+    > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EC%84%A0%ED%83%9D%EC%A0%9C%EC%96%B4%EB%AC%B8/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
     > 형성평가   
