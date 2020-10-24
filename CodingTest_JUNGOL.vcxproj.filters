@@ -167,6 +167,21 @@
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional09.cpp">
       <Filter>Language_Coder\선택제어문\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\형성평가\FormativeConditional01.cpp">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\형성평가\FormativeConditional02.cpp">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\형성평가\FormativeConditional03.cpp">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\형성평가\FormativeConditional04.cpp">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\선택제어문\형성평가\FormativeConditional05.cpp">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -384,6 +399,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional09.h">
       <Filter>Language_Coder\선택제어문\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\형성평가\FormativeConditional01.h">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\형성평가\FormativeConditional02.h">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\형성평가\FormativeConditional03.h">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\형성평가\FormativeConditional04.h">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\선택제어문\형성평가\FormativeConditional05.h">
+      <Filter>Language_Coder\선택제어문\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
