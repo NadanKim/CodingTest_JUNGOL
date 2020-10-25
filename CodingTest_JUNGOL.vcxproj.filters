@@ -182,6 +182,24 @@
     <ClCompile Include="Language_Coder\선택제어문\형성평가\FormativeConditional05.cpp">
       <Filter>Language_Coder\선택제어문\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop101.cpp">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop102.cpp">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop103.cpp">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop104.cpp">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop105.cpp">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop106.cpp">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -231,6 +249,15 @@
     </Filter>
     <Filter Include="Language_Coder\선택제어문\형성평가">
       <UniqueIdentifier>{db0cfe35-aad5-4159-9ad4-0736a0eda68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\반복제어문1">
+      <UniqueIdentifier>{be1353ea-5170-4330-89e0-65221750eb5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\반복제어문1\자가진단">
+      <UniqueIdentifier>{d97d2e71-dc4b-427d-b2d5-a321de6f8790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\반복제어문1\형성평가">
+      <UniqueIdentifier>{65a3d0d0-7f05-4a7a-9078-f0b6965af214}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -414,6 +441,24 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\선택제어문\형성평가\FormativeConditional05.h">
       <Filter>Language_Coder\선택제어문\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop101.h">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop102.h">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop103.h">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop104.h">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop105.h">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop106.h">
+      <Filter>Language_Coder\반복제어문1\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

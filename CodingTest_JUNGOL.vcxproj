@@ -145,6 +145,12 @@
     <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug02.cpp" />
     <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug03.cpp" />
     <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug04.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop101.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop102.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop103.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop104.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop105.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop106.cpp" />
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional01.cpp" />
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional02.cpp" />
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional03.cpp" />
@@ -209,6 +215,12 @@
     <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug02.h" />
     <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug03.h" />
     <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug04.h" />
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop101.h" />
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop102.h" />
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop103.h" />
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop104.h" />
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop105.h" />
+    <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop106.h" />
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional01.h" />
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional02.h" />
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional03.h" />
