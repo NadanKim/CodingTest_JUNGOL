@@ -25,9 +25,9 @@ void BasicDebug02::Code()
 	std::cout.setf(std::ios::fixed);
 
 	// 첫 번째 수를 두 번째 수로 나누기
-	int result1 = var1 / var2;
+	int result1{ var1 / var2 };
 	// 첫 번째 수를 실수로 변환 후 두 번째 수로 나누기
-	float result2 = (float)var1 / var2;
+	float result2{ static_cast<float>(var1) / var2 };
 
 	std::cout << result1 << ' ' << result2;
 }

@@ -33,7 +33,7 @@ void BasicConditional09::Code()
 
 	std::cin >> var1 >> var2 >> var3;
 
-	int minimum = (var1 < var2 ? (var1 < var3 ? var1 : var3) : (var2 < var3 ? var2 : var3));
+	int minimum{ (var1 < var2 ? (var1 < var3 ? var1 : var3) : (var2 < var3 ? var2 : var3)) };
 
 	std::cout << minimum;
 }

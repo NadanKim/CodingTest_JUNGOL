@@ -20,8 +20,8 @@ void FormativeOperator01::Code()
 
 	std::cin >> kor >> eng >> math >> com;
 
-	int sum = kor + eng + math + com;
-	int avg = sum / 4;
+	int sum{ kor + eng + math + com };
+	int avg{ sum / 4 };
 
 	std::cout << "sum " << sum << '\n';
 	std::cout << "avg " << avg;

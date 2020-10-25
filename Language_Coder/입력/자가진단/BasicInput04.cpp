@@ -13,8 +13,8 @@
 /// </summary>
 void BasicInput04::Code()
 {
-	int weight = 49;
-	float gravity = 0.2683f;
+	int weight{ 49 };
+	float gravity{ 0.2683f };
 
 	std::cout.precision(6);
 	std::cout.setf(std::ios::fixed);

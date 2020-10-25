@@ -25,7 +25,7 @@ void BasicConditional03::Code()
 	}
 	else
 	{
-		int leftYears = 20 - age;
+		int leftYears{ 20 - age };
 		std::cout << leftYears << " years later";
 	}
 }

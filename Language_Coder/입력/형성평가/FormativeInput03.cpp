@@ -12,9 +12,9 @@
 /// </summary>
 void FormativeInput03::Code()
 {
-	int var1 = 50;
-	float var2 = 100.12f;
-	int result = var1 * var2 + 0.5f;
+	int var1{ 50 };
+	float var2{ 100.12f };
+	int result{ static_cast<int>(var1 * var2 + 0.5f) };
 
 	std::cout.precision(2);
 	std::cout.setf(std::ios::fixed);

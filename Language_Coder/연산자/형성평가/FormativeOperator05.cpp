@@ -25,6 +25,6 @@ void FormativeOperator05::Code()
 	std::cin >> minsuHeight >> minsuWeight
 		>> giyeongHeight >> giyeongWeight;
 
-	bool result = (minsuHeight > giyeongHeight) && (minsuWeight > giyeongWeight);
+	bool result{ (minsuHeight > giyeongHeight) && (minsuWeight > giyeongWeight) };
 	std::cout << result;
 }

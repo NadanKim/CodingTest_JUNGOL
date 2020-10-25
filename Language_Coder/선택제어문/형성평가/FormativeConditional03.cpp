@@ -21,7 +21,7 @@ void FormativeConditional03::Code()
 
 	std::cin >> year;
 
-	bool isLeapYear = (year % 400 == 0 || year % 4 == 0 && year % 100 != 0);
+	bool isLeapYear{ (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) };
 	if (isLeapYear)
 	{
 		std::cout << "leap year";

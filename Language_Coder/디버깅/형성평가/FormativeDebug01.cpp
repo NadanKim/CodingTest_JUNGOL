@@ -18,7 +18,7 @@ void FormativeDebug01::Code()
 
 	std::cin >> var1 >> var2 >> var3;
 
-	float avg = (var1 + var2 + var3) / 3.0f;
+	float avg{ (var1 + var2 + var3) / 3.0f };
 
 	std::cout.precision(1);
 	std::cout.setf(std::ios::fixed);

@@ -17,8 +17,8 @@
 /// </summary>
 void BasicInput05::Code()
 {
-	float yd = 2.1f;
-	float in = 10.5f;
+	float yd{ 2.1f };
+	float in{ 10.5f };
 
 	std::cout.precision(1);
 	std::cout.setf(std::ios::fixed);

@@ -20,7 +20,7 @@ void BasicOperator08::Code()
 
 	std::cin >> var1 >> var2 >> var3;
 
-	bool result1 = (var1 > var2) & (var1 > var3);
-	bool result2 = (var1 == var2) & (var2 == var3);
+	bool result1{ static_cast<bool>((var1 > var2) & (var1 > var3)) };
+	bool result2{ static_cast<bool>((var1 == var2) & (var2 == var3)) };
 	std::cout << result1 << ' ' << result2;
 }

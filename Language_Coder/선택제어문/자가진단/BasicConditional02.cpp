@@ -23,7 +23,7 @@ void BasicConditional02::Code()
 
 	std::cin >> height >> weight;
 
-	int obesityScore = weight + 100 - height;
+	int obesityScore{ weight + 100 - height };
 
 	std::cout << obesityScore << '\n';
 	if (obesityScore > 0)

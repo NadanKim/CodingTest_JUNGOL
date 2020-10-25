@@ -20,9 +20,9 @@ void BasicDebug01::Code()
 	std::cin >> var1 >> var2;
 
 	// 실수를 곱한 후 정수로 저장
-	int result1 = var1 * var2;
+	int result1{ static_cast<int>(var1 * var2) };
 	// 실수를 정수로 변환 후 곱해서 저장
-	int result2 = (int)var1 * (int)var2;
+	int result2{ static_cast<int>(var1) * static_cast<int>(var2) };
 
 	std::cout << result1 << ' ' << result2;
 }

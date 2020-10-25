@@ -19,8 +19,8 @@ void BasicOperator01::Code()
 
 	std::cin >> var1 >> var2 >> var3;
 
-	int sum = var1 + var2 + var3;
-	int avg = sum / 3;
+	int sum{ var1 + var2 + var3 };
+	int avg{ sum / 3 };
 
 	std::cout << "sum : " << sum << '\n';
 	std::cout << "avg : " << avg;

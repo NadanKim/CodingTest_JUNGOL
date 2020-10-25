@@ -15,7 +15,7 @@
 /// </summary>
 void FormativeInput02::Code()
 {
-	float var1 = 80.5f, var2 = 22.34f;
+	float var1{ 80.5f }, var2{ 22.34f };
 
 	std::cout.precision(2);
 	std::cout.setf(std::ios::fixed | std::ios::right);

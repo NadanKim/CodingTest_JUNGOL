@@ -11,7 +11,7 @@
 /// </summary>
 void BasicInput01::Code()
 {
-	int var = -100;
+	int var{ -100 };
 
 	std::cout << var;
 }

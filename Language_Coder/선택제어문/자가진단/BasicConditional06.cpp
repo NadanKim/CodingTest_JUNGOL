@@ -22,7 +22,7 @@ void BasicConditional06::Code()
 
 	std::cin >> sex >> age;
 
-	bool isAdult = (age >= 18);
+	bool isAdult{ (age >= 18) };
 	if (sex == 'M')
 	{
 		if (isAdult)

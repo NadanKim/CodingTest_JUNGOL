@@ -12,7 +12,7 @@
 /// </summary>
 void BasicInput02::Code()
 {
-	int var1 = -1, var2 = 100;
+	int var1{ -1 }, var2{ 100 };
 
 	std::cout << var1 << '\n';
 	std::cout << var2;

@@ -11,7 +11,7 @@
 /// </summary>
 void FormativeInput01::Code()
 {
-	int var1 = 10, var2 = 20, var3 = 30;
+	int var1{ 10 }, var2{ 20 }, var3{ 30 };
 
 	std::cout << var1 << " + " << var2 << " = " << var3;
 }
