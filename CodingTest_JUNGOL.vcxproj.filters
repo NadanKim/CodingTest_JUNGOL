@@ -200,6 +200,21 @@
     <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop106.cpp">
       <Filter>Language_Coder\반복제어문1\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\형성평가\FormativeLoop101.cpp">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\형성평가\FormativeLoop102.cpp">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\형성평가\FormativeLoop103.cpp">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\형성평가\FormativeLoop104.cpp">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문1\형성평가\FormativeLoop105.cpp">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -459,6 +474,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop106.h">
       <Filter>Language_Coder\반복제어문1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\형성평가\FormativeLoop101.h">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\형성평가\FormativeLoop102.h">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\형성평가\FormativeLoop103.h">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\형성평가\FormativeLoop104.h">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문1\형성평가\FormativeLoop105.h">
+      <Filter>Language_Coder\반복제어문1\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
