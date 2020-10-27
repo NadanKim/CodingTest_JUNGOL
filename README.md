@@ -33,4 +33,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
     > [형성평가](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EC%84%A0%ED%83%9D%EC%A0%9C%EC%96%B4%EB%AC%B8/%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80)   
   * 반복제어문1
     > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%B0%98%EB%B3%B5%EC%A0%9C%EC%96%B4%EB%AC%B81/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
+    > [형성평가](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%B0%98%EB%B3%B5%EC%A0%9C%EC%96%B4%EB%AC%B81/%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80)   
+  * 반복제어문2
+    > 자가진단   
     > 형성평가   
