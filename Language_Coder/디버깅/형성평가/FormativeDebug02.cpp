@@ -20,8 +20,8 @@ void FormativeDebug02::Code()
 
 	std::cin >> var1 >> var2 >> var3;
 
-	int sum = static_cast<int>(var1) + static_cast<int>(var2) + static_cast<int>(var3);
-	int avg = static_cast<int>((var1 + var2 + var3) / 3);
+	int sum{ static_cast<int>(var1) + static_cast<int>(var2) + static_cast<int>(var3) };
+	int avg{ static_cast<int>((var1 + var2 + var3) / 3) };
 
 	std::cout.precision(1);
 	std::cout.setf(std::ios::fixed);

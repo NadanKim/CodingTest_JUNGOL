@@ -239,6 +239,36 @@
     <ClCompile Include="Language_Coder\반복제어문2\자가진단\BasicLoop208.cpp">
       <Filter>Language_Coder\반복제어문2\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop201.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop202.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop203.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop204.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop205.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop206.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop207.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop208.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop209.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop210.cpp">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -546,6 +576,36 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\반복제어문2\자가진단\BasicLoop208.h">
       <Filter>Language_Coder\반복제어문2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop201.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop202.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop203.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop204.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop205.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop206.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop207.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop208.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop209.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop210.h">
+      <Filter>Language_Coder\반복제어문2\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
