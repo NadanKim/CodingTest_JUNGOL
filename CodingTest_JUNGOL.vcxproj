@@ -174,6 +174,13 @@
     <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop208.cpp" />
     <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop209.cpp" />
     <ClCompile Include="Language_Coder\반복제어문2\형성평가\FormativeLoop210.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop301.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop302.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop303.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop304.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop305.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop306.cpp" />
+    <ClCompile Include="Language_Coder\반복제어문3\자가진단\BasicLoop307.cpp" />
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional01.cpp" />
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional02.cpp" />
     <ClCompile Include="Language_Coder\선택제어문\자가진단\BasicConditional03.cpp" />
@@ -267,6 +274,13 @@
     <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop208.h" />
     <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop209.h" />
     <ClInclude Include="Language_Coder\반복제어문2\형성평가\FormativeLoop210.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop301.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop302.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop303.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop304.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop305.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop306.h" />
+    <ClInclude Include="Language_Coder\반복제어문3\자가진단\BasicLoop307.h" />
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional01.h" />
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional02.h" />
     <ClInclude Include="Language_Coder\선택제어문\자가진단\BasicConditional03.h" />
