@@ -347,6 +347,36 @@
     <ClCompile Include="Language_Coder\배열1\자가진단\BasicArray109.cpp">
       <Filter>Language_Coder\배열1\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray101.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray102.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray103.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray104.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray105.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray106.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray107.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray108.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray109.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray110.cpp">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -780,6 +810,36 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\배열1\자가진단\BasicArray109.h">
       <Filter>Language_Coder\배열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray101.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray102.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray103.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray104.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray105.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray106.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray107.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray108.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray109.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray110.h">
+      <Filter>Language_Coder\배열1\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
 
 #include "../../../Base.h"
 
-class FormativeLoop310 : public Base
+class FormativeArray110 : public Base
 {
 protected:
 	void Code() override;
