@@ -377,6 +377,27 @@
     <ClCompile Include="Language_Coder\배열1\형성평가\FormativeArray110.cpp">
       <Filter>Language_Coder\배열1\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray201.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray202.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray203.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray204.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray205.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray206.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\배열2\자가진단\BasicArray207.cpp">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -462,6 +483,15 @@
     </Filter>
     <Filter Include="Language_Coder\배열1\형성평가">
       <UniqueIdentifier>{87da6703-f9f6-4fe7-bf5b-5b304b3af8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\배열2">
+      <UniqueIdentifier>{53f51a5f-1bd9-4cb0-b739-edb34e475564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\배열2\자가진단">
+      <UniqueIdentifier>{9edc28d8-2054-43c4-87c8-34d907f9e9d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\배열2\형성평가">
+      <UniqueIdentifier>{37fdb407-f3bf-414c-8c33-41bcf9c84430}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -840,6 +870,27 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\배열1\형성평가\FormativeArray110.h">
       <Filter>Language_Coder\배열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray201.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray202.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray203.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray204.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray205.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray206.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\배열2\자가진단\BasicArray207.h">
+      <Filter>Language_Coder\배열2\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
