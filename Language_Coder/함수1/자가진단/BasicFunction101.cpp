@@ -16,7 +16,7 @@
 /// ~!@#$ ^ &*()_ + |
 /// 
 /// Hint!
-/// (함수 개념)[http://www.jungol.co.kr/bbs/download.php?bo_table=pds&wr_id=29&no=0]
+/// [함수 개념](http://www.jungol.co.kr/bbs/download.php?bo_table=pds&wr_id=29&no=0)
 /// 
 /// http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=208&sca=10b0
 /// </summary>
