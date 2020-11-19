@@ -46,6 +46,6 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
   * 배열2
     > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%B0%B0%EC%97%B42/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
     > [형성평가](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%B0%B0%EC%97%B42/%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80)   
-  * 배열3
-    > 자가진단   
+  * 함수1
+    > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%ED%95%A8%EC%88%981/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
     > 형셩평가   
