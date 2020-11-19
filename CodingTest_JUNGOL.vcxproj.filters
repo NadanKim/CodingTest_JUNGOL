@@ -428,6 +428,30 @@
     <ClCompile Include="Language_Coder\배열2\형성평가\FormativeArray210.cpp">
       <Filter>Language_Coder\배열2\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction101.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction102.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction103.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction104.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction105.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction106.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction107.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction108.cpp">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -522,6 +546,15 @@
     </Filter>
     <Filter Include="Language_Coder\배열2\형성평가">
       <UniqueIdentifier>{37fdb407-f3bf-414c-8c33-41bcf9c84430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\함수1">
+      <UniqueIdentifier>{2d6fa9d6-ad49-4e12-9b7e-c74e9156004e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\함수1\자가진단">
+      <UniqueIdentifier>{379ebbc6-93f3-456c-aa26-4f850aaba1e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\함수1\형성평가">
+      <UniqueIdentifier>{0774ec92-2f00-47bc-a7f6-20c8c0194bda}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -951,6 +984,30 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\배열2\형성평가\FormativeArray210.h">
       <Filter>Language_Coder\배열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction101.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction102.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction103.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction104.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction105.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction106.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction107.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction108.h">
+      <Filter>Language_Coder\함수1\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

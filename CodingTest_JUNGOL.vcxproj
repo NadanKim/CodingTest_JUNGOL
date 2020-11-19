@@ -281,6 +281,14 @@
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint03.cpp" />
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint04.cpp" />
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint05.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction101.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction102.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction103.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction104.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction105.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction106.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction107.cpp" />
+    <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction108.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -427,6 +435,14 @@
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint03.h" />
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint04.h" />
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint05.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction101.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction102.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction103.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction104.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction105.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction106.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction107.h" />
+    <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction108.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
