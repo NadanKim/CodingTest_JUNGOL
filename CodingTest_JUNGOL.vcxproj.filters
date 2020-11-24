@@ -452,6 +452,21 @@
     <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction108.cpp">
       <Filter>Language_Coder\함수1\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\형성평가\FormativeFunction101.cpp">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\형성평가\FormativeFunction102.cpp">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\형성평가\FormativeFunction103.cpp">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\형성평가\FormativeFunction104.cpp">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수1\형성평가\FormativeFunction105.cpp">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1008,6 +1023,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction108.h">
       <Filter>Language_Coder\함수1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\형성평가\FormativeFunction101.h">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\형성평가\FormativeFunction102.h">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\형성평가\FormativeFunction103.h">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\형성평가\FormativeFunction104.h">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수1\형성평가\FormativeFunction105.h">
+      <Filter>Language_Coder\함수1\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
