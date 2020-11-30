@@ -491,6 +491,27 @@
     <ClCompile Include="Language_Coder\함수2\자가진단\BasicFunction208.cpp">
       <Filter>Language_Coder\함수2\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction201.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction202.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction203.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction204.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction205.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction206.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction207.cpp">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1095,6 +1116,27 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\함수2\자가진단\BasicFunction208.h">
       <Filter>Language_Coder\함수2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction201.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction202.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction203.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction204.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction205.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction206.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction207.h">
+      <Filter>Language_Coder\함수2\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

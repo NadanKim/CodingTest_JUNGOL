@@ -302,6 +302,13 @@
     <ClCompile Include="Language_Coder\함수2\자가진단\BasicFunction206.cpp" />
     <ClCompile Include="Language_Coder\함수2\자가진단\BasicFunction207.cpp" />
     <ClCompile Include="Language_Coder\함수2\자가진단\BasicFunction208.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction201.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction202.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction203.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction204.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction205.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction206.cpp" />
+    <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction207.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -469,6 +476,13 @@
     <ClInclude Include="Language_Coder\함수2\자가진단\BasicFunction206.h" />
     <ClInclude Include="Language_Coder\함수2\자가진단\BasicFunction207.h" />
     <ClInclude Include="Language_Coder\함수2\자가진단\BasicFunction208.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction201.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction202.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction203.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction204.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction205.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction206.h" />
+    <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction207.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
