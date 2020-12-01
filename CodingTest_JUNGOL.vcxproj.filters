@@ -512,6 +512,24 @@
     <ClCompile Include="Language_Coder\함수2\형성평가\FormativeFunction207.cpp">
       <Filter>Language_Coder\함수2\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction301.cpp">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction302.cpp">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction303.cpp">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction304.cpp">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction305.cpp">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction306.cpp">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -624,6 +642,15 @@
     </Filter>
     <Filter Include="Language_Coder\함수2\형성평가">
       <UniqueIdentifier>{a1ffa6eb-0f3a-44e2-9560-d5097ed87497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\함수3">
+      <UniqueIdentifier>{66f646a9-682d-4a12-b69a-116a4472f56e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\함수3\자가진단">
+      <UniqueIdentifier>{85496d04-4d1b-4dbb-9db2-1c35ed608e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\함수3\형성평가">
+      <UniqueIdentifier>{87557a9a-5b3f-4bc5-96d5-fd2c0e750e75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1137,6 +1164,24 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\함수2\형성평가\FormativeFunction207.h">
       <Filter>Language_Coder\함수2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction301.h">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction302.h">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction303.h">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction304.h">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction305.h">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction306.h">
+      <Filter>Language_Coder\함수3\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
