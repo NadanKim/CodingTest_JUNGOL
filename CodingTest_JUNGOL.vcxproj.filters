@@ -530,6 +530,24 @@
     <ClCompile Include="Language_Coder\함수3\자가진단\BasicFunction306.cpp">
       <Filter>Language_Coder\함수3\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction301.cpp">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction302.cpp">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction303.cpp">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction304.cpp">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction305.cpp">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction306.cpp">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1182,6 +1200,24 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\함수3\자가진단\BasicFunction306.h">
       <Filter>Language_Coder\함수3\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction301.h">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction302.h">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction303.h">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction304.h">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction305.h">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction306.h">
+      <Filter>Language_Coder\함수3\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
