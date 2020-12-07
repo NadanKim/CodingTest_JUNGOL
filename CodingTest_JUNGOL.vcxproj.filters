@@ -548,6 +548,33 @@
     <ClCompile Include="Language_Coder\함수3\형성평가\FormativeFunction306.cpp">
       <Filter>Language_Coder\함수3\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString101.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString102.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString103.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString104.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString105.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString106.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString107.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString108.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString109.cpp">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -669,6 +696,15 @@
     </Filter>
     <Filter Include="Language_Coder\함수3\형성평가">
       <UniqueIdentifier>{87557a9a-5b3f-4bc5-96d5-fd2c0e750e75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\문자열1">
+      <UniqueIdentifier>{02bcdcfd-3f52-4522-8387-6ed13c765d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\문자열1\자가진단">
+      <UniqueIdentifier>{343139ad-388d-4964-b2e2-375ab9169da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\문자열1\형성평가">
+      <UniqueIdentifier>{7b4f7c70-679f-428e-b753-9cc847215c62}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1218,6 +1254,33 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction306.h">
       <Filter>Language_Coder\함수3\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString101.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString102.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString103.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString104.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString105.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString106.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString107.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString108.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString109.h">
+      <Filter>Language_Coder\문자열1\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
