@@ -154,6 +154,13 @@
     <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString107.cpp" />
     <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString108.cpp" />
     <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString109.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString101.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString102.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString103.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString104.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString105.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString106.cpp" />
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString107.cpp" />
     <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop101.cpp" />
     <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop102.cpp" />
     <ClCompile Include="Language_Coder\반복제어문1\자가진단\BasicLoop103.cpp" />
@@ -349,6 +356,13 @@
     <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString107.h" />
     <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString108.h" />
     <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString109.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString101.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString102.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString103.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString104.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString105.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString106.h" />
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString107.h" />
     <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop101.h" />
     <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop102.h" />
     <ClInclude Include="Language_Coder\반복제어문1\자가진단\BasicLoop103.h" />

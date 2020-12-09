@@ -575,6 +575,27 @@
     <ClCompile Include="Language_Coder\문자열1\자가진단\BasicString109.cpp">
       <Filter>Language_Coder\문자열1\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString101.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString102.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString103.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString104.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString105.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString106.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString107.cpp">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1281,6 +1302,27 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\문자열1\자가진단\BasicString109.h">
       <Filter>Language_Coder\문자열1\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString101.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString102.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString103.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString104.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString105.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString106.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString107.h">
+      <Filter>Language_Coder\문자열1\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
