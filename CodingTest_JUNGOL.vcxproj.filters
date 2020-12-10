@@ -596,6 +596,39 @@
     <ClCompile Include="Language_Coder\문자열1\형성평가\FormativeString107.cpp">
       <Filter>Language_Coder\문자열1\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString201.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString202.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString203.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString204.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString205.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString206.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString207.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString208.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString209.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString210.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString211.cpp">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -726,6 +759,15 @@
     </Filter>
     <Filter Include="Language_Coder\문자열1\형성평가">
       <UniqueIdentifier>{7b4f7c70-679f-428e-b753-9cc847215c62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\문자열2">
+      <UniqueIdentifier>{d753faf8-6747-44ad-8ae9-67fd34435169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\문자열2\자가진단">
+      <UniqueIdentifier>{d23b1de0-5e19-4218-a314-01ed24a2a8fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\문자열2\형성평가">
+      <UniqueIdentifier>{d014c876-4c7b-4a77-b871-dc26990081aa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1323,6 +1365,39 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\문자열1\형성평가\FormativeString107.h">
       <Filter>Language_Coder\문자열1\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString201.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString202.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString203.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString204.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString205.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString206.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString207.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString208.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString209.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString210.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString211.h">
+      <Filter>Language_Coder\문자열2\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
