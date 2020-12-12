@@ -20,19 +20,34 @@
 /// </summary>
 void FormativeString204::Code()
 {
-	string str;
-	char ch;
+	int n;
 
-	std::cin >> str >> ch;
+	std::cin >> n;
 
-	size_t pos{ str.find(ch, 0) };
-	
-	if (pos != ULLONG_MAX)
+	string* arr = new string[n];
+
+	for (int i = 0; i < n; i++)
 	{
-		std::cout << pos;
+		std::cin >> arr[i];
 	}
-	else
+
+	for (int i = 1; i < n; i++)
 	{
-		std::cout << "No";
+		for (int j = 0; j < n - i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				string temp{ arr[j] };
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
 	}
+
+	for (int i = 0; i < n; i++)
+	{
+		std::cout << arr[i] << '\n';
+	}
+
+	delete[] arr;
 }

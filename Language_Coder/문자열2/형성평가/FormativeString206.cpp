@@ -16,27 +16,15 @@
 /// </summary>
 void FormativeString206::Code()
 {
-	string str;
+	string str1, str2;
+	int n;
 
-	std::cin >> str;
+	std::cin >> str1 >> str2 >> n;
 
-	size_t n;
+	str1 += str2;
 
-	do
-	{
-		std::cin >> n;
+	str2.replace(0, n, str1.substr(0, n));
 
-		if (n <= 0)
-		{
-			n = 1;
-		}
-		else if (n > str.size())
-		{
-			n = str.size();
-		}
-
-		str.replace(n - 1, 1, "");
-
-		std::cout << str << '\n';
-	} while (str.size() > 1);
+	std::cout << str1 << '\n';
+	std::cout << str2;
 }

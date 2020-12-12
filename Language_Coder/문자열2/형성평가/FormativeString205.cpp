@@ -24,11 +24,31 @@
 /// </summary>
 void FormativeString205::Code()
 {
-	string str1, str2;
+	string arr[5];
 
-	std::cin >> str1 >> str2;
+	for (int i = 0; i < 5; i++)
+	{
+		std::cin >> arr[i];
+	}
 
-	size_t result{ str1.size() > str2.size() ? str1.size() : str2.size() };
+	char ch;
+	string str;
 
-	std::cout << result;
+	std::cin >> ch >> str;
+	
+	bool hasFound{ false };
+	for (int i = 0; i < 5; i++)
+	{
+		if (arr[i].find(ch) != SIZE_MAX || arr[i].find(str) != SIZE_MAX)
+		{
+			hasFound = true;
+
+			std::cout << arr[i] << '\n';
+		}
+	}
+
+	if (!hasFound)
+	{
+		std::cout << "none";
+	}
 }

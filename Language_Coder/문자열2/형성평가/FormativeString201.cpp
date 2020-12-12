@@ -20,12 +20,19 @@
 /// </summary>
 void FormativeString201::Code()
 {
-	char ch1, ch2;
+	string str;
 
-	std::cin >> ch1 >> ch2;
+	std::getline(std::cin, str);
 
-	int var1{ static_cast<int>(ch1) };
-	int var2{ static_cast<int>(ch2) };
+	string word;
+	vector<string> words;
+	for (stringstream ss{ str }; ss >> word;)
+	{
+		words.push_back(word);
+	}
 
-	std::cout << var1 + var2 << ' ' << abs(var1 - var2);
+	for (int i = static_cast<int>(words.size()) - 1; i >= 0; i--)
+	{
+		std::cout << words[i] << '\n';
+	}
 }

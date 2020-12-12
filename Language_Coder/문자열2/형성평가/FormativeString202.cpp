@@ -19,9 +19,23 @@
 /// </summary>
 void FormativeString202::Code()
 {
-	string str;
+	string arr[]{ "flower", "rose", "lily", "daffodil", "azalea" };
+	
+	char ch;
 
-	std::cin >> str;
+	std::cin >> ch;
 
-	std::cout << str.substr(0, 5);
+	int count{ 0 };
+
+	for (int i = 0; i < 5; i++)
+	{
+		if (arr[i][1] == ch || arr[i][2] == ch)
+		{
+			std::cout << arr[i] << '\n';
+
+			count++;
+		}
+	}
+
+	std::cout << count;
 }

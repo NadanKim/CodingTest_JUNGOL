@@ -24,7 +24,7 @@ void FormativeString107::Code()
 
 	std::getline(std::cin, str);
 
-	int count{ 2 };
+	size_t count{ 2 };
 
 	for (size_t i = 0; i < str.size(); i++)
 	{

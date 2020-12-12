@@ -20,33 +20,16 @@ void FormativeString208::Code()
 {
 	string str;
 
-	std::getline(std::cin, str);
-
-	int count{ 2 };
-
-	for (size_t i = 0; i < str.size(); i++)
+	while (true)
 	{
-		if (str[i] == ' ')
+		std::cin >> str;
+
+		if (str == "END")
 		{
-			count++;
-		}
-	}
-
-	for (size_t i = 0, j = 0; i < count - 1; i++)
-	{
-		std::cout << i + 1 << ". ";
-
-		while (j < str.size())
-		{
-			std::cout << str[j++];
-
-			if (str[j] == ' ')
-			{
-				j++;
-				break;
-			}
+			break;
 		}
 
-		std::cout << '\n';
+		std::reverse(str.begin(), str.end());
+		std::cout << str << '\n';
 	}
 }

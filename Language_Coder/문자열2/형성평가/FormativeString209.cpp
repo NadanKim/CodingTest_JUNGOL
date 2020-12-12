@@ -17,35 +17,19 @@
 /// </summary>
 void FormativeString209::Code()
 {
+	int var1;
+	double var2;
 	string str;
 
-	std::getline(std::cin, str);
+	std::cin >> var1 >> var2 >> str;
 
-	int count{ 2 };
+	char buff[100];
 
-	for (size_t i = 0; i < str.size(); i++)
-	{
-		if (str[i] == ' ')
-		{
-			count++;
-		}
-	}
+	std::sprintf(buff, "%d%.3f%s", var1, var2, str.c_str());
+	str = buff;
 
-	for (size_t i = 0, j = 0; i < count - 1; i++)
-	{
-		std::cout << i + 1 << ". ";
-
-		while (j < str.size())
-		{
-			std::cout << str[j++];
-
-			if (str[j] == ' ')
-			{
-				j++;
-				break;
-			}
-		}
-
-		std::cout << '\n';
-	}
+	bool isOdd{ str.size() % 2 == 1 };
+	
+	std::cout << str.substr(0, str.size() / 2 + (isOdd ? 1 : 0)) << '\n';
+	std::cout << str.substr(str.size() / 2 + (isOdd ? 1 : 0));
 }

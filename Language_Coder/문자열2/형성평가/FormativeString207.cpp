@@ -15,35 +15,37 @@
 /// </summary>
 void FormativeString207::Code()
 {
-	string str;
+	string str1, str2;
 
-	std::getline(std::cin, str);
+	std::cin >> str1 >> str2;
 
-	int count{ 2 };
+	int var1{ 0 };
 
-	for (size_t i = 0; i < str.size(); i++)
+	for (int i = 0; i < str1.size(); i++)
 	{
-		if (str[i] == ' ')
+		if (std::isdigit(str1[i]))
 		{
-			count++;
+			var1 = var1 * 10 + (str1[i] - '0');
+		}
+		else
+		{
+			break;
 		}
 	}
 
-	for (size_t i = 0, j = 0; i < count - 1; i++)
+	int var2{ 0 };
+
+	for (int i = 0; i < str2.size(); i++)
 	{
-		std::cout << i + 1 << ". ";
-
-		while (j < str.size())
+		if (std::isdigit(str2[i]))
 		{
-			std::cout << str[j++];
-
-			if (str[j] == ' ')
-			{
-				j++;
-				break;
-			}
+			var2 = var2 * 10 + (str2[i] - '0');
 		}
-
-		std::cout << '\n';
+		else
+		{
+			break;
+		}
 	}
+
+	std::cout << var1 * var2;
 }

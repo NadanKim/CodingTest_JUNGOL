@@ -21,19 +21,23 @@
 /// </summary>
 void FormativeString203::Code()
 {
-	string str;
+	int count{ 0 };
+	string arr[50];
 
-	std::cin >> str;
-
-	for (size_t i = 0; i < str.size(); i++)
+	for (; count < 50; count++)
 	{
-		if (isalpha(str[i]))
+		std::cin >> arr[count];
+
+		if (arr[count] == "0")
 		{
-			std::cout << static_cast<char>(tolower(str[i]));
+			break;
 		}
-		else if (isdigit(str[i]))
-		{
-			std::cout << str[i];
-		}
+	}
+
+	std::cout << count << '\n';
+
+	for (int i = 0; i < count; i += 2)
+	{
+		std::cout << arr[i] << '\n';
 	}
 }
