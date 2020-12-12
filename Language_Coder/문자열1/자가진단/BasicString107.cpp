@@ -19,7 +19,7 @@ void BasicString107::Code()
 
 	std::cin >> str;
 
-	for (int i = 0; i < str.size(); i++)
+	for (size_t i = 0; i < str.size(); i++)
 	{
 		if (isalpha(str[i]))
 		{

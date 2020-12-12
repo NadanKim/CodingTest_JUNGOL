@@ -629,6 +629,33 @@
     <ClCompile Include="Language_Coder\문자열2\자가진단\BasicString211.cpp">
       <Filter>Language_Coder\문자열2\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString201.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString202.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString203.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString204.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString205.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString206.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString207.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString208.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString209.cpp">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1398,6 +1425,33 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\문자열2\자가진단\BasicString211.h">
       <Filter>Language_Coder\문자열2\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString201.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString202.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString203.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString204.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString205.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString206.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString207.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString208.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString209.h">
+      <Filter>Language_Coder\문자열2\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,7 +20,7 @@ void BasicString210::Code()
 
 	std::cin >> str;
 
-	int index{ 0 };
+	size_t index{ 0 };
 	bool hasDot{ false };
 	for (; index < str.size(); index++)
 	{

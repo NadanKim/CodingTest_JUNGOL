@@ -27,9 +27,9 @@ void BasicString211::Code()
 		str.append(std::to_string(var));
 	}
 
-	for (int i = 0; i < str.size(); i += 3)
+	for (size_t i = 0; i < str.size(); i += 3)
 	{
-		for (int j = i, k = i + 3; j < k && j < str.size(); j++)
+		for (size_t j = i, k = i + 3; j < k && j < str.size(); j++)
 		{
 			std::cout << str[j];
 		}

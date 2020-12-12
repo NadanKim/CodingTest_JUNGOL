@@ -26,7 +26,7 @@ void FormativeString107::Code()
 
 	int count{ 2 };
 
-	for (int i = 0; i < str.size(); i++)
+	for (size_t i = 0; i < str.size(); i++)
 	{
 		if (str[i] == ' ')
 		{
@@ -34,7 +34,7 @@ void FormativeString107::Code()
 		}
 	}
 
-	for (int i = 0, j = 0; i < count - 1; i++)
+	for (size_t i = 0, j = 0; i < count - 1; i++)
 	{
 		std::cout << i + 1 << ". ";
 
