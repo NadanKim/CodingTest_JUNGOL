@@ -62,5 +62,5 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
     > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%AC%B8%EC%9E%90%EC%97%B42/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
     > [형성평가](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EB%AC%B8%EC%9E%90%EC%97%B42/%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80)   
   * 구조체
-    > 자가진단   
+    > [자가진단](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%EA%B5%AC%EC%A1%B0%EC%B2%B4/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8)   
     > 형성평가   
