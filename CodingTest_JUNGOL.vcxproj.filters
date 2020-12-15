@@ -656,6 +656,24 @@
     <ClCompile Include="Language_Coder\문자열2\형성평가\FormativeString209.cpp">
       <Filter>Language_Coder\문자열2\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct04.cpp">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct05.cpp">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct06.cpp">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -795,6 +813,15 @@
     </Filter>
     <Filter Include="Language_Coder\문자열2\형성평가">
       <UniqueIdentifier>{d014c876-4c7b-4a77-b871-dc26990081aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\구조체">
+      <UniqueIdentifier>{c9ef2e77-2a33-4e2a-83ba-8b7233a0cce5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\구조체\자가진단">
+      <UniqueIdentifier>{4da1f9ab-9456-4763-826c-bbc6cc2e9887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\구조체\형성평가">
+      <UniqueIdentifier>{9f681494-f114-4dad-918d-3efff41f849c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1452,6 +1479,24 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\문자열2\형성평가\FormativeString209.h">
       <Filter>Language_Coder\문자열2\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct04.h">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct05.h">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct06.h">
+      <Filter>Language_Coder\구조체\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

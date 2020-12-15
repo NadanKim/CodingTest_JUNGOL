@@ -139,6 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp" />
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct04.cpp" />
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct05.cpp" />
+    <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct06.cpp" />
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug01.cpp" />
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug02.cpp" />
     <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug01.cpp" />
@@ -361,6 +367,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h" />
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct04.h" />
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct05.h" />
+    <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct06.h" />
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug01.h" />
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug02.h" />
     <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug01.h" />
