@@ -145,6 +145,11 @@
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct04.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct05.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct06.cpp" />
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct01.cpp" />
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct02.cpp" />
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct03.cpp" />
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct04.cpp" />
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct05.cpp" />
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug01.cpp" />
     <ClCompile Include="Language_Coder\디버깅\자가진단\BasicDebug02.cpp" />
     <ClCompile Include="Language_Coder\디버깅\형성평가\FormativeDebug01.cpp" />
@@ -373,6 +378,11 @@
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct04.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct05.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct06.h" />
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct01.h" />
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct02.h" />
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct03.h" />
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct04.h" />
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct05.h" />
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug01.h" />
     <ClInclude Include="Language_Coder\디버깅\자가진단\BasicDebug02.h" />
     <ClInclude Include="Language_Coder\디버깅\형성평가\FormativeDebug01.h" />

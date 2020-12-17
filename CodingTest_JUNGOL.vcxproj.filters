@@ -674,6 +674,21 @@
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct06.cpp">
       <Filter>Language_Coder\구조체\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct01.cpp">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct02.cpp">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct03.cpp">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct04.cpp">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct05.cpp">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1497,6 +1512,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct06.h">
       <Filter>Language_Coder\구조체\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct01.h">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct02.h">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct03.h">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct04.h">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct05.h">
+      <Filter>Language_Coder\구조체\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
