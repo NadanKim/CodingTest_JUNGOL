@@ -689,6 +689,27 @@
     <ClCompile Include="Language_Coder\구조체\형성평가\FormativeStruct05.cpp">
       <Filter>Language_Coder\구조체\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer01.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer02.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer03.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer04.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer05.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer06.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer07.cpp">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -837,6 +858,15 @@
     </Filter>
     <Filter Include="Language_Coder\구조체\형성평가">
       <UniqueIdentifier>{9f681494-f114-4dad-918d-3efff41f849c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\포인터">
+      <UniqueIdentifier>{dcb5c311-15bf-4e05-b56b-b333e3a32ee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\포인터\자가진단">
+      <UniqueIdentifier>{1263135f-dea6-4d18-b355-6731cd16e978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\포인터\형성평가">
+      <UniqueIdentifier>{35641cb9-ea44-4175-b840-316b26d03464}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1527,6 +1557,27 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\구조체\형성평가\FormativeStruct05.h">
       <Filter>Language_Coder\구조체\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer01.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer02.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer03.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer04.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer05.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer06.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer07.h">
+      <Filter>Language_Coder\포인터\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
