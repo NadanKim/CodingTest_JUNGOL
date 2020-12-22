@@ -710,6 +710,21 @@
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer07.cpp">
       <Filter>Language_Coder\포인터\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer01.cpp">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer02.cpp">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer03.cpp">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer04.cpp">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer05.cpp">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1578,6 +1593,21 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer07.h">
       <Filter>Language_Coder\포인터\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer01.h">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer02.h">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer03.h">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer04.h">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer05.h">
+      <Filter>Language_Coder\포인터\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

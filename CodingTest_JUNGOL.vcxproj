@@ -335,6 +335,11 @@
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer05.cpp" />
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer06.cpp" />
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer07.cpp" />
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer01.cpp" />
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer02.cpp" />
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer03.cpp" />
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer04.cpp" />
+    <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer05.cpp" />
     <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction101.cpp" />
     <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction102.cpp" />
     <ClCompile Include="Language_Coder\함수1\자가진단\BasicFunction103.cpp" />
@@ -575,6 +580,11 @@
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer05.h" />
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer06.h" />
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer07.h" />
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer01.h" />
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer02.h" />
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer03.h" />
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer04.h" />
+    <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer05.h" />
     <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction101.h" />
     <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction102.h" />
     <ClInclude Include="Language_Coder\함수1\자가진단\BasicFunction103.h" />
