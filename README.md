@@ -28,5 +28,5 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | | 파일입출력 |
 |:---:|:---:|
-| 자가진단 | ◇ |
+| 자가진단 | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/tree/main/Language_Coder/%ED%8C%8C%EC%9D%BC%EC%9E%85%EC%B6%9C%EB%A0%A5/%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8) |
 | 형성평가 | ◇ |
