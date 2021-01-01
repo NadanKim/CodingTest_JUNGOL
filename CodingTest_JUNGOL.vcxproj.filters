@@ -725,6 +725,24 @@
     <ClCompile Include="Language_Coder\포인터\형성평가\FormativePointer05.cpp">
       <Filter>Language_Coder\포인터\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess01.cpp">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess02.cpp">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess03.cpp">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess04.cpp">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess05.cpp">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess06.cpp">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -882,6 +900,15 @@
     </Filter>
     <Filter Include="Language_Coder\포인터\형성평가">
       <UniqueIdentifier>{35641cb9-ea44-4175-b840-316b26d03464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\파일입출력">
+      <UniqueIdentifier>{0682146c-8cfb-445d-a075-4be8d974fe12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\파일입출력\자가진단">
+      <UniqueIdentifier>{6fa40c50-cab6-4fe0-baad-7d37eec9efea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language_Coder\파일입출력\형성평가">
+      <UniqueIdentifier>{a705900a-bd42-4578-97f6-3c4b15a7e68f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1608,6 +1635,24 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\포인터\형성평가\FormativePointer05.h">
       <Filter>Language_Coder\포인터\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess01.h">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess02.h">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess03.h">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess04.h">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess05.h">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess06.h">
+      <Filter>Language_Coder\파일입출력\자가진단</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

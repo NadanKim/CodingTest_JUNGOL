@@ -1,20 +1,14 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <limits>
 
 #include "../../../Base.h"
 
 using std::string;
 
-class BasicStruct05 : public Base
+class BasicFileProcess05 : public Base
 {
-private:
-	struct Person
-	{
-		string m_name;
-		int m_height{};
-	};
-
 protected:
 	void Code() override;
 };

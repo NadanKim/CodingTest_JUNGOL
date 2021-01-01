@@ -328,6 +328,12 @@
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint03.cpp" />
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint04.cpp" />
     <ClCompile Include="Language_Coder\출력\형성평가\FormativePrint05.cpp" />
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess01.cpp" />
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess02.cpp" />
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess03.cpp" />
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess04.cpp" />
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess05.cpp" />
+    <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess06.cpp" />
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer01.cpp" />
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer02.cpp" />
     <ClCompile Include="Language_Coder\포인터\자가진단\BasicPointer03.cpp" />
@@ -573,6 +579,12 @@
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint03.h" />
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint04.h" />
     <ClInclude Include="Language_Coder\출력\형성평가\FormativePrint05.h" />
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess01.h" />
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess02.h" />
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess03.h" />
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess04.h" />
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess05.h" />
+    <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess06.h" />
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer01.h" />
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer02.h" />
     <ClInclude Include="Language_Coder\포인터\자가진단\BasicPointer03.h" />

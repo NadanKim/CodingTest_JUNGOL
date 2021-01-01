@@ -6,15 +6,8 @@
 
 using std::string;
 
-class BasicStruct05 : public Base
+class BasicFileProcess04 : public Base
 {
-private:
-	struct Person
-	{
-		string m_name;
-		int m_height{};
-	};
-
 protected:
 	void Code() override;
 };
