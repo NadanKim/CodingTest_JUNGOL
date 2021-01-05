@@ -743,6 +743,36 @@
     <ClCompile Include="Language_Coder\파일입출력\자가진단\BasicFileProcess06.cpp">
       <Filter>Language_Coder\파일입출력\자가진단</Filter>
     </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess01.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess02.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess03.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess04.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess05.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess06.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess07.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess08.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess09.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
+    <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess10.cpp">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1653,6 +1683,36 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\파일입출력\자가진단\BasicFileProcess06.h">
       <Filter>Language_Coder\파일입출력\자가진단</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess01.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess02.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess03.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess04.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess05.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess06.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess07.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess08.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess09.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess10.h">
+      <Filter>Language_Coder\파일입출력\형성평가</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
