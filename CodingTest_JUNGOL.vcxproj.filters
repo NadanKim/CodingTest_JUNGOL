@@ -773,6 +773,12 @@
     <ClCompile Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess10.cpp">
       <Filter>Language_Coder\파일입출력\형성평가</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable1.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable2.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -939,6 +945,12 @@
     </Filter>
     <Filter Include="Language_Coder\파일입출력\형성평가">
       <UniqueIdentifier>{a705900a-bd42-4578-97f6-3c4b15a7e68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder">
+      <UniqueIdentifier>{d1722c65-3034-4d9c-ab4f-90b0672a0290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\도형만들기1">
+      <UniqueIdentifier>{be2a4ed2-0504-4996-a4a6-bd62c1210bb0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1713,6 +1725,12 @@
     </ClInclude>
     <ClInclude Include="Language_Coder\파일입출력\형성평가\FormativeFileProcess10.h">
       <Filter>Language_Coder\파일입출력\형성평가</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable1.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable2.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

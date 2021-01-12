@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable1.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable2.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp" />
@@ -400,6 +402,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable1.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable2.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h" />
