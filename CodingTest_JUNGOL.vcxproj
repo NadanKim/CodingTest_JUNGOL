@@ -139,6 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare1.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare2.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare3.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare4.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable1.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable2.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
@@ -402,6 +406,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare1.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare2.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare3.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare4.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable1.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable2.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />

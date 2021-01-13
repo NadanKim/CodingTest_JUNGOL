@@ -779,6 +779,18 @@
     <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable2.cpp">
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare1.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare2.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare3.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare4.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1730,6 +1742,18 @@
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable2.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare1.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare2.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare3.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare4.h">
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClInclude>
   </ItemGroup>
