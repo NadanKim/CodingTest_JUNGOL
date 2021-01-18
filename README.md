@@ -40,7 +40,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 문자사각형1 | 문자사각형2 | 문자사각형3 | 문자사각형4 |
 |:---:|:---:|:---:|:---:|
-| ◇ | ◇ | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B01/CharacterSquare1.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B01/CharacterSquare2.cpp) | ◇ | ◇ |
 
 * 도형만들기2
 
