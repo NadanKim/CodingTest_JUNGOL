@@ -797,6 +797,12 @@
     <ClCompile Include="Beginner_Coder\도형만들기1\CharacterSquare2.cpp">
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\CharacterTriangle1.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기1\CharacterTriangle2.cpp">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1766,6 +1772,12 @@
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\도형만들기1\CharacterSquare2.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\CharacterTriangle1.h">
+      <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기1\CharacterTriangle2.h">
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClInclude>
   </ItemGroup>

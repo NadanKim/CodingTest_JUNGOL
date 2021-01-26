@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="Beginner_Coder\도형만들기1\CharacterSquare1.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\CharacterSquare2.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기1\CharacterTriangle1.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기1\CharacterTriangle2.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare1.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare2.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare3.cpp" />
@@ -410,6 +412,8 @@
     <ClInclude Include="Base.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\CharacterSquare1.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\CharacterSquare2.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\CharacterTriangle1.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기1\CharacterTriangle2.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare1.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare2.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare3.h" />
