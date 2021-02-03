@@ -56,7 +56,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 곱셈 | 숫자의 개수 | 약수와 배수 | 약수 구하기 | 약수 | 최대공약수와최소공배수 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| ◇ | ◇ | ◇ | ◇ | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%88%98%ED%95%991/Multiply.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%88%98%ED%95%991/NumberOfNumbers.cpp) | ◇ | ◇ | ◇ | ◇ |
 
 | 최대공약수, 최소공배수 |
 |:---:|
