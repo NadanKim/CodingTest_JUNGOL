@@ -1,11 +1,11 @@
 ﻿// 문제 클래스 바꾸는 법
 // 1. 원하는 문제 클래스의 헤더를 불러온다.
 // 2. codeBase에 문제 클래스를 생성한다.
-#include "Beginner_Coder/도형만들기1/CharacterTriangle2.h"
+#include "Beginner_Coder/수학1/NumberOfNumbers.h"
 
 int main()
 {
-    Base* codeBase = new CharacterTriangle2();
+    Base* codeBase = new NumberOfNumbers();
     codeBase->Code();
 
     delete codeBase;

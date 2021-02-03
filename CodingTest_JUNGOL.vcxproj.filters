@@ -803,6 +803,12 @@
     <ClCompile Include="Beginner_Coder\도형만들기1\CharacterTriangle2.cpp">
       <Filter>Beginner_Coder\도형만들기1</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\Multiply.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\NumberOfNumbers.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -975,6 +981,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\도형만들기1">
       <UniqueIdentifier>{be2a4ed2-0504-4996-a4a6-bd62c1210bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\수학1">
+      <UniqueIdentifier>{d0d6155f-3a04-40bf-a4ac-c0b5564d426b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1779,6 +1788,12 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\도형만들기1\CharacterTriangle2.h">
       <Filter>Beginner_Coder\도형만들기1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\Multiply.h">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\NumberOfNumbers.h">
+      <Filter>Beginner_Coder\수학1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
