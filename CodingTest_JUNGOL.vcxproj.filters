@@ -809,6 +809,15 @@
     <ClCompile Include="Beginner_Coder\수학1\NumberOfNumbers.cpp">
       <Filter>Beginner_Coder\수학1</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\FactorAndMultiple.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\Factors.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\FindingFactor.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1793,6 +1802,15 @@
       <Filter>Beginner_Coder\수학1</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학1\NumberOfNumbers.h">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\FactorAndMultiple.h">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\Factors.h">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\FindingFactor.h">
       <Filter>Beginner_Coder\수학1</Filter>
     </ClInclude>
   </ItemGroup>
