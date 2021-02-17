@@ -818,6 +818,12 @@
     <ClCompile Include="Beginner_Coder\수학1\FindingFactor.cpp">
       <Filter>Beginner_Coder\수학1</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\GCDAndLCM1.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학1\GCDAndLCM2.cpp">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1811,6 +1817,12 @@
       <Filter>Beginner_Coder\수학1</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학1\FindingFactor.h">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\GCDAndLCM1.h">
+      <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학1\GCDAndLCM2.h">
       <Filter>Beginner_Coder\수학1</Filter>
     </ClInclude>
   </ItemGroup>
