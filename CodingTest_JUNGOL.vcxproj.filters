@@ -824,6 +824,15 @@
     <ClCompile Include="Beginner_Coder\수학1\GCDAndLCM2.cpp">
       <Filter>Beginner_Coder\수학1</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle1.cpp">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle2.cpp">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle3.cpp">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -999,6 +1008,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\수학1">
       <UniqueIdentifier>{d0d6155f-3a04-40bf-a4ac-c0b5564d426b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\도형만들기2">
+      <UniqueIdentifier>{e0e84edb-d6a7-4d87-a182-0d8998f65d0f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1824,6 +1836,15 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학1\GCDAndLCM2.h">
       <Filter>Beginner_Coder\수학1</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle1.h">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle2.h">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle3.h">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
