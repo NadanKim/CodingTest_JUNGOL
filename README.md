@@ -48,9 +48,9 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/StarTriangle1.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/StarTriangle2.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/StarTriangle3.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/NumberTriangle.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/SnailTriangle.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/PascalTriangle.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/SnailSquare.cpp) |
 
-| 마름모 | 대각선 지그재그 | 홀수 마방진 |
+| 문자마름모 | 대각선 지그재그 | 홀수 마방진 |
 |:---:|:---:|:---:|
-| ◇ | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/CharacterRhombus.cpp) | ◇ | ◇ |
 
 * 수학1
 
