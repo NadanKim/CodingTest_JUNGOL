@@ -149,6 +149,7 @@
     <ClCompile Include="Beginner_Coder\도형만들기1\NumberSquare4.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable1.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기1\TimesTable2.cpp" />
+    <ClCompile Include="Beginner_Coder\도형만들기2\CharacterRhombus.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\NumberTriangle.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\PascalTriangle.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\SnailSquare.cpp" />
@@ -434,6 +435,7 @@
     <ClInclude Include="Beginner_Coder\도형만들기1\NumberSquare4.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable1.h" />
     <ClInclude Include="Beginner_Coder\도형만들기1\TimesTable2.h" />
+    <ClInclude Include="Beginner_Coder\도형만들기2\CharacterRhombus.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\NumberTriangle.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\PascalTriangle.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\SnailSquare.h" />
