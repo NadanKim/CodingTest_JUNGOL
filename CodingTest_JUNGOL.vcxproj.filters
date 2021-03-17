@@ -848,6 +848,9 @@
     <ClCompile Include="Beginner_Coder\도형만들기2\CharacterRhombus.cpp">
       <Filter>Beginner_Coder\도형만들기2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\도형만들기2\DiagonalZigZag.cpp">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1874,6 +1877,9 @@
       <Filter>Beginner_Coder\도형만들기2</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\도형만들기2\CharacterRhombus.h">
+      <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\도형만들기2\DiagonalZigZag.h">
       <Filter>Beginner_Coder\도형만들기2</Filter>
     </ClInclude>
   </ItemGroup>
