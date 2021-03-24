@@ -50,7 +50,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 문자마름모 | 대각선 지그재그 | 홀수 마방진 |
 |:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/CharacterRhombus.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/DiagonalZigZag.cpp) | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/CharacterRhombus.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/DiagonalZigZag.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%8F%84%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B02/OddMagicSquare.cpp) |
 
 * 수학1
 
