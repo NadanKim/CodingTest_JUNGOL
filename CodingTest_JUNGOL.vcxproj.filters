@@ -854,6 +854,9 @@
     <ClCompile Include="Beginner_Coder\도형만들기2\OddMagicSquare.cpp">
       <Filter>Beginner_Coder\도형만들기2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학2\NumberReverse.cpp">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1032,6 +1035,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\도형만들기2">
       <UniqueIdentifier>{e0e84edb-d6a7-4d87-a182-0d8998f65d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\수학2">
+      <UniqueIdentifier>{9f186421-222b-4b61-b3b0-ce946d59bf66}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1887,6 +1893,9 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\도형만들기2\OddMagicSquare.h">
       <Filter>Beginner_Coder\도형만들기2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학2\NumberReverse.h">
+      <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
