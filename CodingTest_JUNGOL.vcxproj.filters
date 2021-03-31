@@ -857,6 +857,9 @@
     <ClCompile Include="Beginner_Coder\수학2\NumberReverse.cpp">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.cpp">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1895,6 +1898,9 @@
       <Filter>Beginner_Coder\도형만들기2</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학2\NumberReverse.h">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.h">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
   </ItemGroup>
