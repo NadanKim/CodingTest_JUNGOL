@@ -167,6 +167,7 @@
     <ClCompile Include="Beginner_Coder\수학1\Multiply.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\NumberOfNumbers.cpp" />
     <ClCompile Include="Beginner_Coder\수학2\NumberReverse.cpp" />
+    <ClCompile Include="Beginner_Coder\수학2\PrimeNumber.cpp" />
     <ClCompile Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
@@ -457,6 +458,7 @@
     <ClInclude Include="Beginner_Coder\수학1\Multiply.h" />
     <ClInclude Include="Beginner_Coder\수학1\NumberOfNumbers.h" />
     <ClInclude Include="Beginner_Coder\수학2\NumberReverse.h" />
+    <ClInclude Include="Beginner_Coder\수학2\PrimeNumber.h" />
     <ClInclude Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />

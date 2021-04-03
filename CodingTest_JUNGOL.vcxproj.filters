@@ -860,6 +860,9 @@
     <ClCompile Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.cpp">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학2\PrimeNumber.cpp">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1901,6 +1904,9 @@
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.h">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학2\PrimeNumber.h">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
   </ItemGroup>
