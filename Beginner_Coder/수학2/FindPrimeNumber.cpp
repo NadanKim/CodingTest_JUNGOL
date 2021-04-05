@@ -33,19 +33,19 @@ void FindPrimeNumber::Code()
 
 	std::cin >> n;
 
+	vector<int> allPrimeNumbers = CalculateAllPrimeNumbers();
+
 	int number;
 	for (int i = 0; i < n; i++)
 	{
 		std::cin >> number;
-		PrintNearestPrimeNumber(number);
+		PrintNearestPrimeNumber(number, allPrimeNumbers);
 	}
 }
 
 bool FindPrimeNumber::IsPrimeNumber(int number)
 {
-	int limit{ static_cast<int>(std::sqrt(number)) };
-
-	for (int i = 2; i <= limit; i++)
+	for (int i = 2; i <= number /i; i++)
 	{
 		if (number % i == 0)
 		{
@@ -55,53 +55,50 @@ bool FindPrimeNumber::IsPrimeNumber(int number)
 	return true;
 }
 
-void FindPrimeNumber::PrintNearestPrimeNumber(int number)
+void FindPrimeNumber::PrintNearestPrimeNumber(int number, vector<int> allPrimeNumbers)
 {
-	int results[2]{};
-	int arrDiff[2]{};
-	int count{ 0 };
-	int diff{ INT_MAX };
-
-	for (int i = 2; ; i++)
+	int idx{ 0 };
+	int maxIdx{ static_cast<int>(allPrimeNumbers.size()) };
+	while (idx < maxIdx)
 	{
-		if (IsPrimeNumber(i))
+		if (allPrimeNumbers[idx] > number)
 		{
-			int temp{ std::abs(number - i) };
-			if (temp <= diff)
-			{
-				diff = temp;
-				if (count > 1)
-				{
-					results[0] = results[1];
-					results[1] = i;
-
-					arrDiff[0] = arrDiff[1];
-					arrDiff[1] = diff;
-				}
-				else
-				{
-					results[count++] = i;
-					arrDiff[count++] = diff;
-				}
-			}
-
-			if (i > number)
-			{
-				break;
-			}
+			break;
 		}
+
+		idx++;
 	}
 
-	if (arrDiff[0] == arrDiff[1])
+	int small{ idx > 0 ? allPrimeNumbers[idx - 1] : -1000000 };
+	int diffToSmall{ number - small };
+	int big{ allPrimeNumbers[idx] };
+	int diffToBig{ big - number };
+
+	if (diffToSmall == diffToBig)
 	{
-		std::cout << results[0] << ' ' << results[1] << '\n';
+		std::cout << small << ' ' << big << '\n';
 	}
-	else if (arrDiff[0] < arrDiff[1])
+	else if (diffToSmall < diffToBig)
 	{
-		std::cout << results[0] << '\n';
+		std::cout << small << '\n';
 	}
 	else
 	{
-		std::cout << results[1] << '\n';
+		std::cout << big << '\n';
 	}
+}
+
+vector<int> FindPrimeNumber::CalculateAllPrimeNumbers()
+{
+	vector<int> allPrimeNumbers;
+
+	for (int i = 2; i <= 1000000; i++)
+	{
+		if (IsPrimeNumber(i))
+		{
+			allPrimeNumbers.push_back(i);
+		}
+	}
+
+	return allPrimeNumbers;
 }
