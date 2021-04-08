@@ -866,6 +866,9 @@
     <ClCompile Include="Beginner_Coder\수학2\FindPrimeNumber.cpp">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학2\CountPrimeNumber.cpp">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1913,6 +1916,9 @@
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학2\FindPrimeNumber.h">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학2\CountPrimeNumber.h">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
   </ItemGroup>
