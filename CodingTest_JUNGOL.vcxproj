@@ -166,6 +166,7 @@
     <ClCompile Include="Beginner_Coder\수학1\GCDAndLCM2.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\Multiply.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\NumberOfNumbers.cpp" />
+    <ClCompile Include="Beginner_Coder\수학2\BinaryNumber.cpp" />
     <ClCompile Include="Beginner_Coder\수학2\CountPrimeNumber.cpp" />
     <ClCompile Include="Beginner_Coder\수학2\FindPrimeNumber.cpp" />
     <ClCompile Include="Beginner_Coder\수학2\NumberReverse.cpp" />
@@ -459,6 +460,7 @@
     <ClInclude Include="Beginner_Coder\수학1\GCDAndLCM2.h" />
     <ClInclude Include="Beginner_Coder\수학1\Multiply.h" />
     <ClInclude Include="Beginner_Coder\수학1\NumberOfNumbers.h" />
+    <ClInclude Include="Beginner_Coder\수학2\BinaryNumber.h" />
     <ClInclude Include="Beginner_Coder\수학2\CountPrimeNumber.h" />
     <ClInclude Include="Beginner_Coder\수학2\FindPrimeNumber.h" />
     <ClInclude Include="Beginner_Coder\수학2\NumberReverse.h" />
