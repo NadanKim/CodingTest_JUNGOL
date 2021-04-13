@@ -96,51 +96,36 @@ void CountPrimeNumber::Code()
 
 	std::cin >> n >> m;
 
-	vector<int> allPrimeNumbers = CalculateAllPrimeNumbers();
+	bool* isPrimeNumberArr = new bool[2000001];
+	std::fill_n(isPrimeNumberArr, 2000001, true);
+
+	CalculateAllPrimeNumbers(isPrimeNumberArr);
 
 	int count{ 0 };
-	int limit = allPrimeNumbers.size();
-
-	for (int i = 0; i < limit; i++)
+	for (int i = n; i <= m; i++)
 	{
-		if (allPrimeNumbers[i] > m)
+		if (isPrimeNumberArr[i])
 		{
-			break;
+			count++;
 		}
-		if (allPrimeNumbers[i] < n)
-		{
-			continue;
-		}
-
-		count++;
 	}
 
 	std::cout << count;
+
+	delete[] isPrimeNumberArr;
 }
 
-bool CountPrimeNumber::IsPrimeNumber(int number)
+void CountPrimeNumber::CalculateAllPrimeNumbers(bool* isPrimeNumberArr)
 {
-	for (int i = 2; i <= number /i; i++)
+	isPrimeNumberArr[0] = isPrimeNumberArr[1] = false;
+	for (int i = 2; i <= 2000000 / i; i++)
 	{
-		if (number % i == 0)
+		if (isPrimeNumberArr[i])
 		{
-			return false;
+			for (int j = i * i; j <= 2000000; j += i)
+			{
+				isPrimeNumberArr[j] = false;
+			}
 		}
 	}
-	return true;
-}
-
-vector<int> CountPrimeNumber::CalculateAllPrimeNumbers()
-{
-	vector<int> allPrimeNumbers;
-
-	for (int i = 2; i <= 2000000; i++)
-	{
-		if (IsPrimeNumber(i))
-		{
-			allPrimeNumbers.push_back(i);
-		}
-	}
-
-	return allPrimeNumbers;
 }
