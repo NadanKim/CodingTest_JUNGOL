@@ -872,6 +872,9 @@
     <ClCompile Include="Beginner_Coder\수학2\BinaryNumber.cpp">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\수학2\ConvertNumber.cpp">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1925,6 +1928,9 @@
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학2\BinaryNumber.h">
+      <Filter>Beginner_Coder\수학2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\수학2\ConvertNumber.h">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
   </ItemGroup>
