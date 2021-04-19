@@ -70,7 +70,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 10진수를 2,8,16진수로 | 진법 변환 |
 |:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%88%98%ED%95%992/ConvertNumber.cpp) | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%88%98%ED%95%992/ConvertNumber.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%88%98%ED%95%992/ConvertFromTo.cpp) |
 
 * 문자열
 
