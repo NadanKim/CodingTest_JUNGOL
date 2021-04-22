@@ -90,11 +90,11 @@ string ConvertFromTo::FromDecimal(long long n, int to)
 		long long temp{ n % to };
 		if (temp < 10)
 		{
-			result += ('0' + temp);
+			result += static_cast<char>('0' + temp);
 		}
 		else
 		{
-			result += ('A' + temp - 10);
+			result += static_cast<char>('A' + temp - 10);
 		}
 		n /= to;
 	}

@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>26451</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>26451</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>26451</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,6 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>26451</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,6 +163,7 @@
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle1.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle2.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle3.cpp" />
+    <ClCompile Include="Beginner_Coder\문자열\Bowl.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\FactorAndMultiple.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\Factors.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\FindingFactor.cpp" />
@@ -455,6 +460,7 @@
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle1.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle2.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle3.h" />
+    <ClInclude Include="Beginner_Coder\문자열\Bowl.h" />
     <ClInclude Include="Beginner_Coder\수학1\FactorAndMultiple.h" />
     <ClInclude Include="Beginner_Coder\수학1\Factors.h" />
     <ClInclude Include="Beginner_Coder\수학1\FindingFactor.h" />

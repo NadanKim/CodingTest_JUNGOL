@@ -878,6 +878,9 @@
     <ClCompile Include="Beginner_Coder\수학2\ConvertFromTo.cpp">
       <Filter>Beginner_Coder\수학2</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\문자열\Bowl.cpp">
+      <Filter>Beginner_Coder\문자열</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1059,6 +1062,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\수학2">
       <UniqueIdentifier>{9f186421-222b-4b61-b3b0-ce946d59bf66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\문자열">
+      <UniqueIdentifier>{cadfa0e6-f110-4ad0-ad67-6fd871859c48}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1938,6 +1944,9 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\수학2\ConvertFromTo.h">
       <Filter>Beginner_Coder\수학2</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\문자열\Bowl.h">
+      <Filter>Beginner_Coder\문자열</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
