@@ -164,6 +164,7 @@
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle2.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle3.cpp" />
     <ClCompile Include="Beginner_Coder\문자열\Bowl.cpp" />
+    <ClCompile Include="Beginner_Coder\문자열\FindString.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\FactorAndMultiple.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\Factors.cpp" />
     <ClCompile Include="Beginner_Coder\수학1\FindingFactor.cpp" />
@@ -461,6 +462,7 @@
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle2.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle3.h" />
     <ClInclude Include="Beginner_Coder\문자열\Bowl.h" />
+    <ClInclude Include="Beginner_Coder\문자열\FindString.h" />
     <ClInclude Include="Beginner_Coder\수학1\FactorAndMultiple.h" />
     <ClInclude Include="Beginner_Coder\수학1\Factors.h" />
     <ClInclude Include="Beginner_Coder\수학1\FindingFactor.h" />

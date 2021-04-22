@@ -881,6 +881,9 @@
     <ClCompile Include="Beginner_Coder\문자열\Bowl.cpp">
       <Filter>Beginner_Coder\문자열</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\문자열\FindString.cpp">
+      <Filter>Beginner_Coder\문자열</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1946,6 +1949,9 @@
       <Filter>Beginner_Coder\수학2</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\문자열\Bowl.h">
+      <Filter>Beginner_Coder\문자열</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\문자열\FindString.h">
       <Filter>Beginner_Coder\문자열</Filter>
     </ClInclude>
   </ItemGroup>
