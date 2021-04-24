@@ -76,7 +76,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 그릇 | 문자열 찾기 | 세로읽기 | 암호풀기(Message Decowding) | 단어 세기 | 변장 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%AC%B8%EC%9E%90%EC%97%B4/Bowl.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%AC%B8%EC%9E%90%EC%97%B4/FindString.cpp) | ◇ | ◇ | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%AC%B8%EC%9E%90%EC%97%B4/Bowl.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%AC%B8%EC%9E%90%EC%97%B4/FindString.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EB%AC%B8%EC%9E%90%EC%97%B4/VerticalRead.cpp) | ◇ | ◇ | ◇ |
 
 
 * 여러가지
