@@ -164,6 +164,7 @@
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle2.cpp" />
     <ClCompile Include="Beginner_Coder\도형만들기2\StarTriangle3.cpp" />
     <ClCompile Include="Beginner_Coder\문자열\Bowl.cpp" />
+    <ClCompile Include="Beginner_Coder\문자열\CountWords.cpp" />
     <ClCompile Include="Beginner_Coder\문자열\FindString.cpp" />
     <ClCompile Include="Beginner_Coder\문자열\MessageDecoding.cpp" />
     <ClCompile Include="Beginner_Coder\문자열\VerticalRead.cpp" />
@@ -464,6 +465,7 @@
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle2.h" />
     <ClInclude Include="Beginner_Coder\도형만들기2\StarTriangle3.h" />
     <ClInclude Include="Beginner_Coder\문자열\Bowl.h" />
+    <ClInclude Include="Beginner_Coder\문자열\CountWords.h" />
     <ClInclude Include="Beginner_Coder\문자열\FindString.h" />
     <ClInclude Include="Beginner_Coder\문자열\MessageDecoding.h" />
     <ClInclude Include="Beginner_Coder\문자열\VerticalRead.h" />

@@ -890,6 +890,9 @@
     <ClCompile Include="Beginner_Coder\문자열\MessageDecoding.cpp">
       <Filter>Beginner_Coder\문자열</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\문자열\CountWords.cpp">
+      <Filter>Beginner_Coder\문자열</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1964,6 +1967,9 @@
       <Filter>Beginner_Coder\문자열</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\문자열\MessageDecoding.h">
+      <Filter>Beginner_Coder\문자열</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\문자열\CountWords.h">
       <Filter>Beginner_Coder\문자열</Filter>
     </ClInclude>
   </ItemGroup>
