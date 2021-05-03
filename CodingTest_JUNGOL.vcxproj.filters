@@ -899,6 +899,9 @@
     <ClCompile Include="Beginner_Coder\여러가지\ColoredPaper1.cpp">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\여러가지\ColoredPaper2.cpp">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1985,6 +1988,9 @@
       <Filter>Beginner_Coder\문자열</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\여러가지\ColoredPaper1.h">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\여러가지\ColoredPaper2.h">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
   </ItemGroup>
