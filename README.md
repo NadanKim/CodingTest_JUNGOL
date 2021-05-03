@@ -83,7 +83,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 색종이(초) | 색종이(중) | 카드게임 | 떡 먹는 호랑이 | 오목 | 빙고 | 숫자 야구 | 연속부분합 찾기 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ◇ | ◇ | ◇ | ◇ | ◇ | ◇ | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80/ColoredPaper1.cpp) | ◇ | ◇ | ◇ | ◇ | ◇ | ◇ | ◇ |
 
 | 참외밭 | 볼 모으기(balls) |
 |:---:|:---:|
