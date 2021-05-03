@@ -896,6 +896,9 @@
     <ClCompile Include="Beginner_Coder\문자열\Disguise.cpp">
       <Filter>Beginner_Coder\문자열</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\여러가지\ColoredPaper1.cpp">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1080,6 +1083,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\문자열">
       <UniqueIdentifier>{cadfa0e6-f110-4ad0-ad67-6fd871859c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\여러가지">
+      <UniqueIdentifier>{ad22669b-0857-4ab9-abf1-2c1eb443cfb9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1977,6 +1983,9 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\문자열\Disguise.h">
       <Filter>Beginner_Coder\문자열</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\여러가지\ColoredPaper1.h">
+      <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
