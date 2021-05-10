@@ -905,6 +905,9 @@
     <ClCompile Include="Beginner_Coder\여러가지\CardGame.cpp">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\여러가지\EatingTiger.cpp">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1997,6 +2000,9 @@
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\여러가지\CardGame.h">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\여러가지\EatingTiger.h">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
   </ItemGroup>
