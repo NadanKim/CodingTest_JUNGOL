@@ -908,6 +908,9 @@
     <ClCompile Include="Beginner_Coder\여러가지\EatingTiger.cpp">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\여러가지\FiveInARow.cpp">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2003,6 +2006,9 @@
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\여러가지\EatingTiger.h">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\여러가지\FiveInARow.h">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
   </ItemGroup>
