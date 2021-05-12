@@ -6,11 +6,11 @@
 class FiveInARow : public Base
 {
 private:
-	bool CheckRight(int** arr, int i, int checkVal);
-	bool CheckDown(int** arr, int i, int checkVal);
-	bool CheckRightDown(int** arr, int i, int checkVal);
-	
-	void PrintResult(int winner, int y, int x);
+	int GetNumberAtCoord(int** arr, int x, int y);
+	bool IsAlreadyChecked(int** arr, int x, int y, const int checkVal);
+	bool CheckDirection(int** arr, int num, int xBeg, int yBeg,
+		int xInc, int yInc, const int checkVal);
+	bool IsEdge(int x, int y, int yInc);
 
 protected:
 	void Code() override;

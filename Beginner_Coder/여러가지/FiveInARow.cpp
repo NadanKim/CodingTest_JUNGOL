@@ -54,54 +54,62 @@
 /// </summary>
 void FiveInARow::Code()
 {
+	const int CHECK_RIGHT_UP = 1 << 2;
+	const int CHECK_RIGHT = 1 << 3;
+	const int CHECK_DOWN = 1 << 4;
+	const int CHECK_RIGHT_DOWN = 1 << 5;
+
 	int** arr = new int* [19];
 	for (int i = 0; i < 19; i++)
 	{
 		arr[i] = new int[19];
 		std::fill_n(arr[i], 19, 0);
 	}
-	int r = 0x4;
-	int d = 0x8;
-	int ru = 0x16;
-	int rd = 0x32;
 
-	for (int i = 0; i < 19; i++)
+	for (int i = 0; i <= 18; i++)
 	{
-		for (int j = 0; j < 19; j++)
+		for (int j = 0; j <= 18; j++)
 		{
 			std::cin >> arr[i][j];
 		}
 	}
 
-	//std::cout << "\n\n";
-	//arr[14][0] = arr[15][0] = arr[16][0] = arr[17][0] = arr[18][0] = 1;
-
-	//for (int i = 0; i < 19; i++)
-	//{
-	//	for (int j = 0; j < 19; j++)
-	//	{
-	//		std::cout << arr[i][j] << ' ';
-	//	}
-	//	std::cout << '\n';
-	//}
-
 	bool hasWinner{ false };
-	for (int i = 0; i < 14; i++)
+
+	for (int y = 0; y <= 18; y++)
 	{
-		hasWinner = CheckRight(arr, i, r);
-		if (hasWinner)
+		for (int x = 0; x <= 14; x++)
 		{
-			break;
-		}
-		hasWinner = CheckDown(arr, i, d);
-		if (hasWinner)
-		{
-			break;
-		}
-		hasWinner = CheckRightDown(arr, i, ru);
-		if (hasWinner)
-		{
-			break;
+			int num{ GetNumberAtCoord(arr, x, y) };
+
+			if (num == 0)
+			{
+				continue;
+			}
+
+			if (y >= 4 && !IsAlreadyChecked(arr, x, y, CHECK_RIGHT_UP))
+			{
+				hasWinner |= CheckDirection(arr, num, x, y, 1, -1, CHECK_RIGHT_UP);
+			}
+			if (!IsAlreadyChecked(arr, x, y, CHECK_RIGHT))
+			{
+				hasWinner |= CheckDirection(arr, num, x, y, 1, 0, CHECK_RIGHT);
+			}
+			if (y <= 14 && !IsAlreadyChecked(arr, x, y, CHECK_DOWN))
+			{
+				hasWinner |= CheckDirection(arr, num, x, y, 0, 1, CHECK_DOWN);
+			}
+			if (y <= 14 && !IsAlreadyChecked(arr, x, y, CHECK_RIGHT_DOWN))
+			{
+				hasWinner |= CheckDirection(arr, num, x, y, 1, 1, CHECK_RIGHT_DOWN);
+			}
+
+			if (hasWinner)
+			{
+				std::cout << num << '\n';
+				std::cout << y + 1 << ' ' << x + 1;
+				return;
+			}
 		}
 	}
 
@@ -117,191 +125,62 @@ void FiveInARow::Code()
 	delete[] arr;
 }
 
-bool FiveInARow::CheckRight(int** arr, int i, int checkVal)
+int FiveInARow::GetNumberAtCoord(int** arr, int x, int y)
 {
-	for (int j = 0; j < 14; j++)
+	if ((arr[y][x] & 0x1) == 1) return 1;
+	if ((arr[y][x] & 0x2) == 2) return 2;
+	return 0;
+}
+
+bool FiveInARow::IsAlreadyChecked(int** arr, int x, int y, const int checkVal)
+{
+	return (arr[y][x] & checkVal) == checkVal;
+}
+
+bool FiveInARow::CheckDirection(int** arr, int num, int xBeg, int yBeg,
+	int xInc, int yInc, const int checkVal)
+{
+	int count{ 1 };
+	int x{ xBeg }, y{ yBeg };
+
+	do
 	{
-		if ((arr[i][j] & checkVal) == checkVal)
+		x += xInc;
+		y += yInc;
+
+		if (GetNumberAtCoord(arr, x, y) != num)
 		{
-			continue;
+			break;
 		}
 
-		int count{ 0 };
-		int curNumber{ -1 };
+		count++;
+	} while (!IsEdge(x, y, yInc));
 
-		for (int k = j; k < 19; k++)
+	if (count == 5)
+	{
+		return true;
+	}
+
+	while (true)
+	{
+		arr[yBeg][xBeg] |= checkVal;
+
+		xBeg += xInc;
+		yBeg += yInc;
+
+		if (xInc != 0 && xBeg == x || yInc != 0 && yBeg == y)
 		{
-			if (curNumber == -1)
-			{
-				if (arr[i][k] != 1 && arr[i][k] != 2)
-				{
-					continue;
-				}
-				curNumber = arr[i][k];
-			}
-
-			if (curNumber == arr[i][k])
-			{
-				count++;
-				if (k == 18 && count == 5)
-				{
-					PrintResult(arr[i][k - 4], i, k - 4);
-					return true;
-				}
-			}
-			else if (count == 5)
-			{
-				PrintResult(arr[i][k - 5], i, k - 5);
-				return true;
-			}
-			else
-			{
-				for (int l = k - 1; l >= j; l--)
-				{
-					arr[i][l] |= checkVal;
-				}
-
-				if (arr[i][k] == 1 || arr[i][k] == 2)
-				{
-					curNumber = arr[i][k];
-					count = 1;
-				}
-				else
-				{
-					curNumber = -1;
-					count = 0;
-				}
-			}
+			break;
 		}
 	}
 
 	return false;
 }
 
-bool FiveInARow::CheckDown(int** arr, int i, int checkVal)
+bool FiveInARow::IsEdge(int x, int y, int yInc)
 {
-	for (int j = 0; j < 14; j++)
-	{
-		if ((arr[j][i] & checkVal) == checkVal)
-		{
-			continue;
-		}
-
-		int count{ 0 };
-		int curNumber{ -1 };
-
-		for (int k = j; k < 19; k++)
-		{
-			if (curNumber == -1)
-			{
-				if (arr[k][i] != 1 && arr[k][i] != 2)
-				{
-					continue;
-				}
-				curNumber = arr[k][i];
-			}
-
-			if (curNumber == arr[k][i])
-			{
-				count++;
-				if (k == 18 && count == 5)
-				{
-					PrintResult(arr[k - 4][i], k - 4, i);
-					return true;
-				}
-			}
-			else if (count == 5)
-			{
-				PrintResult(arr[k - 5][i], k - 5, i);
-				return true;
-			}
-			else
-			{
-				for (int l = k - 1; l >= j; l--)
-				{
-					arr[l][i] |= checkVal;
-				}
-
-				if (arr[k][i] == 1 || arr[k][i] == 2)
-				{
-					curNumber = arr[k][i];
-					count = 1;
-				}
-				else
-				{
-					curNumber = -1;
-					count = 0;
-				}
-			}
-		}
-	}
-
+	if (x == 18) return true;
+	if (yInc == -1 && y == 0) return true;
+	if (yInc == 1 && y == 18) return true;
 	return false;
-}
-
-bool FiveInARow::CheckRightDown(int** arr, int i, int checkVal)
-{
-	for (int j = 0; j < 14; j++)
-	{
-		if ((arr[i][j] & checkVal) == checkVal)
-		{
-			continue;
-		}
-
-		int count{ 0 };
-		int curNumber{ -1 };
-
-		for (int k = 0; j + k < 19 && i + k < 19; k++)
-		{
-			if (curNumber == -1)
-			{
-				if (arr[i + k][j + k] != 1 && arr[i + k][j + k] != 2)
-				{
-					continue;
-				}
-				curNumber = arr[i + k][j + k];
-			}
-
-			if (curNumber == arr[i + k][j + k])
-			{
-				count++;
-				if (j + k == 18 && count == 5)
-				{
-					PrintResult(arr[i + k][j + k - 4], i + k, j + k - 4);
-					return true;
-				}
-			}
-			else if (count == 5)
-			{
-				PrintResult(arr[i + k][j + k - 5], i + k, j + k - 5);
-				return true;
-			}
-			else
-			{
-				for (int l = j + k - 1; l >= j; l--)
-				{
-					arr[i + k][l] |= checkVal;
-				}
-
-				if (arr[i + k][j + k] == 1 || arr[i + k][j + k] == 2)
-				{
-					curNumber = arr[i + k][j + k];
-					count = 1;
-				}
-				else
-				{
-					curNumber = -1;
-					count = 0;
-				}
-			}
-		}
-	}
-
-	return false;
-}
-
-void FiveInARow::PrintResult(int winner, int y, int x)
-{
-	std::cout << winner << '\n';
-	std::cout << y + 1 << ' ' << x + 1;
 }
