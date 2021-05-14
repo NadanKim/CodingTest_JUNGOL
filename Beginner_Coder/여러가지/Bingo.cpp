@@ -62,24 +62,112 @@
 /// </summary>
 void Bingo::Code()
 {
-	int arr[5][5]{};
-	for (int i = 0; i < 5; i++)
+	unordered_map<int, Point> map;
+
+	int num;
+	for (int y = 0; y < 5; y++)
 	{
-		for (int j = 0; j < 5; j++)
+		for (int x = 0; x < 5; x++)
 		{
-			std::cin >> arr[i][j];
+			std::cin >> num;
+			map[num] = Point(x, y);
 		}
 	}
 
-	int input{ 0 };
-	for (int i = 1; i <= 25; i++)
+	int inputArr[25]{};
+	for (int i = 0; i < 25; i++)
 	{
-		std::cin >> input;
+		std::cin >> inputArr[i];
+	}
 
-		if (true)
+	int bingoCount{ 0 };
+	int checkBoard[5][5]{};
+
+	for (int i = 0; i < 25; i++)
+	{
+		if (CheckThreeBingo(map, inputArr[i], checkBoard, bingoCount))
 		{
-			std::cout << i;
+			std::cout << i + 1;
 			break;
 		}
 	}
+}
+
+bool Bingo::CheckThreeBingo(unordered_map<int, Point> map, int input,
+	int checkBoard[5][5], int& bingoCount)
+{
+	Point curPos{ map[input] };
+	checkBoard[curPos.y][curPos.x] = input;
+
+	// horizontal
+	if (IsExistsValueToEdge(checkBoard, curPos, -1, 0)
+		&& IsExistsValueToEdge(checkBoard, curPos, 1, 0))
+	{
+		bingoCount++;
+	}
+	// vertical
+	if (IsExistsValueToEdge(checkBoard, curPos, 0, -1)
+		&& IsExistsValueToEdge(checkBoard, curPos, 0, 1))
+	{
+		bingoCount++;
+	}
+
+	if (IsDiagonalToRU(curPos))
+	{
+		if (IsExistsValueToEdge(checkBoard, curPos, -1, 1)
+			&& IsExistsValueToEdge(checkBoard, curPos, 1, -1))
+		{
+			bingoCount++;
+		}
+	}
+	if (IsDiagonalToRD(curPos))
+	{
+		if (IsExistsValueToEdge(checkBoard, curPos, -1, -1)
+			&& IsExistsValueToEdge(checkBoard, curPos, 1, 1))
+		{
+			bingoCount++;
+		}
+	}
+
+	return bingoCount >= 3;
+}
+
+bool Bingo::IsDiagonalToRU(Point& pos)
+{
+	if (pos.x + pos.y == 4) return true;
+	return false;
+}
+
+bool Bingo::IsDiagonalToRD(Point& pos)
+{
+	if (pos.x == pos.y) return true;
+	return false;
+}
+
+bool Bingo::IsExistsValueToEdge(const int checkBoard[5][5], Point pos, int incX, int incY)
+{
+	bool result{ false };
+
+	do
+	{
+		pos.x += incX;
+		pos.y += incY;
+
+		if (IsEdge(pos))
+		{
+			result = true;
+			break;
+		}
+	} while (checkBoard[pos.y][pos.x] != 0);
+
+	return result;
+}
+
+bool Bingo::IsEdge(Point& pos)
+{
+	if (pos.x < 0) return true;
+	if (pos.x >= 5) return true;
+	if (pos.y < 0) return true;
+	if (pos.y >= 5) return true;
+	return false;
 }
