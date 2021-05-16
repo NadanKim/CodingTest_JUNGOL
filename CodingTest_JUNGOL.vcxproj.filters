@@ -914,6 +914,9 @@
     <ClCompile Include="Beginner_Coder\여러가지\Bingo.cpp">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\여러가지\NumberBaseball.cpp">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2015,6 +2018,9 @@
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\여러가지\Bingo.h">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\여러가지\NumberBaseball.h">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
   </ItemGroup>
