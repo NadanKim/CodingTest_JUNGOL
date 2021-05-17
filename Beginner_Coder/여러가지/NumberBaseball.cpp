@@ -99,14 +99,7 @@ void NumberBaseball::Code()
 			return;
 		}
 
-		if (s + b != 0)
-		{
-			CheckNumber(arr, num, s, b);
-		}
-		else
-		{
-			RemoveNumbers(arr, num);
-		}
+		CheckNumber(arr, num, s, b);
 	}
 
 	std::cout << GetNumberCount(arr);
@@ -160,30 +153,6 @@ void NumberBaseball::CheckNumber(bool arr[10][10][10], int num, int s, int b)
 				}
 
 				if (sCnt != s || bCnt != b)
-				{
-					arr[i][j][k] = false;
-				}
-			}
-		}
-	}
-}
-
-void NumberBaseball::RemoveNumbers(bool arr[10][10][10], int num)
-{
-	int numbers[3] = { num / 100, (num / 10) % 10, num % 10 };
-
-	for (int i = 1; i < 10; i++)
-	{
-		for (int j = 1; j < 10; j++)
-		{
-			for (int k = 1; k < 10; k++)
-			{
-				if (!arr[i][j][k])
-				{
-					continue;
-				}
-
-				if (Exsists(numbers, i) || Exsists(numbers, j) || Exsists(numbers, k))
 				{
 					arr[i][j][k] = false;
 				}
