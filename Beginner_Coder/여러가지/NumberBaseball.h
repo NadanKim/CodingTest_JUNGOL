@@ -7,6 +7,7 @@ class NumberBaseball : public Base
 {
 private:
 	void CheckNumber(bool arr[10][10][10], int num, int s, int b);
+	void RemoveNumbers(bool arr[10][10][10], int num);
 	bool Exsists(int arr[3], int num);
 	int GetNumberCount(bool arr[10][10][10]);
 
