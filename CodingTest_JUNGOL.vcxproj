@@ -186,6 +186,7 @@
     <ClCompile Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\Bingo.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\CardGame.cpp" />
+    <ClCompile Include="Beginner_Coder\여러가지\CollectBalls.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\ColoredPaper1.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\ColoredPaper2.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\EatingTiger.cpp" />
@@ -497,6 +498,7 @@
     <ClInclude Include="Beginner_Coder\수학2\PrimeNumberAndCompositeNumber.h" />
     <ClInclude Include="Beginner_Coder\여러가지\Bingo.h" />
     <ClInclude Include="Beginner_Coder\여러가지\CardGame.h" />
+    <ClInclude Include="Beginner_Coder\여러가지\CollectBalls.h" />
     <ClInclude Include="Beginner_Coder\여러가지\ColoredPaper1.h" />
     <ClInclude Include="Beginner_Coder\여러가지\ColoredPaper2.h" />
     <ClInclude Include="Beginner_Coder\여러가지\EatingTiger.h" />

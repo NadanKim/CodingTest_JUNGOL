@@ -923,6 +923,9 @@
     <ClCompile Include="Beginner_Coder\여러가지\MelonField.cpp">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\여러가지\CollectBalls.cpp">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2033,6 +2036,9 @@
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\여러가지\MelonField.h">
+      <Filter>Beginner_Coder\여러가지</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\여러가지\CollectBalls.h">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
   </ItemGroup>
