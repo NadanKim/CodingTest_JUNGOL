@@ -11,7 +11,8 @@ using std::vector;
 class CollectBalls : public Base
 {
 private:
-	int CountToCollect(vector<char> workingList, char target, int direction);
+	int CountToCollect(vector<char>& workingList, int n, char target, int direction);
+	void Copy(const vector<char>& srcList, vector<char>& dstList, int n);
 
 protected:
 	void Code() override;

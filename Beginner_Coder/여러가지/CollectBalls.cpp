@@ -53,14 +53,16 @@ void CollectBalls::Code()
 
 	std::cin >> n;
 
-	vector<char> originList;
+	vector<char> originList, workingList;
 	originList.reserve(n);
-	
+	workingList.reserve(n);
+
 	char ch;
 	for (int i = 0; i < n; i++)
 	{
 		std::cin >> ch;
 		originList.emplace_back(ch);
+		workingList.emplace_back(ch);
 	}
 	
 	char targetArr[2]{ 'R', 'B' };
@@ -70,11 +72,13 @@ void CollectBalls::Code()
 	{
 		for (int j = -1; j <= 1; j += 2)
 		{
-			int curCount{ CountToCollect(originList, targetArr[i], j) };
+			int curCount{ CountToCollect(workingList, n, targetArr[i], j) };
 			if (curCount < minCount)
 			{
 				minCount = curCount;
 			}
+
+			Copy(originList, workingList, n);
 		}
 	}
 
@@ -83,10 +87,9 @@ void CollectBalls::Code()
 	originList.clear();
 }
 
-int CollectBalls::CountToCollect(vector<char> workingList, char target, int direction)
+int CollectBalls::CountToCollect(vector<char>& workingList, int n,
+	char target, int direction)
 {
-	int n{ static_cast<int>(workingList.size()) };
-
 	int countToCollect{ 0 };
 
 	int addVal{ direction < 0 ? 1 : -1 };
@@ -96,8 +99,8 @@ int CollectBalls::CountToCollect(vector<char> workingList, char target, int dire
 	{
 		// 시작 인덱스는 어차피 끝에 붙어 있으므로 무시
 		// 이동 방향 바로 오른쪽에 다른 색이 붙어있는 것 찾기
-		if (workingList.at(idx) == target && idx != startIdx &&
-			workingList.at(idx + direction) != target)
+		if (workingList[idx] == target && idx != startIdx &&
+			workingList[idx + direction] != target)
 		{
 			// 다른 색 건너 뛰기
 			int targetIdx{ idx + direction };
@@ -108,7 +111,7 @@ int CollectBalls::CountToCollect(vector<char> workingList, char target, int dire
 				{
 					break;
 				}
-				if (workingList.at(tempIdx) == target)
+				if (workingList[tempIdx] == target)
 				{
 					break;
 				}
@@ -122,4 +125,12 @@ int CollectBalls::CountToCollect(vector<char> workingList, char target, int dire
 	}
 
 	return countToCollect;
+}
+
+void CollectBalls::Copy(const vector<char>& srcList, vector<char>& dstList, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		dstList[i] = srcList[i];
+	}
 }
