@@ -53,16 +53,11 @@ void CollectBalls::Code()
 
 	std::cin >> n;
 
-	vector<char> originList, workingList;
-	originList.reserve(n);
-	workingList.reserve(n);
+	char* arr = new char[n];
 
-	char ch;
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> ch;
-		originList.emplace_back(ch);
-		workingList.emplace_back(ch);
+		std::cin >> arr[i];
 	}
 	
 	char targetArr[2]{ 'R', 'B' };
@@ -72,65 +67,49 @@ void CollectBalls::Code()
 	{
 		for (int j = -1; j <= 1; j += 2)
 		{
-			int curCount{ CountToCollect(workingList, n, targetArr[i], j) };
+			int curCount{ CountToCollect(arr, n, targetArr[i], j) };
 			if (curCount < minCount)
 			{
 				minCount = curCount;
 			}
-
-			Copy(originList, workingList, n);
 		}
 	}
 
 	std::cout << minCount;
 
-	originList.clear();
+	delete[] arr;
 }
 
-int CollectBalls::CountToCollect(vector<char>& workingList, int n,
-	char target, int direction)
+int CollectBalls::CountToCollect(const char* arr, int n, char target, int direction)
 {
 	int countToCollect{ 0 };
 
 	int addVal{ direction < 0 ? 1 : -1 };
 	int startIdx{ direction < 0 ? 0 : n - 1 };
-	int idx{ startIdx };
+	int idx{ startIdx + addVal };
+
+	if (idx >= n)
+	{
+		return 0;
+	}
+
 	while (0 <= idx && idx < n)
 	{
-		// 시작 인덱스는 어차피 끝에 붙어 있으므로 무시
-		// 이동 방향 바로 오른쪽에 다른 색이 붙어있는 것 찾기
-		if (workingList[idx] == target && idx != startIdx &&
-			workingList[idx + direction] != target)
+		if (arr[idx] == target && arr[idx + direction] != target)
 		{
-			// 다른 색 건너 뛰기
-			int targetIdx{ idx + direction };
-			while (0 < targetIdx && targetIdx < n - 1)
-			{
-				int tempIdx{ targetIdx + direction };
-				if (tempIdx == 0 || tempIdx == n - 1)
-				{
-					break;
-				}
-				if (workingList[tempIdx] == target)
-				{
-					break;
-				}
-				targetIdx = tempIdx;
-			}
+			break;
+		}
+		idx += addVal;
+	}
 
-			std::swap(workingList[idx], workingList[targetIdx]);
+	while (0 <= idx && idx < n)
+	{
+		if (arr[idx] == target)
+		{
 			countToCollect++;
 		}
 		idx += addVal;
 	}
 
 	return countToCollect;
-}
-
-void CollectBalls::Copy(const vector<char>& srcList, vector<char>& dstList, int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		dstList[i] = srcList[i];
-	}
 }
