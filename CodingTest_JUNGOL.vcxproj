@@ -194,6 +194,7 @@
     <ClCompile Include="Beginner_Coder\여러가지\FiveInARow.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\MelonField.cpp" />
     <ClCompile Include="Beginner_Coder\여러가지\NumberBaseball.cpp" />
+    <ClCompile Include="Beginner_Coder\자료처리\DataProcessStack.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp" />
@@ -506,6 +507,7 @@
     <ClInclude Include="Beginner_Coder\여러가지\FiveInARow.h" />
     <ClInclude Include="Beginner_Coder\여러가지\MelonField.h" />
     <ClInclude Include="Beginner_Coder\여러가지\NumberBaseball.h" />
+    <ClInclude Include="Beginner_Coder\자료처리\DataProcessStack.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h" />

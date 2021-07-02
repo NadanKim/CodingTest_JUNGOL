@@ -926,6 +926,9 @@
     <ClCompile Include="Beginner_Coder\여러가지\CollectBalls.cpp">
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\자료처리\DataProcessStack.cpp">
+      <Filter>Beginner_Coder\자료처리</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1113,6 +1116,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\여러가지">
       <UniqueIdentifier>{ad22669b-0857-4ab9-abf1-2c1eb443cfb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\자료처리">
+      <UniqueIdentifier>{a87c634d-a220-4839-8871-aa545a7d80ec}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2040,6 +2046,9 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\여러가지\CollectBalls.h">
       <Filter>Beginner_Coder\여러가지</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\자료처리\DataProcessStack.h">
+      <Filter>Beginner_Coder\자료처리</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
