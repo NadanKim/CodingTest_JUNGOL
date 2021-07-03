@@ -929,6 +929,9 @@
     <ClCompile Include="Beginner_Coder\자료처리\DataProcessStack.cpp">
       <Filter>Beginner_Coder\자료처리</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\자료처리\DataProcessQueue.cpp">
+      <Filter>Beginner_Coder\자료처리</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2048,6 +2051,9 @@
       <Filter>Beginner_Coder\여러가지</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\자료처리\DataProcessStack.h">
+      <Filter>Beginner_Coder\자료처리</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\자료처리\DataProcessQueue.h">
       <Filter>Beginner_Coder\자료처리</Filter>
     </ClInclude>
   </ItemGroup>
