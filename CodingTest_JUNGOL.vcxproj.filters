@@ -941,6 +941,9 @@
     <ClCompile Include="Beginner_Coder\자료처리\BubbleSort.cpp">
       <Filter>Beginner_Coder\자료처리</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\자료처리\CountInsertionSort.cpp">
+      <Filter>Beginner_Coder\자료처리</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2072,6 +2075,9 @@
       <Filter>Beginner_Coder\자료처리</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\자료처리\BubbleSort.h">
+      <Filter>Beginner_Coder\자료처리</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\자료처리\CountInsertionSort.h">
       <Filter>Beginner_Coder\자료처리</Filter>
     </ClInclude>
   </ItemGroup>
