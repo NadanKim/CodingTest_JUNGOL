@@ -97,7 +97,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 쇠막대기 |
 |:---:|
-| ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%90%EB%A3%8C%EC%B2%98%EB%A6%AC/IronStick.cpp) |
 
 
 * 재귀
