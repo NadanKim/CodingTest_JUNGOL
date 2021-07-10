@@ -199,6 +199,7 @@
     <ClCompile Include="Beginner_Coder\자료처리\DataProcessQueue.cpp" />
     <ClCompile Include="Beginner_Coder\자료처리\DataProcessStack.cpp" />
     <ClCompile Include="Beginner_Coder\자료처리\InsertionSort.cpp" />
+    <ClCompile Include="Beginner_Coder\자료처리\IronStick.cpp" />
     <ClCompile Include="Beginner_Coder\자료처리\PostfixNotation1.cpp" />
     <ClCompile Include="Beginner_Coder\자료처리\SelectionSort.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
@@ -518,6 +519,7 @@
     <ClInclude Include="Beginner_Coder\자료처리\DataProcessQueue.h" />
     <ClInclude Include="Beginner_Coder\자료처리\DataProcessStack.h" />
     <ClInclude Include="Beginner_Coder\자료처리\InsertionSort.h" />
+    <ClInclude Include="Beginner_Coder\자료처리\IronStick.h" />
     <ClInclude Include="Beginner_Coder\자료처리\PostfixNotation1.h" />
     <ClInclude Include="Beginner_Coder\자료처리\SelectionSort.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
