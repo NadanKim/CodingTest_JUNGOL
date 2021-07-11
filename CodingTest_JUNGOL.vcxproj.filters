@@ -950,6 +950,9 @@
     <ClCompile Include="Beginner_Coder\자료처리\IronStick.cpp">
       <Filter>Beginner_Coder\자료처리</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\재귀\Factorial.cpp">
+      <Filter>Beginner_Coder\재귀</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1140,6 +1143,9 @@
     </Filter>
     <Filter Include="Beginner_Coder\자료처리">
       <UniqueIdentifier>{a87c634d-a220-4839-8871-aa545a7d80ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beginner_Coder\재귀">
+      <UniqueIdentifier>{291e8143-1098-4493-b134-7faffad8a497}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2091,6 +2097,9 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\자료처리\IronStick.h">
       <Filter>Beginner_Coder\자료처리</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\재귀\Factorial.h">
+      <Filter>Beginner_Coder\재귀</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
