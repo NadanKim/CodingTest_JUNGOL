@@ -205,6 +205,7 @@
     <ClCompile Include="Beginner_Coder\재귀\Factorial.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\Hanoi1.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\RollDice1.cpp" />
+    <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp" />
@@ -528,6 +529,7 @@
     <ClInclude Include="Beginner_Coder\재귀\Factorial.h" />
     <ClInclude Include="Beginner_Coder\재귀\Hanoi1.h" />
     <ClInclude Include="Beginner_Coder\재귀\RollDice1.h" />
+    <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h" />

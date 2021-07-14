@@ -959,6 +959,9 @@
     <ClCompile Include="Beginner_Coder\재귀\RollDice1.cpp">
       <Filter>Beginner_Coder\재귀</Filter>
     </ClCompile>
+    <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp">
+      <Filter>Beginner_Coder\재귀</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2111,6 +2114,9 @@
       <Filter>Beginner_Coder\재귀</Filter>
     </ClInclude>
     <ClInclude Include="Beginner_Coder\재귀\RollDice1.h">
+      <Filter>Beginner_Coder\재귀</Filter>
+    </ClInclude>
+    <ClInclude Include="Beginner_Coder\재귀\RollDice2.h">
       <Filter>Beginner_Coder\재귀</Filter>
     </ClInclude>
   </ItemGroup>
