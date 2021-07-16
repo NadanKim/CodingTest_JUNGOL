@@ -21,7 +21,7 @@ void FormativeString207::Code()
 
 	int var1{ 0 };
 
-	for (int i = 0; i < str1.size(); i++)
+	for (int i = 0; i < static_cast<int>(str1.size()); i++)
 	{
 		if (std::isdigit(str1[i]))
 		{
@@ -35,7 +35,7 @@ void FormativeString207::Code()
 
 	int var2{ 0 };
 
-	for (int i = 0; i < str2.size(); i++)
+	for (int i = 0; i < static_cast<int>(str2.size()); i++)
 	{
 		if (std::isdigit(str2[i]))
 		{
