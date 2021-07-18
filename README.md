@@ -104,7 +104,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 팩토리얼 | 하노이1 | 주사위 던지기1 | 주사위 던지기2 | 숫자고르기 | 장난감조립 | 로또(Lotto) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/Factorial.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/Hanoi1.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/RollDice1.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/RollDice2.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/ChooseNumbers.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/MakeToy.cpp) | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/Factorial.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/Hanoi1.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/RollDice1.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/RollDice2.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/ChooseNumbers.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/MakeToy.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/Lotto.cpp) |
 
 | 다음 조합(next combination) | 싸이클 |
 |:---:|:---:|
