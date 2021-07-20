@@ -203,6 +203,7 @@
     <ClCompile Include="Beginner_Coder\자료처리\PostfixNotation1.cpp" />
     <ClCompile Include="Beginner_Coder\자료처리\SelectionSort.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\ChooseNumbers.cpp" />
+    <ClCompile Include="Beginner_Coder\재귀\Cycle.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\Factorial.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\Hanoi1.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\Lotto.cpp" />
@@ -531,6 +532,7 @@
     <ClInclude Include="Beginner_Coder\자료처리\PostfixNotation1.h" />
     <ClInclude Include="Beginner_Coder\자료처리\SelectionSort.h" />
     <ClInclude Include="Beginner_Coder\재귀\ChooseNumbers.h" />
+    <ClInclude Include="Beginner_Coder\재귀\Cycle.h" />
     <ClInclude Include="Beginner_Coder\재귀\Factorial.h" />
     <ClInclude Include="Beginner_Coder\재귀\Hanoi1.h" />
     <ClInclude Include="Beginner_Coder\재귀\Lotto.h" />
