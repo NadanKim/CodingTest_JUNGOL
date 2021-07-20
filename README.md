@@ -108,4 +108,4 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 다음 조합(next combination) | 싸이클 |
 |:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/NextCombination.cpp) | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/NextCombination.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Beginner_Coder/%EC%9E%AC%EA%B7%80/Cycle.cpp) |
