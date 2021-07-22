@@ -977,6 +977,9 @@
     <ClCompile Include="Beginner_Coder\재귀\Cycle.cpp">
       <Filter>Beginner_Coder\재귀</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\분할정복\BinarySearch.cpp">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1170,6 +1173,12 @@
     </Filter>
     <Filter Include="Beginner_Coder\재귀">
       <UniqueIdentifier>{291e8143-1098-4493-b134-7faffad8a497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Intermediate_Coder">
+      <UniqueIdentifier>{4985a940-0006-46de-a62a-b655d89b65c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Intermediate_Coder\분할정복">
+      <UniqueIdentifier>{037ee857-917d-401a-bdcc-49606ed6f9ee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2148,6 +2157,9 @@
     </ClInclude>
     <ClInclude Include="Beginner_Coder\재귀\Cycle.h">
       <Filter>Beginner_Coder\재귀</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\분할정복\BinarySearch.h">
+      <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
