@@ -113,21 +113,23 @@ void BinarySearch::Code()
 
 int BinarySearch::DoSearch(int arr[], int beg, int end, int num)
 {
-	if (beg > end)
+	while (beg <= end)
 	{
-		return -1;
-	}
+		int mid{ (end + beg) / 2 };
 
-	int curIdx{ (end + beg) / 2 };
+		if (arr[mid] == num)
+		{
+			return mid;
+		}
 
-	if (arr[curIdx] == num)
-	{
-		return curIdx;
+		if (num < arr[mid])
+		{
+			end = mid - 1;
+		}
+		else
+		{
+			beg = mid + 1;
+		}
 	}
-
-	if (num < arr[curIdx])
-	{
-		return DoSearch(arr, beg, curIdx - 1, num);
-	}
-	return DoSearch(arr, curIdx + 1, end, num);
+	return -1;
 }
