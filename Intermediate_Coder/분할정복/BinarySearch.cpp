@@ -90,22 +90,22 @@
 void BinarySearch::Code()
 {
 	int n;
-	std::cin >> n;
+	(void)scanf("%d", &n);
 
 	int* arr = new int[n];
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> arr[i];
+		(void)scanf("%d", &arr[i]);
 	}
 
 	int m;
-	std::cin >> m;
+	(void)scanf("%d", &m);
 
 	int num;
 	for (int i = 0; i < m; i++)
 	{
-		std::cin >> num;
-		std::cout << DoSearch(arr, 0, n, num) << ' ';
+		(void)scanf("%d", &num);
+		printf("%d ", DoSearch(arr, 0, n - 1, num));
 	}
 
 	delete[] arr;
