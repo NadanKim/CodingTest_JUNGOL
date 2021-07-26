@@ -980,6 +980,9 @@
     <ClCompile Include="Intermediate_Coder\분할정복\BinarySearch.cpp">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\분할정복\SquareRoot.cpp">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2159,6 +2162,9 @@
       <Filter>Beginner_Coder\재귀</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\분할정복\BinarySearch.h">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\분할정복\SquareRoot.h">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
   </ItemGroup>
