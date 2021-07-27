@@ -68,7 +68,7 @@ void VerticalRead::Code()
 	}
 
 	string result;
-	int idx{ 0 };
+	size_t idx{ 0 };
 	bool isDone{ false };
 
 	while (!isDone)

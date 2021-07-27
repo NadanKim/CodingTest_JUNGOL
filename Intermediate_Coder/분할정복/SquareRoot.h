@@ -6,7 +6,7 @@
 class SquareRoot : public Base
 {
 private:
-	long long GetSquareRoot(long long num);
+	unsigned long long GetSquareRoot(unsigned long long num);
 
 protected:
 	void Code() override;

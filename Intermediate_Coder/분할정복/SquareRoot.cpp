@@ -31,17 +31,17 @@
 /// </summary>
 void SquareRoot::Code()
 {
-	int num;
+	unsigned long long num;
 
 	std::cin >> num;
 
 	std::cout << GetSquareRoot(num);
 }
 
-long long SquareRoot::GetSquareRoot(long long num)
+unsigned long long SquareRoot::GetSquareRoot(unsigned long long num)
 {
-	long long x = num;
-	for (int i = 0; i < 20; i++)
+	unsigned long long x{ num };
+	for (int i = 0; i < 100; i++)
 	{
 		x = (x + num / x) / 2;
 	}

@@ -45,7 +45,7 @@ void FormativeFileProcess09::Code()
 	}
 
 	std::cout << str.size() << '\n';
-	for (int i = 0; i < allWords.size(); i++)
+	for (size_t i = 0; i < allWords.size(); i++)
 	{
 		if (allWords[i].size() == longest)
 		{
