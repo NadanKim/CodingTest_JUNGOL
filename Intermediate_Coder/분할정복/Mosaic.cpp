@@ -110,7 +110,7 @@ void Mosaic::Code()
 			prev = num;
 		}
 
-		if (curPaperCnt == paperCnt)
+		if (curPaperCnt <= paperCnt)
 		{
 			std::cout << size;
 			break;
