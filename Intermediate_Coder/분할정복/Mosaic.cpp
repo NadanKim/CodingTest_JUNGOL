@@ -86,16 +86,19 @@ void Mosaic::Code()
 	auto colIt = colSet.end();
 	colIt--;
 	int lastNum{ *colIt };
-
-	for (int size = minSize; ; size++)
+	int maxSize{ lastNum };
+	int result{ lastNum };
+	
+	while (minSize <= maxSize)
 	{
 		int curPaperCnt{ 0 };
+		int midSize{ (minSize + maxSize) / 2 };
 		int beg{ *colSet.begin() }, prev{ beg };
 		for (int num : colSet)
 		{
-			if (num - prev >= size)
+			if (num - prev >= midSize)
 			{
-				curPaperCnt += (prev - beg) / size + 1;
+				curPaperCnt += (prev - beg) / midSize + 1;
 				beg = num;
 
 				if (curPaperCnt > paperCnt)
@@ -105,15 +108,20 @@ void Mosaic::Code()
 			}
 			else if(num == lastNum)
 			{
-				curPaperCnt += (num - beg) / size + 1;
+				curPaperCnt += (num - beg) / midSize + 1;
 			}
 			prev = num;
 		}
 
-		if (curPaperCnt <= paperCnt)
+		if (curPaperCnt > paperCnt)
 		{
-			std::cout << size;
-			break;
+			minSize++;
+		}
+		else
+		{
+			maxSize--;
+			result = midSize;
 		}
 	}
+	std::cout << result;
 }
