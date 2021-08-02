@@ -115,11 +115,11 @@ void Mosaic::Code()
 
 		if (curPaperCnt > paperCnt)
 		{
-			minSize++;
+			minSize = midSize + 1;
 		}
 		else
 		{
-			maxSize--;
+			maxSize = midSize - 1;
 			result = midSize;
 		}
 	}
