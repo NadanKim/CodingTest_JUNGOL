@@ -69,6 +69,11 @@ void Mosaic::Code()
 	int wrongCnt;
 	std::cin >> wrongCnt;
 
+	if (wrongCnt == 0)
+	{
+		std::cout << 0;
+	}
+
 	int minSize{ 1 };
 	set<int> colSet;
 	for (int row, col, i = 0; i < wrongCnt; i++)
@@ -91,26 +96,16 @@ void Mosaic::Code()
 	
 	while (minSize <= maxSize)
 	{
-		int curPaperCnt{ 0 };
+		int curPaperCnt{ 1 };
 		int midSize{ (minSize + maxSize) / 2 };
-		int beg{ *colSet.begin() }, prev{ beg };
+		int prev{ *colSet.begin() };
 		for (int num : colSet)
 		{
-			if (num - prev >= midSize)
+			if (num >= prev + midSize)
 			{
-				curPaperCnt += (prev - beg) / midSize + 1;
-				beg = num;
-
-				if (curPaperCnt > paperCnt)
-				{
-					break;
-				}
+				prev = num;
+				curPaperCnt++;
 			}
-			else if(num == lastNum)
-			{
-				curPaperCnt += (num - beg) / midSize + 1;
-			}
-			prev = num;
 		}
 
 		if (curPaperCnt > paperCnt)
