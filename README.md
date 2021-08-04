@@ -115,7 +115,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | Tutorial : 이진탐색(Binary Search-이진검색) | 제곱근 | 모자이크 | 숫자구슬(easy) |
 |:---:|:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/BinarySearch.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/SquareRoot.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/Mosaic.cpp) | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/BinarySearch.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/SquareRoot.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/Mosaic.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/NumberBeadEasy.cpp) |
 
 | Tutorial : 퀵정렬(QuickSort) | Tutorial : 합병(병합)정렬(MergeSort) | Tutorial : STL Sort1 |
 |:---:|:---:|:---:|
