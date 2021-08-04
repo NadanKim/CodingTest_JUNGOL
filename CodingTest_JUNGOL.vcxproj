@@ -213,6 +213,7 @@
     <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\BinarySearch.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\Mosaic.cpp" />
+    <ClCompile Include="Intermediate_Coder\분할정복\NumberBeadEasy.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\SquareRoot.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
@@ -545,6 +546,7 @@
     <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\BinarySearch.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\Mosaic.h" />
+    <ClInclude Include="Intermediate_Coder\분할정복\NumberBeadEasy.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\SquareRoot.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />

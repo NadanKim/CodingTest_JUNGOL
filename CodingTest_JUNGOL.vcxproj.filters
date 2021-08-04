@@ -986,6 +986,9 @@
     <ClCompile Include="Intermediate_Coder\분할정복\Mosaic.cpp">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\분할정복\NumberBeadEasy.cpp">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2171,6 +2174,9 @@
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\분할정복\Mosaic.h">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\분할정복\NumberBeadEasy.h">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
   </ItemGroup>
