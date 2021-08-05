@@ -46,17 +46,17 @@ void NumberBeadEasy::Code()
 {
 	int n, m;
 
-	std::cin >> n >> m;
+	(void)scanf("%d %d", &n, &m);
 
 	int* arr = new int[n];
 	int* totalArr = new int[m];
 
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> arr[i];
+		(void)scanf("%d", &arr[i]);
 	}
 
-	std::cout << FindMinTotal(arr, n, totalArr, m);
+	printf("%d", FindMinTotal(arr, n, totalArr, m));
 
 	delete[] arr;
 	delete[] totalArr;
@@ -65,8 +65,14 @@ void NumberBeadEasy::Code()
 int NumberBeadEasy::FindMinTotal(int arr[], int n, int totalArr[], int m, 
 	int prev, int depth)
 {
-	if (depth == m)
+	if (depth == m - 1)
 	{
+		totalArr[depth] = 0;
+		for (int j = prev; j < n; j++)
+		{
+			totalArr[depth] += arr[j];
+		}
+
 		int maxTotal{ totalArr[0] };
 		for (int i = 1; i < m; i++)
 		{
@@ -82,19 +88,9 @@ int NumberBeadEasy::FindMinTotal(int arr[], int n, int totalArr[], int m,
 	for (int i = prev; i <= n - m + depth; i++)
 	{
 		totalArr[depth] = 0;
-		if (depth == m - 1)
+		for (int j = prev; j <= i; j++)
 		{
-			for (int j = prev; j < n; j++)
-			{
-				totalArr[depth] += arr[j];
-			}
-		}
-		else
-		{
-			for (int j = prev; j <= i; j++)
-			{
-				totalArr[depth] += arr[j];
-			}
+			totalArr[depth] += arr[j];
 		}
 		
 		int curTotal{ FindMinTotal(arr, n, totalArr, m, i + 1, depth + 1) };
