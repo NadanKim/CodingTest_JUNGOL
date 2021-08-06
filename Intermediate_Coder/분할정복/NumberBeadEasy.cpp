@@ -46,59 +46,107 @@ void NumberBeadEasy::Code()
 {
 	int n, m;
 
-	(void)scanf("%d %d", &n, &m);
+	std::cin >> n >> m;
 
 	int* arr = new int[n];
-	int* totalArr = new int[m];
 
 	for (int i = 0; i < n; i++)
 	{
-		(void)scanf("%d", &arr[i]);
+		std::cin >> arr[i];
 	}
 
-	printf("%d", FindMinTotal(arr, n, totalArr, m));
+	std::cout << FindMinTotal(arr, n, m, GetMaxNum(arr, n), GetTotal(arr, n));
 
 	delete[] arr;
-	delete[] totalArr;
 }
 
-int NumberBeadEasy::FindMinTotal(int arr[], int n, int totalArr[], int m, 
-	int prev, int depth)
+/// <summary>
+/// 주어진 배열의 값을 m개로 나눴을 때 각 그룹의 최댓값을 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="m">분할 개수</param>
+/// <param name="beg">나올 수 있는 합의 최솟값</param>
+/// <param name="end">나올 수 있는 합의 최댓값</param>
+/// <returns></returns>
+int NumberBeadEasy::FindMinTotal(int arr[], int n, int m, int beg, int end)
 {
-	if (depth == m - 1)
+	if (beg > end)
 	{
-		totalArr[depth] = 0;
-		for (int j = prev; j < n; j++)
-		{
-			totalArr[depth] += arr[j];
-		}
-
-		int maxTotal{ totalArr[0] };
-		for (int i = 1; i < m; i++)
-		{
-			if (maxTotal < totalArr[i])
-			{
-				maxTotal = totalArr[i];
-			}
-		}
-		return maxTotal;
-	}
-	
-	int minTotal{ INT_MAX };
-	for (int i = prev; i <= n - m + depth; i++)
-	{
-		totalArr[depth] = 0;
-		for (int j = prev; j <= i; j++)
-		{
-			totalArr[depth] += arr[j];
-		}
-		
-		int curTotal{ FindMinTotal(arr, n, totalArr, m, i + 1, depth + 1) };
-		if (curTotal < minTotal)
-		{
-			minTotal = curTotal;
-		}
+		return beg;
 	}
 
-	return minTotal;
+	int mid{ (beg + end) / 2 };
+	int groupCount{ GetGroupCount(arr, n, mid) };
+
+	if (groupCount <= m)
+	{
+		return FindMinTotal(arr, n, m, beg, mid - 1);
+	}
+	else
+	{
+		return FindMinTotal(arr, n, m, mid + 1, end);
+	}
+}
+
+/// <summary>
+/// 각 그룹의 합이 max를 넘지 않도록 할 때의 그룹의 개수를 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="max">각 그룹의 합의 최댓값</param>
+/// <returns>그룹의 개수</returns>
+int NumberBeadEasy::GetGroupCount(int arr[], int n, int max)
+{
+	int groupCount{ 1 };
+	int curTotal{ 0 };
+	for (int i = 0; i < n; i++)
+	{
+		curTotal += arr[i];
+		if (curTotal > max)
+		{
+			curTotal = arr[i];
+			groupCount++;
+		}
+	}
+	return groupCount;
+}
+
+/// <summary>
+/// 주어진 배열의 최댓값을 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <returns>배열의 최댓값</returns>
+int NumberBeadEasy::GetMaxNum(int arr[], int n)
+{
+	int maxNum{ arr[0] };
+
+	for (int i = 1; i < n; i++)
+	{
+		if (arr[i] > maxNum)
+		{
+			maxNum = arr[i];
+		}
+	}
+
+	return maxNum;
+}
+
+/// <summary>
+/// 주어진 배열의 모든 원소의 합을 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <returns>배열의 원소의 합</returns>
+int NumberBeadEasy::GetTotal(int arr[], int n)
+{
+	int total{ 0 };
+
+	for (int i = 0; i < n; i++)
+	{
+		total += arr[i];
+	}
+
+	return total;
 }
