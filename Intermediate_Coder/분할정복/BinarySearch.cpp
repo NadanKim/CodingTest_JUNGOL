@@ -111,6 +111,14 @@ void BinarySearch::Code()
 	delete[] arr;
 }
 
+/// <summary>
+/// 이진 탐색을 이용하여 주어진 수의 인덱스를 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="beg">배열의 시작 인덱스</param>
+/// <param name="end">배열의 끝 인덱스</param>
+/// <param name="num">찾는 값</param>
+/// <returns>찾는 값의 인덱스, 없는 경우 -1</returns>
 int BinarySearch::DoSearch(int arr[], int beg, int end, int num)
 {
 	while (beg <= end)

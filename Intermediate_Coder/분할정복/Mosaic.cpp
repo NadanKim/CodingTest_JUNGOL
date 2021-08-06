@@ -74,7 +74,7 @@ void Mosaic::Code()
 		std::cout << 0;
 	}
 
-	int minSize{ 1 };
+	int minSize{ 0 };
 	set<int> colSet;
 	for (int row, col, i = 0; i < wrongCnt; i++)
 	{
@@ -87,13 +87,21 @@ void Mosaic::Code()
 			minSize = row;
 		}
 	}
-
-	auto colIt = colSet.end();
-	colIt--;
-	int lastNum{ *colIt };
-	int maxSize{ lastNum };
-	int result{ lastNum };
 	
+	std::cout << FindProperSize(colSet, paperCnt, minSize);
+}
+
+/// <summary>
+/// 잘못된 부분을 잘 수정할 수 있는 적절한 종이 크기를 반환한다.
+/// </summary>
+/// <param name="colSet">틀린 부분의 x축 위치</param>
+/// <param name="paperCnt">사용할 수 있는 종이의 개수</param>
+/// <returns>종이의 크기</returns>
+int Mosaic::FindProperSize(set<int> colSet, int paperCnt, int minSize)
+{
+	int maxSize{ *(--colSet.end()) };
+	int result{ maxSize };
+
 	while (minSize <= maxSize)
 	{
 		int curPaperCnt{ 1 };
@@ -118,5 +126,6 @@ void Mosaic::Code()
 			result = midSize;
 		}
 	}
-	std::cout << result;
+
+	return result;
 }

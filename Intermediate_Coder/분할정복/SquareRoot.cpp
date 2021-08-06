@@ -38,6 +38,11 @@ void SquareRoot::Code()
 	std::cout << GetSquareRoot(num);
 }
 
+/// <summary>
+/// 루트를 구하는 알고리즘을 적용하여 주어진 수의 루트 값을 반환한다.
+/// </summary>
+/// <param name="num">루트 값을 찾을 수</param>
+/// <returns>주어진 수의 루트 값</returns>
 unsigned long long SquareRoot::GetSquareRoot(unsigned long long num)
 {
 	unsigned long long x{ num };
