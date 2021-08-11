@@ -119,7 +119,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | Tutorial : 퀵정렬(QuickSort) | Tutorial : 합병(병합)정렬(MergeSort) | Tutorial : STL Sort1 |
 |:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/QuickSort.cpp) | ◇ | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/STLSort1.cpp) |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/QuickSort.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/MergeSort.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/STLSort1.cpp) |
 
 | Tutorial : STL Sort2 | Tutorial : Operator Overloading(연산자 오버로딩) | Tutorial : STL Sort3 |
 |:---:|:---:|:---:|
