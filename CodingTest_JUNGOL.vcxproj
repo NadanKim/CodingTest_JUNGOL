@@ -218,6 +218,7 @@
     <ClCompile Include="Intermediate_Coder\분할정복\QuickSort.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\SquareRoot.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\STLSort1.cpp" />
+    <ClCompile Include="Intermediate_Coder\분할정복\STLSort2.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp" />
@@ -554,6 +555,7 @@
     <ClInclude Include="Intermediate_Coder\분할정복\QuickSort.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\SquareRoot.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\STLSort1.h" />
+    <ClInclude Include="Intermediate_Coder\분할정복\STLSort2.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h" />
