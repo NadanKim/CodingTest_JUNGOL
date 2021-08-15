@@ -1001,6 +1001,9 @@
     <ClCompile Include="Intermediate_Coder\분할정복\STLSort2.cpp">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\분할정복\OperatorOverloading.cpp">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2201,6 +2204,9 @@
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\분할정복\STLSort2.h">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\분할정복\OperatorOverloading.h">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
   </ItemGroup>
