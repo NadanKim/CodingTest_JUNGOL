@@ -123,7 +123,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | Tutorial : STL Sort2 | Tutorial : Operator Overloading(연산자 오버로딩) | Tutorial : STL Sort3 |
 |:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/STLSort2.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/OperatorOverloading.cpp) | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/STLSort2.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/OperatorOverloading.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5/STLSort3.cpp) |
 
 | Tutorial : STL Sort4(심화) | 색종이 만들기(영역구분) | 색종이 만들기2(4진트리) | 제곱수 출력 |
 |:---:|:---:|:---:|:---:|
