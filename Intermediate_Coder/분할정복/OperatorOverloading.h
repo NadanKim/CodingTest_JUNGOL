@@ -5,7 +5,7 @@
 
 class OperatorOverloading : public Base
 {
-public:
+private:
 	struct Rectangle
 	{
 		int width;
