@@ -1,11 +1,11 @@
 ﻿// 문제 클래스 바꾸는 법
 // 1. 원하는 문제 클래스의 헤더를 불러온다.
 // 2. codeBase에 문제 클래스를 생성한다.
-#include "Intermediate_Coder/분할정복/STLSort3.h"
+#include "Intermediate_Coder/분할정복/STLSort4.h"
 
 int main()
 {
-    Base* codeBase = new STLSort3();
+    Base* codeBase = new STLSort4();
     codeBase->Code();
 
     delete codeBase;
