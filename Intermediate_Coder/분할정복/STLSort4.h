@@ -1,5 +1,7 @@
 #pragma once
-#include <iostream>
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <cstdio>
 #include <algorithm>
 #include <string>
 
@@ -12,18 +14,9 @@ class STLSort4 : public Base
 private:
 	struct Student
 	{
-		static int ID;
-
 		int id;
 		string name;
 		int preference;
-
-		friend std::istream& operator >>(std::istream& is, Student& student)
-		{
-			is >> student.name >> student.preference;
-			student.id = ID++;
-			return is;
-		}
 	};
 
 	static bool Compare(const Student& s1, const Student& s2)

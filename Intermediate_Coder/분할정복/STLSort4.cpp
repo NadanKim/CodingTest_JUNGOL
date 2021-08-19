@@ -191,12 +191,15 @@
 void STLSort4::Code()
 {
 	int n, q;
-	std::cin >> n >> q;
+	(void)scanf("%d %d", &n, &q);
 
+	int id{ 1 };
 	Student* arr = new Student[n];
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> arr[i];
+		arr[i].name = string(100, '\0');
+		(void)scanf("%s %d", &arr[i].name[0], &arr[i].preference);
+		arr[i].id = id++;
 	}
 
 	Sort(arr, n);
@@ -204,14 +207,12 @@ void STLSort4::Code()
 	int num;
 	for (int i = 0; i < q; i++)
 	{
-		std::cin >> num;
-		std::cout << arr[num - 1].id << ' ';
+		(void)scanf("%d", &num);
+		printf("%d ", arr[num - 1].id);
 	}
 
 	delete[] arr;
 }
-
-int STLSort4::Student::ID = 1;
 
 /// <summary>
 /// 주어진 학생 배열을 정렬한다.
