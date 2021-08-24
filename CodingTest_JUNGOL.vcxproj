@@ -213,6 +213,7 @@
     <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\BinarySearch.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\MakeColoredPaper.cpp" />
+    <ClCompile Include="Intermediate_Coder\분할정복\MakeColoredPaper2.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\MergeSort.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\Mosaic.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\NumberBeadEasy.cpp" />
@@ -554,6 +555,7 @@
     <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\BinarySearch.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\MakeColoredPaper.h" />
+    <ClInclude Include="Intermediate_Coder\분할정복\MakeColoredPaper2.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\MergeSort.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\Mosaic.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\NumberBeadEasy.h" />
