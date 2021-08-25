@@ -218,6 +218,7 @@
     <ClCompile Include="Intermediate_Coder\분할정복\Mosaic.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\NumberBeadEasy.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\OperatorOverloading.cpp" />
+    <ClCompile Include="Intermediate_Coder\분할정복\PrintSquare.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\QuickSort.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\SquareRoot.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\STLSort1.cpp" />
@@ -560,6 +561,7 @@
     <ClInclude Include="Intermediate_Coder\분할정복\Mosaic.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\NumberBeadEasy.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\OperatorOverloading.h" />
+    <ClInclude Include="Intermediate_Coder\분할정복\PrintSquare.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\QuickSort.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\SquareRoot.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\STLSort1.h" />

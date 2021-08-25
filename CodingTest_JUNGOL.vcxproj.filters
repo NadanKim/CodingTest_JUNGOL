@@ -1016,6 +1016,9 @@
     <ClCompile Include="Intermediate_Coder\분할정복\MakeColoredPaper2.cpp">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\분할정복\PrintSquare.cpp">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2231,6 +2234,9 @@
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\분할정복\MakeColoredPaper2.h">
+      <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\분할정복\PrintSquare.h">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
   </ItemGroup>
