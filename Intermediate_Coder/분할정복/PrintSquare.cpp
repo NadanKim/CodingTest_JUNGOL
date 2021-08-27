@@ -23,7 +23,7 @@
 /// </summary>
 void PrintSquare::Code()
 {
-	int x, y;
+	long long x, y;
 	std::cin >> x >> y;
 
 	std::cout << PrintSquareModuler(x, y);
@@ -35,13 +35,15 @@ void PrintSquare::Code()
 /// <param name="x">곱할 값</param>
 /// <param name="pow">곱해지는 횟수</param>
 /// <returns>제곱수를 20091024로 나눈 나머지</returns>
-long long PrintSquare::PrintSquareModuler(long long x, long long pow)
+long long PrintSquare::PrintSquareModuler(long long x, long long pow, long long result)
 {
+	const static int MODULATION{ 20091024 };
+
 	if (pow == 0)
 	{
-		return 1;
+		return result;
 	}
 
-	long long modNum{ x % 20091024 };
-	return modNum * PrintSquareModuler(x, pow - 1);
+	int modNum{ x % MODULATION };
+	return PrintSquareModuler(x, pow - 1, (result * modNum) % MODULATION);
 }
