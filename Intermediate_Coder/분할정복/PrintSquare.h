@@ -6,7 +6,7 @@
 class PrintSquare : public Base
 {
 private:
-	long long PrintSquareModuler(long long x, long long pow, long long result = 1);
+	long long PrintSquareModuler(long long x, long long pow);
 
 protected:
 	void Code() override;

@@ -35,14 +35,17 @@ void PrintSquare::Code()
 /// <param name="x">곱할 값</param>
 /// <param name="pow">곱해지는 횟수</param>
 /// <returns>제곱수를 20091024로 나눈 나머지</returns>
-long long PrintSquare::PrintSquareModuler(long long x, long long pow, long long result)
+long long PrintSquare::PrintSquareModuler(long long x, long long pow)
 {
 	const static int MODULATION{ 20091024 };
 
 	int modNum{ x % MODULATION };
+
+	long long result{ 1 };
 	while (pow-- > 0)
 	{
 		result = (result * modNum) % MODULATION;
 	}
+
 	return result;
 }
