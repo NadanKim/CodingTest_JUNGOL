@@ -39,11 +39,10 @@ long long PrintSquare::PrintSquareModuler(long long x, long long pow, long long 
 {
 	const static int MODULATION{ 20091024 };
 
-	if (pow == 0)
-	{
-		return result;
-	}
-
 	int modNum{ x % MODULATION };
-	return PrintSquareModuler(x, pow - 1, (result * modNum) % MODULATION);
+	while (pow-- > 0)
+	{
+		result = (result * modNum) % MODULATION;
+	}
+	return result;
 }
