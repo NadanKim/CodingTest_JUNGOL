@@ -1019,6 +1019,9 @@
     <ClCompile Include="Intermediate_Coder\분할정복\PrintSquare.cpp">
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\자료구조\BadHairDay.cpp">
+      <Filter>Intermediate_Coder\자료구조</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1218,6 +1221,9 @@
     </Filter>
     <Filter Include="Intermediate_Coder\분할정복">
       <UniqueIdentifier>{037ee857-917d-401a-bdcc-49606ed6f9ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Intermediate_Coder\자료구조">
+      <UniqueIdentifier>{ebbd697c-3577-436e-8c18-f4836a576586}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2238,6 +2244,9 @@
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\분할정복\PrintSquare.h">
       <Filter>Intermediate_Coder\분할정복</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\자료구조\BadHairDay.h">
+      <Filter>Intermediate_Coder\자료구조</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

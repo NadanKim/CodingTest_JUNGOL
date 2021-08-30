@@ -47,71 +47,27 @@ void BadHairDay::Code()
 	int n;
 	std::cin >> n;
 
-	Cow* arr = new Cow[n];
+	int height;
+	CowStack cowStack;
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> arr[i];
-		for (int j = i - 1; j >= 0; j--)
-		{
-			if (arr[i] < arr[j])
-			{
-				arr[j]++;
-			}
-			else
-			{
-				arr[j].MakeItBlind();
-			}
-		}
+		std::cin >> height;
+		cowStack.AddData(height);
 	}
 
-	std::cout << GetTotalCount(arr, n);
+	std::cout << cowStack.count;
 }
 
 /// <summary>
-/// 더 이상 앞의 Cow를 볼 수 없도록 만들기
+/// 입력된 키를 이용하여 기존 소들이 볼 수 있는 숫자를 파악한다.
 /// </summary>
-void BadHairDay::Cow::MakeItBlind()
+/// <param name="height">새로운 소의 키</param>
+void BadHairDay::CowStack::AddData(int height)
 {
-	isBlind = true;
-}
-
-/// <summary>
-/// Cow 의 후위 증가 연산, count 증가 처리
-/// </summary>
-/// <returns>증가한 값을 가진 Cow</returns>
-BadHairDay::Cow BadHairDay::Cow::operator++(int)
-{
-	Cow temp{ *this };
-
-	if (!isBlind)
+	while (!heightStack.empty() && heightStack.top() < height)
 	{
-		count++;
+		heightStack.pop();
 	}
-	return temp;
-}
-
-/// <summary>
-/// Cow 의 비교 연산, height로 비교 처리
-/// </summary>
-/// <param name="other">비교를 위한 다른 Cow</param>
-/// <returns>비교 결과</returns>
-bool BadHairDay::Cow::operator<(const BadHairDay::Cow& other)
-{
-	return height < other.height;
-}
-
-/// <summary>
-/// 각 Cow가 볼수 있는 머리 모양의 총 합을 반환한다.
-/// </summary>
-/// <param name="arr">Cow의 배열</param>
-/// <param name="n">배열의 길이</param>
-/// <returns></returns>
-int BadHairDay::GetTotalCount(Cow* arr, int n)
-{
-	int total{ 0 };
-	for (int i = 0; i < n; i++)
-	{
-		total += arr[i].count;
-	}
-	return total;
+	count += static_cast<int>(heightStack.size());
+	heightStack.push(height);
 }

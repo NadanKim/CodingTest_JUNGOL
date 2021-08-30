@@ -1,31 +1,23 @@
 #pragma once
 #include <iostream>
+#include <stack>
 
 #include "../../Base.h"
+
+using std::stack;
 
 class BadHairDay : public Base
 {
 private:
-	struct Cow
+	struct CowStack
 	{
-		Cow() : height(0), count(0), isBlind(false) {}
+		CowStack() : count{ 0 } {}
 
-		int height;
+		stack<int> heightStack;
 		int count;
-		bool isBlind;
 
-		void MakeItBlind();
-
-		Cow operator++(int);
-		bool operator<(const Cow& other);
-		friend std::istream& operator>>(std::istream& is, Cow& cow)
-		{
-			is >> cow.height;
-			return is;
-		}
+		void AddData(int height);
 	};
-
-	int GetTotalCount(Cow* arr, int n);
 
 protected:
 	void Code() override;
