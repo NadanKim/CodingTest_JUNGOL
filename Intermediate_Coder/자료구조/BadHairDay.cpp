@@ -64,10 +64,10 @@ void BadHairDay::Code()
 /// <param name="height">새로운 소의 키</param>
 void BadHairDay::CowStack::AddData(int height)
 {
-	while (!heightStack.empty() && heightStack.top() < height)
+	while (!heightStack.empty() && heightStack.top() <= height)
 	{
 		heightStack.pop();
 	}
-	count += static_cast<int>(heightStack.size());
+	count += heightStack.size();
 	heightStack.push(height);
 }

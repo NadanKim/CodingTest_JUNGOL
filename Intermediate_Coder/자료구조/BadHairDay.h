@@ -14,7 +14,7 @@ private:
 		CowStack() : count{ 0 } {}
 
 		stack<int> heightStack;
-		int count;
+		size_t count;
 
 		void AddData(int height);
 	};
