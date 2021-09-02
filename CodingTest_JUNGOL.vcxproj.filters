@@ -1022,6 +1022,9 @@
     <ClCompile Include="Intermediate_Coder\자료구조\BadHairDay.cpp">
       <Filter>Intermediate_Coder\자료구조</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\자료구조\Building.cpp">
+      <Filter>Intermediate_Coder\자료구조</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2246,6 +2249,9 @@
       <Filter>Intermediate_Coder\분할정복</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\자료구조\BadHairDay.h">
+      <Filter>Intermediate_Coder\자료구조</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\자료구조\Building.h">
       <Filter>Intermediate_Coder\자료구조</Filter>
     </ClInclude>
   </ItemGroup>
