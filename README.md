@@ -133,7 +133,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 불쾌한 날(Bad Hair Day) | 빌딩 | 탑 | 히스토그램 | 색종이(고) |
 |:---:|:---:|:---:|:---:|:---:|
-| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/BadHairDay.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Building.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Tower.cpp) | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/BadHairDay.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Building.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Tower.cpp) | [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Histogram.cpp) | ◇ |
 
 * 백트래킹-DFS
 
