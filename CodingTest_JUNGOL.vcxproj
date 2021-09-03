@@ -227,6 +227,7 @@
     <ClCompile Include="Intermediate_Coder\분할정복\STLSort4.cpp" />
     <ClCompile Include="Intermediate_Coder\자료구조\BadHairDay.cpp" />
     <ClCompile Include="Intermediate_Coder\자료구조\Building.cpp" />
+    <ClCompile Include="Intermediate_Coder\자료구조\Tower.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct01.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct02.cpp" />
     <ClCompile Include="Language_Coder\구조체\자가진단\BasicStruct03.cpp" />
@@ -572,6 +573,7 @@
     <ClInclude Include="Intermediate_Coder\분할정복\STLSort4.h" />
     <ClInclude Include="Intermediate_Coder\자료구조\BadHairDay.h" />
     <ClInclude Include="Intermediate_Coder\자료구조\Building.h" />
+    <ClInclude Include="Intermediate_Coder\자료구조\Tower.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct01.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct02.h" />
     <ClInclude Include="Language_Coder\구조체\자가진단\BasicStruct03.h" />
