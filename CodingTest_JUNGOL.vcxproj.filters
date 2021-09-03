@@ -1028,6 +1028,9 @@
     <ClCompile Include="Intermediate_Coder\자료구조\Tower.cpp">
       <Filter>Intermediate_Coder\자료구조</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\자료구조\Histogram.cpp">
+      <Filter>Intermediate_Coder\자료구조</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2258,6 +2261,9 @@
       <Filter>Intermediate_Coder\자료구조</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\자료구조\Tower.h">
+      <Filter>Intermediate_Coder\자료구조</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\자료구조\Histogram.h">
       <Filter>Intermediate_Coder\자료구조</Filter>
     </ClInclude>
   </ItemGroup>
