@@ -29,65 +29,92 @@ void Histogram::Code()
 	int n;
 	std::cin >> n;
 
-	long long maxArea{ 0 };
-	map<int, int> accCount;
-	int prevHeight{ 0 }, curHeight;
+	int* arr = new int[n];
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> curHeight;
+		std::cin >> arr[i];
+	}
 
-		// 기존 높이보다 작은 경우
-		if (curHeight < prevHeight)
+	std::cout << GetHistogramMaxArea(arr, n);
+
+	delete[] arr;
+}
+
+/// <summary>
+/// 히스토그램으로 만들 수 있는 사각형 최대 면적을 반환환다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <returns>최대 넓이</returns>
+long long Histogram::GetHistogramMaxArea(int arr[], int n)
+{
+	long long maxArea{ 0 };
+	stack<int> idxStack;
+
+	for (int i = 0; i < n; i++)
+	{
+		while (!idxStack.empty())
 		{
-			// 더 이상 진행 불가능한 높은 높이들은 정산한다.
-			for (int j = curHeight + 1; j < prevHeight; j++)
+			int idx{ idxStack.top() };
+			if (arr[idx] < arr[i])
 			{
-				long long area{ accCount.at(j) * j };
+				idxStack.push(i);
+				break;
+			}
+			else if (arr[i] < arr[idx])
+			{
+				int leftIdx{ GetLeftIdx(arr, n, idx) };
+				int area{ (i - leftIdx) * arr[idx] };
 				if (area > maxArea)
 				{
 					maxArea = area;
 				}
-				accCount.at(j) = 0;
+				idxStack.pop();
 			}
-
-			// 나머지 낮은 높이는 계속 누적한다.
-			for (int j = 1; j <= curHeight; j++)
+			else
 			{
-				if (accCount.find(j) == accCount.end())
-				{
-					accCount[j] = 0;
-				}
-
-				accCount[j]++;
+				break;
 			}
 		}
-		// 새로 들어온 높이가 이전과 같거나 더 높은 경우
-		else
+
+		if (idxStack.empty())
 		{
-			// 높이를 누적한다.
-			for (int j = 1; j <= curHeight; j++)
-			{
-				if (accCount.find(j) == accCount.end())
-				{
-					accCount[j] = 0;
-				}
-
-				accCount[j]++;
-			}
+			idxStack.push(i);
 		}
-
-		prevHeight = curHeight;
 	}
 
-	// 최종 결과를 누적하여 결과를 파악한다.
-	for (auto ic = accCount.begin(); ic != accCount.end(); ic++)
+	while (!idxStack.empty())
 	{
-		long long area{ (*ic).first * (*ic).second };
+		int idx{ idxStack.top() };
+		int leftIdx{ GetLeftIdx(arr, n, idx) };
+		int area{ (n - leftIdx) * arr[idx] };
 		if (area > maxArea)
 		{
 			maxArea = area;
 		}
+		idxStack.pop();
 	}
 
-	std::cout << maxArea;
+	return maxArea;
+}
+
+/// <summary>
+/// 주어진 인덱스 기준 왼쪽으로 같거나 큰 높이를 가진 최초의 인덱스를 찾아 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="idx">기준 인덱스</param>
+/// <returns>높이가 같은 최소 인덱스</returns>
+int Histogram::GetLeftIdx(int arr[], int n, int idx)
+{
+	int left{ idx };
+	while(left >= 0)
+	{
+		if (arr[left] < arr[idx])
+		{
+			break;
+		}
+		left--;
+	}
+	return left + 1;
 }
