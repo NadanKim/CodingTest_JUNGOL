@@ -30,35 +30,62 @@ void Histogram::Code()
 	std::cin >> n;
 
 	long long maxArea{ 0 };
-	int height{ 0 }, count{ 0 };
-
-	int curHeight;
+	map<int, int> accCount;
+	int prevHeight{ 0 }, curHeight;
 	for (int i = 0; i < n; i++)
 	{
 		std::cin >> curHeight;
-		
-		int small{ height < curHeight ? height : curHeight };
-		int sumArea{ small * (count + 1) };
 
-		if (sumArea < curHeight)
+		// 기존 높이보다 작은 경우
+		if (curHeight < prevHeight)
 		{
-			// 기존에 더해오던 값보다 새로 들어온 값의 넓이가 더 큰 경우 교체한다.
-			count = 1;
-			height = curHeight;
-			if (curHeight > maxArea)
+			// 더 이상 진행 불가능한 높은 높이들은 정산한다.
+			for (int j = curHeight + 1; j < prevHeight; j++)
 			{
-				maxArea = curHeight;
+				long long area{ accCount.at(j) * j };
+				if (area > maxArea)
+				{
+					maxArea = area;
+				}
+				accCount.at(j) = 0;
+			}
+
+			// 나머지 낮은 높이는 계속 누적한다.
+			for (int j = 1; j <= curHeight; j++)
+			{
+				if (accCount.find(j) == accCount.end())
+				{
+					accCount[j] = 0;
+				}
+
+				accCount[j]++;
 			}
 		}
+		// 새로 들어온 높이가 이전과 같거나 더 높은 경우
 		else
 		{
-			// 기존 값을 누적하는 게 더 크다면 이 값을 사용한다.
-			count += 1;
-			height = small;
-			if (sumArea > maxArea)
+			// 높이를 누적한다.
+			for (int j = 1; j <= curHeight; j++)
 			{
-				maxArea = sumArea;
+				if (accCount.find(j) == accCount.end())
+				{
+					accCount[j] = 0;
+				}
+
+				accCount[j]++;
 			}
+		}
+
+		prevHeight = curHeight;
+	}
+
+	// 최종 결과를 누적하여 결과를 파악한다.
+	for (auto ic = accCount.begin(); ic != accCount.end(); ic++)
+	{
+		long long area{ (*ic).first * (*ic).second };
+		if (area > maxArea)
+		{
+			maxArea = area;
 		}
 	}
 
