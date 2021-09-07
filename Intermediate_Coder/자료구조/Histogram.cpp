@@ -51,29 +51,25 @@ long long Histogram::GetHistogramMaxArea(int arr[], int n)
 	long long maxArea{ 0 };
 	stack<int> idxStack;
 
-	for (int i = 0; i < n; i++)
+	for (long long i = 0; i < n; i++)
 	{
 		while (!idxStack.empty())
 		{
 			int idx{ idxStack.top() };
-			if (arr[idx] < arr[i])
+			if (arr[idx] <= arr[i])
 			{
 				idxStack.push(i);
 				break;
 			}
-			else if (arr[i] < arr[idx])
+			else
 			{
-				int leftIdx{ GetLeftIdx(arr, n, idx) };
-				int area{ (i - leftIdx) * arr[idx] };
+				long long leftIdx{ GetLeftIdx(arr, n, idx) };
+				long long area{ (i - leftIdx) * arr[idx] };
 				if (area > maxArea)
 				{
 					maxArea = area;
 				}
 				idxStack.pop();
-			}
-			else
-			{
-				break;
 			}
 		}
 
@@ -86,8 +82,8 @@ long long Histogram::GetHistogramMaxArea(int arr[], int n)
 	while (!idxStack.empty())
 	{
 		int idx{ idxStack.top() };
-		int leftIdx{ GetLeftIdx(arr, n, idx) };
-		int area{ (n - leftIdx) * arr[idx] };
+		long long leftIdx{ GetLeftIdx(arr, n, idx) };
+		long long area{ (n - leftIdx) * arr[idx] };
 		if (area > maxArea)
 		{
 			maxArea = area;
