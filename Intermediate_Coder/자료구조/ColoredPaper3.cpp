@@ -38,27 +38,42 @@
 /// </summary>
 void ColoredPaper3::Code()
 {
-	bool** arr = new bool*[101];
-	for (int i = 0; i < 101; i++)
+	bool** arr = new bool*[100];
+	for (int i = 0; i < 100; i++)
 	{
-		arr[i] = new bool[101];
-		std::fill_n(arr[i], 101, false);
+		arr[i] = new bool[100];
+		std::fill_n(arr[i], 100, false);
 	}
 
 	int n;
 	std::cin >> n;
 
-	Point* pointArr = new Point[n];
+	stack<Point> pointStack;
 	for (int i = 0; i < n; i++)
 	{
-		std::cin >> pointArr[i].x >> pointArr[i].y;
-		FillArr(arr, pointArr[i].x, pointArr[i].y);
+		Point p;
+		std::cin >> p.x >> p.y;
+		pointStack.push(p);
+
+		FillArr(arr, p);
+	}
+
+	for (int i = 0; i < 100; i++)
+	{
+		for (int j = 0; j < 100; j++)
+		{
+			if (arr[i][j])
+				std::cout << "■";
+			else
+				std::cout << "□";
+		}
+		std::cout << '\n';
 	}
 
 	int maxArea{ 100 };
-	for (int i = 0; i < n; i++)
+	while(!pointStack.empty())
 	{
-		int area{ CheckArea(arr, pointArr[i].x, pointArr[i].y) };
+		int area{ CheckArea(arr, pointStack) };
 		if (area > maxArea)
 		{
 			maxArea = area;
@@ -67,9 +82,7 @@ void ColoredPaper3::Code()
 
 	std::cout << maxArea;
 
-	delete[] pointArr;
-
-	for (int i = 0; i < 101; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		delete[] arr[i];
 	}
@@ -82,11 +95,11 @@ void ColoredPaper3::Code()
 /// <param name="arr">배열</param>
 /// <param name="x">x 시작 인덱스</param>
 /// <param name="y">y 시작 인덱스</param>
-void ColoredPaper3::FillArr(bool** arr, int x, int y)
+void ColoredPaper3::FillArr(bool** arr, Point p)
 {
-	for (int i = y; i < y + 10; i++)
+	for (int i = p.y; i < p.y + 10; i++)
 	{
-		for (int j = x; j < x + 10; j++)
+		for (int j = p.x; j < p.x + 10; j++)
 		{
 			arr[i][j] = true;
 		}
@@ -100,38 +113,32 @@ void ColoredPaper3::FillArr(bool** arr, int x, int y)
 /// <param name="x">x 시작 인덱스</param>
 /// <param name="y">y 시작 인덱스</param>
 /// <returns>넓이</returns>
-int ColoredPaper3::CheckArea(bool** arr, int x, int y)
+int ColoredPaper3::CheckArea(bool** arr, stack<Point>& pointStack)
 {
-	int width{ GetCurLineWidth(arr, x, y) };
+	Point p{ pointStack.top() };
+	pointStack.pop();
+
+	int x{ p.x }, y{ p.y };
+	int width{ p.width > 0 ? p.width : GetCurLineWidth(arr, x, y) };
 	int count{ 0 };
-	int area{ 100 };
 
-	for (int i = y; ; i++)
+	int area{ 0 };
+	for (int i = y; i < 100; i++)
 	{
-		if (!arr[i][x])
-		{
-			int curArea{ width * count };
-			if (curArea > area)
-			{
-				area = curArea;
-			}
-			break;
-		}
-
 		int curWidth{ GetCurLineWidth(arr, x, i) };
+
 		if (curWidth >= width)
 		{
 			count++;
+			area = width * count;
 		}
 		else
 		{
-			int curArea{ width * count };
-			if (curArea > area)
+			if (curWidth > 0)
 			{
-				area = curArea;
+				pointStack.push(Point(x, y, curWidth));
 			}
-			width = curWidth;
-			count++;
+			break;
 		}
 	}
 
@@ -148,7 +155,7 @@ int ColoredPaper3::CheckArea(bool** arr, int x, int y)
 int ColoredPaper3::GetCurLineWidth(bool** arr, int x, int y)
 {
 	int width{ 0 };
-	for (int i = x; ; i++)
+	for (int i = x; i < 100; i++)
 	{
 		if (!arr[y][i])
 		{
