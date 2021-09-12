@@ -11,12 +11,13 @@ class ColoredPaper3 : public Base
 private:
 	struct Point
 	{
-		Point(int x, int y, int width) : x(x), y(y), width(width) {}
-		Point() : x(0), y(0), width(0) {}
+		Point(int x, int y, int width) : x(x), y(y), width(width), isBasePoint(false) {}
+		Point() : x(0), y(0), width(0), isBasePoint(false) {}
 
 		int x;
 		int y;
 		int width;
+		bool isBasePoint;
 	};
 
 	void FillArr(bool** arr, Point p);

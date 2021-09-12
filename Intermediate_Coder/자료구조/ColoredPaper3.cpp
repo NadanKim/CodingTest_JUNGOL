@@ -53,21 +53,10 @@ void ColoredPaper3::Code()
 	{
 		Point p;
 		std::cin >> p.x >> p.y;
+		p.isBasePoint = true;
 		pointStack.push(p);
 
 		FillArr(arr, p);
-	}
-
-	for (int i = 0; i < 100; i++)
-	{
-		for (int j = 0; j < 100; j++)
-		{
-			if (arr[i][j])
-				std::cout << "■";
-			else
-				std::cout << "□";
-		}
-		std::cout << '\n';
 	}
 
 	int maxArea{ 100 };
@@ -121,6 +110,7 @@ int ColoredPaper3::CheckArea(bool** arr, stack<Point>& pointStack)
 	int x{ p.x }, y{ p.y };
 	int width{ p.width > 0 ? p.width : GetCurLineWidth(arr, x, y) };
 	int count{ 0 };
+	int lastAddedWidth{ 0 };
 
 	int area{ 0 };
 	for (int i = y; i < 100; i++)
@@ -131,10 +121,16 @@ int ColoredPaper3::CheckArea(bool** arr, stack<Point>& pointStack)
 		{
 			count++;
 			area = width * count;
+
+			if (p.isBasePoint && lastAddedWidth != curWidth)
+			{
+				pointStack.push(Point(x, i, curWidth));
+				lastAddedWidth = curWidth;
+			}
 		}
 		else
 		{
-			if (curWidth > 0)
+			if (p.isBasePoint && curWidth > 0)
 			{
 				pointStack.push(Point(x, y, curWidth));
 			}
