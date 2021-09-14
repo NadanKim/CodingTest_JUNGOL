@@ -53,16 +53,17 @@ void ColoredPaper3::Code()
 	{
 		Point p;
 		std::cin >> p.x >> p.y;
-		p.isBasePoint = true;
 		pointStack.push(p);
 
 		FillArr(arr, p);
 	}
 
+	vector<Point> pointVector;
+
 	int maxArea{ 100 };
 	while(!pointStack.empty())
 	{
-		int area{ CheckArea(arr, pointStack) };
+		int area{ CheckArea(arr, pointStack, pointVector) };
 		if (area > maxArea)
 		{
 			maxArea = area;
@@ -102,10 +103,13 @@ void ColoredPaper3::FillArr(bool** arr, Point p)
 /// <param name="x">x 시작 인덱스</param>
 /// <param name="y">y 시작 인덱스</param>
 /// <returns>넓이</returns>
-int ColoredPaper3::CheckArea(bool** arr, stack<Point>& pointStack)
+int ColoredPaper3::CheckArea(bool** arr, stack<Point>& pointStack,
+	vector<Point>& pointVector)
 {
 	Point p{ pointStack.top() };
 	pointStack.pop();
+
+	pointVector.push_back(Point(p.x, p.y, p.width));
 
 	int x{ p.x }, y{ p.y };
 	int width{ p.width > 0 ? p.width : GetCurLineWidth(arr, x, y) };
@@ -115,24 +119,44 @@ int ColoredPaper3::CheckArea(bool** arr, stack<Point>& pointStack)
 	int area{ 0 };
 	for (int i = y; i < 100; i++)
 	{
-		int curWidth{ GetCurLineWidth(arr, x, i) };
-
-		if (curWidth >= width)
+		if (arr[i][x])
 		{
-			count++;
-			area = width * count;
+			int curWidth{ GetCurLineWidth(arr, x, i) };
 
-			if (p.isBasePoint && lastAddedWidth != curWidth)
+			if (curWidth >= width)
 			{
-				pointStack.push(Point(x, i, curWidth));
-				lastAddedWidth = curWidth;
+				count++;
+				area = width * count;
+
+				if (lastAddedWidth != curWidth
+					&& !IsDuplicated(pointVector, x, y, curWidth))
+				{
+					pointStack.push(Point(x, i, curWidth));
+					lastAddedWidth = curWidth;
+				}
+			}
+			else
+			{
+				if (curWidth > 0 && !IsDuplicated(pointVector, x, y, curWidth))
+				{
+					pointStack.push(Point(x, y, curWidth));
+				}
+				break;
 			}
 		}
 		else
 		{
-			if (p.isBasePoint && curWidth > 0)
+			for (int j = x; j < x + 10; j++)
 			{
-				pointStack.push(Point(x, y, curWidth));
+				if (arr[i][j])
+				{
+					int curWidth{ GetCurLineWidth(arr, j, i) };
+					if (!IsDuplicated(pointVector, j, y, curWidth))
+					{
+						pointStack.push(Point(j, y, curWidth));
+					}
+					break;
+				}
 			}
 			break;
 		}
@@ -161,4 +185,25 @@ int ColoredPaper3::GetCurLineWidth(bool** arr, int x, int y)
 		width++;
 	}
 	return width;
+}
+
+/// <summary>
+/// 주어진 값이 이미 처리된 적 있는 값인지 여부를 반환한다.
+/// </summary>
+/// <param name="pointVector">처리된 값</param>
+/// <param name="x">추가할 x 값</param>
+/// <param name="y">추가할 y 값</param>
+/// <param name="width">추가할 width 값</param>
+/// <returns>중복 여부</returns>
+bool ColoredPaper3::IsDuplicated(vector<Point>& pointVector, int x, int y, int width)
+{
+	for (size_t total = pointVector.size(), i = 0; i < total; i++)
+	{
+		if (pointVector[i].x == x && pointVector[i].y == y
+			&& pointVector[i].width == width)
+		{
+			return true;
+		}
+	}
+	return false;
 }
