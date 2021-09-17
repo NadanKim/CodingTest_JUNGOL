@@ -51,7 +51,7 @@ long long Histogram::GetHistogramMaxArea(int arr[], int n)
 	long long maxArea{ 0 };
 	stack<int> idxStack;
 
-	for (long long i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		while (!idxStack.empty())
 		{

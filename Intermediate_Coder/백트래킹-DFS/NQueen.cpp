@@ -31,5 +31,86 @@
 /// </summary>
 void NQueen::Code()
 {
-	
+	int n;
+	std::cin >> n;
+
+	bool** arr = new bool* [n];
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = new bool[n];
+		std::fill_n(arr[i], n, false);
+	}
+
+	std::cout << GetNQueenCount(arr, n);
+
+	for (int i = 0; i < n; i++)
+	{
+		delete[] arr[i];
+	}
+	delete[] arr;
+}
+
+/// <summary>
+/// NQueen 이 가능한 경우의 수를 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="y">현재 진행할 y 좌표</param>
+/// <returns>NQueen이 가능한 경우의 수</returns>
+int NQueen::GetNQueenCount(bool* arr[], int n, int y)
+{
+	if (y == n)
+	{
+		return 1;
+	}
+
+	int count{ 0 };
+	for (int i = 0; i < n; i++)
+	{
+		if (CanPutQueen(arr, n, i, y))
+		{
+			arr[y][i] = true;
+			count += GetNQueenCount(arr, n, y + 1);
+			arr[y][i] = false;
+		}
+	}
+
+	return count;
+}
+
+/// <summary>
+/// 주어진 좌표에 퀸을 놓을 수 있는지 여부를 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="x">x 좌표</param>
+/// <param name="y">y 좌표</param>
+/// <returns>퀸 놓을 수 있는지 여부</returns>
+bool NQueen::CanPutQueen(bool* arr[], int n, int x, int y)
+{
+	// 왼쪽 위 대각선 체크
+	for (int i = y - 1, j = x - 1; i >= 0 && j >= 0; i--, j--)
+	{
+		if (arr[i][j])
+		{
+			return false;
+		}
+	}
+	// 위 체크
+	for (int i = y - 1; i >= 0; i--)
+	{
+		if (arr[i][x])
+		{
+			return false;
+		}
+	}
+	// 오른쪽 위 대각선 체크
+	for (int i = y - 1, j = x + 1; i >= 0 && j < n; i--, j++)
+	{
+		if (arr[i][j])
+		{
+			return false;
+		}
+	}
+	return true;
 }
