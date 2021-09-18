@@ -34,20 +34,9 @@ void NQueen::Code()
 	int n;
 	std::cin >> n;
 
-	bool** arr = new bool* [n];
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = new bool[n];
-		std::fill_n(arr[i], n, false);
-	}
+	bool arr[13][13]{};
 
 	std::cout << GetNQueenCount(arr, n);
-
-	for (int i = 0; i < n; i++)
-	{
-		delete[] arr[i];
-	}
-	delete[] arr;
 }
 
 /// <summary>
@@ -57,7 +46,7 @@ void NQueen::Code()
 /// <param name="n">배열의 길이</param>
 /// <param name="y">현재 진행할 y 좌표</param>
 /// <returns>NQueen이 가능한 경우의 수</returns>
-int NQueen::GetNQueenCount(bool* arr[], int n, int y)
+int NQueen::GetNQueenCount(bool arr[][13], int n, int y)
 {
 	if (y == n)
 	{
@@ -67,50 +56,67 @@ int NQueen::GetNQueenCount(bool* arr[], int n, int y)
 	int count{ 0 };
 	for (int i = 0; i < n; i++)
 	{
-		if (CanPutQueen(arr, n, i, y))
+		// 퀸 영역인 경우 패스
+		if (arr[y][i])
 		{
-			arr[y][i] = true;
-			count += GetNQueenCount(arr, n, y + 1);
-			arr[y][i] = false;
+			continue;
 		}
+
+		bool tempArr[13][13];
+		for (int i = 0; i < n; i++)
+		{
+			std::copy_n(arr[i], n, tempArr[i]);
+		}
+
+		ColorQueenArea(tempArr, n, i, y);
+
+		count += GetNQueenCount(tempArr, n, y + 1);
 	}
 
 	return count;
 }
 
 /// <summary>
-/// 주어진 좌표에 퀸을 놓을 수 있는지 여부를 반환한다.
+/// 주어진 좌표에서 Queen 범위를 색칠한다.
 /// </summary>
-/// <param name="arr">배열</param>
-/// <param name="n">배열의 길이</param>
-/// <param name="x">x 좌표</param>
-/// <param name="y">y 좌표</param>
-/// <returns>퀸 놓을 수 있는지 여부</returns>
-bool NQueen::CanPutQueen(bool* arr[], int n, int x, int y)
+/// <param name="arr"></param>
+/// <param name="n"></param>
+/// <param name="x"></param>
+/// <param name="y"></param>
+/// <returns></returns>
+void NQueen::ColorQueenArea(bool arr[][13], int n, int x, int y)
 {
-	// 왼쪽 위 대각선 체크
-	for (int i = y - 1, j = x - 1; i >= 0 && j >= 0; i--, j--)
+	for (int i = 0; i < n; i++)
 	{
-		if (arr[i][j])
+		// 가로
+		arr[y][i] = true;
+		// 세로
+		arr[i][x] = true;
+		if (y - i >= 0)
 		{
-			return false;
+			// 좌상단
+			if (x - i >= 0)
+			{
+				arr[y - i][x - i] = true;
+			}
+			// 우상단
+			if (x + i < n)
+			{
+				arr[y - i][x + i] = true;
+			}
+		}
+		if (y + i < n)
+		{
+			// 좌하단
+			if (x - i >= 0)
+			{
+				arr[y + i][x - i] = true;
+			}
+			// 우하단
+			if (x + i < n)
+			{
+				arr[y + i][x + i] = true;
+			}
 		}
 	}
-	// 위 체크
-	for (int i = y - 1; i >= 0; i--)
-	{
-		if (arr[i][x])
-		{
-			return false;
-		}
-	}
-	// 오른쪽 위 대각선 체크
-	for (int i = y - 1, j = x + 1; i >= 0 && j < n; i--, j++)
-	{
-		if (arr[i][j])
-		{
-			return false;
-		}
-	}
-	return true;
 }
