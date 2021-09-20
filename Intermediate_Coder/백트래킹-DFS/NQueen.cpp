@@ -79,11 +79,10 @@ int NQueen::GetNQueenCount(bool arr[][13], int n, int y)
 /// <summary>
 /// 주어진 좌표에서 Queen 범위를 색칠한다.
 /// </summary>
-/// <param name="arr"></param>
-/// <param name="n"></param>
-/// <param name="x"></param>
-/// <param name="y"></param>
-/// <returns></returns>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="x">새 퀸의 x 좌표</param>
+/// <param name="y">새 퀸의 y 좌표</param>
 void NQueen::ColorQueenArea(bool arr[][13], int n, int x, int y)
 {
 	for (int i = 0; i < n; i++)
