@@ -76,16 +76,23 @@ void HamiltonPath::Code()
 /// <returns>최소 이동 비용</returns>
 int HamiltonPath::GetLeastCost(short arr[][12], int n, int locIdx, int cost, int depth)
 {
+	static int minCost{ 99999999 };
+
 	if (depth == n)
 	{
 		return cost;
 	}
 
-	int minCost{ 99999999 };
 	for (int i = 0; i < n; i++)
 	{
 		// 갈 방법이 없는 경우 패스
 		if (arr[locIdx][i] == 0)
+		{
+			continue;
+		}
+
+		short curCost{ arr[locIdx][i] };
+		if (cost + curCost > minCost)
 		{
 			continue;
 		}
@@ -96,16 +103,11 @@ int HamiltonPath::GetLeastCost(short arr[][12], int n, int locIdx, int cost, int
 			std::copy_n(arr[i], n, tempArr[i]);
 		}
 
-		short curCost{ arr[locIdx][i] };
 
 		BlockPrevLocation(tempArr, n, locIdx);
 		BlockNextLocation(tempArr, n, i);
 
-		int totalCost = GetLeastCost(tempArr, n, i, cost + curCost, depth + 1);
-		if (totalCost < minCost)
-		{
-			minCost = totalCost;
-		}
+		minCost = GetLeastCost(tempArr, n, i, cost + curCost, depth + 1);
 	}
 
 	return minCost;
@@ -116,7 +118,7 @@ int HamiltonPath::GetLeastCost(short arr[][12], int n, int locIdx, int cost, int
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
-/// <param name="locIdx">다음 도시의 인덱스</param>
+/// <param name="locIdx">이전 도시의 인덱스</param>
 void HamiltonPath::BlockPrevLocation(short arr[][12], int n, int locIdx)
 {
 	for (int i = 0; i < n; i++)
