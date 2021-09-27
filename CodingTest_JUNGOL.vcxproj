@@ -211,6 +211,7 @@
     <ClCompile Include="Beginner_Coder\재귀\NextCombination.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\RollDice1.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\NQueen.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\BinarySearch.cpp" />
@@ -561,6 +562,7 @@
     <ClInclude Include="Beginner_Coder\재귀\NextCombination.h" />
     <ClInclude Include="Beginner_Coder\재귀\RollDice1.h" />
     <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\NQueen.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\BinarySearch.h" />

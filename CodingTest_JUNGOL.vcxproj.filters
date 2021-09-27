@@ -1040,6 +1040,9 @@
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.cpp">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.cpp">
+      <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2285,6 +2288,9 @@
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.h">
+      <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.h">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
   </ItemGroup>
