@@ -98,40 +98,36 @@ bool GoodSequence::IsGoodPatern(int arr[], int idx)
 	// 직전 입력과 동일한 것 허용 X
 	if (arr[idx - 1] == arr[idx]) return false;
 
-	// 패턴을 찾기 위해 입력된 값과 같은 값 위치 찾기
-	int begIdx{ -1 };
 	for (int i = idx - 1; i >= 0; i--)
 	{
+		// 패턴을 찾기 위해 입력된 값과 같은 값 위치 찾기
 		if (arr[i] == arr[idx])
 		{
-			begIdx = i;
-			break;
+			int leftIdx{ i }, rightIdx{ idx };
+			int paternLength{ rightIdx - leftIdx };
+
+			// 같은 값 위치에 패턴 길이 만큼이 안 나오면 참
+			if (leftIdx + 1 < paternLength)
+			{
+				break;
+			}
+
+			// 패턴이 다르면 넘기기
+			while (--paternLength > 0)
+			{
+				if (arr[--leftIdx] != arr[--rightIdx])
+				{
+					break;
+				}
+			}
+			
+			// 모든 패턴이 일치한 경우 X
+			if (paternLength <= 0)
+			{
+				return false;
+			}
 		}
 	}
 
-	// 같은 입력이 없었으면 참
-	if (begIdx == -1)
-	{
-		return true;
-	}
-
-	int paternLength{ idx - begIdx };
-
-	// 같은 값 위치에 패턴 길이 만큼이 안 나오면 참
-	if (begIdx + 1 < paternLength)
-	{
-		return true;
-	}
-
-	// 패턴이 같지 않으면 참
-	while (--paternLength > 0)
-	{
-		if (arr[--begIdx] != arr[--idx])
-		{
-			return true;
-		}
-	}
-
-	// 패턴이 동일하면 X
-	return false;
+	return true;
 }
