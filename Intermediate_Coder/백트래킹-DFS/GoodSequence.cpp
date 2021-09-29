@@ -112,7 +112,7 @@ bool GoodSequence::IsGoodPatern(int arr[], int idx)
 				break;
 			}
 
-			// 패턴이 다르면 넘기기
+			// 패턴 검사
 			while (--paternLength > 0)
 			{
 				if (arr[--leftIdx] != arr[--rightIdx])
