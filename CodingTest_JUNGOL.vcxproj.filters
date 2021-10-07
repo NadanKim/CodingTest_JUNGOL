@@ -1046,6 +1046,9 @@
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Sudoku.cpp">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Bishop.cpp">
+      <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2297,6 +2300,9 @@
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Sudoku.h">
+      <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Bishop.h">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
   </ItemGroup>
