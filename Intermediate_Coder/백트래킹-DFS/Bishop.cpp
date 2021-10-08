@@ -44,16 +44,20 @@ void Bishop::Code()
 	std::cin >> n;
 
 	int arr[10][10];
-
+	vector<Point> coords;
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
 			std::cin >> arr[i][j];
+			if (arr[i][j] == 1)
+			{
+				coords.push_back(Point(j, i));
+			}
 		}
 	}
 
-	std::cout << GetMaxBishop(arr, n);
+	std::cout << GetMaxBishop(arr, n, coords);
 }
 
 /// <summary>
@@ -61,27 +65,26 @@ void Bishop::Code()
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
+/// <param name="coords">비숍을 놓을 수 있는 좌표</param>
 /// <param name="count">현재 개수</param>
 /// <returns>비숍의 최대 개수</returns>
-int Bishop::GetMaxBishop(int arr[10][10], int n, int count)
+int Bishop::GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, int count)
 {
 	int maxCount{ count };
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < coords.size(); i++)
 	{
-		for (int j = 0; j < n; j++)
+		const Point& p{ coords[i] };
+		if (arr[p.y][p.x] == 1)
 		{
-			if (arr[i][j] == 1)
-			{
-				int newArr[10][10];
-				CopyArr(arr, n, newArr);
-				FillBoard(newArr, n, j, i);
+			int newArr[10][10];
+			CopyArr(arr, n, newArr);
+			FillBoard(newArr, n, p);
 
-				int curCount{ GetMaxBishop(newArr, n, count + 1) };
-				if (curCount > maxCount)
-				{
-					maxCount = curCount;
-				}
+			int curCount{ GetMaxBishop(newArr, n, coords, count + 1) };
+			if (curCount > maxCount)
+			{
+				maxCount = curCount;
 			}
 		}
 	}
@@ -108,36 +111,35 @@ void Bishop::CopyArr(int src[10][10], int n, int dst[10][10])
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
-/// <param name="x">비숍을 둘 x 좌표</param>
-/// <param name="y">비숍을 둘 y 좌표</param>
-void Bishop::FillBoard(int arr[10][10], int n, int x, int y)
+/// <param name="p">좌표</param>
+void Bishop::FillBoard(int arr[10][10], int n, const Point& p)
 {
 	for (int i = 0; i < n; i++)
 	{
-		if (y - i >= 0)
+		if (p.y - i >= 0)
 		{
 			// 좌상단
-			if (x - i >= 0)
+			if (p.x - i >= 0)
 			{
-				arr[y - i][x - i] = 0;
+				arr[p.y - i][p.x - i] = 0;
 			}
 			// 우상단
-			if (x + i < n)
+			if (p.x + i < n)
 			{
-				arr[y - i][x + i] = 0;
+				arr[p.y - i][p.x + i] = 0;
 			}
 		}
-		if (y + i < n)
+		if (p.y + i < n)
 		{
 			// 좌하단
-			if (x - i >= 0)
+			if (p.x - i >= 0)
 			{
-				arr[y + i][x - i] = 0;
+				arr[p.y + i][p.x - i] = 0;
 			}
 			// 우하단
-			if (x + i < n)
+			if (p.x + i < n)
 			{
-				arr[y + i][x + i] = 0;
+				arr[p.y + i][p.x + i] = 0;
 			}
 		}
 	}
