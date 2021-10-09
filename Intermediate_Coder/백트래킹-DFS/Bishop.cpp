@@ -44,18 +44,16 @@ void Bishop::Code()
 	std::cin >> n;
 
 	int arr[10][10];
-	vector<Point> coords;
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
 			std::cin >> arr[i][j];
-			if (arr[i][j] == 1)
-			{
-				coords.push_back(Point(j, i));
-			}
 		}
 	}
+
+	vector<Point> coords;
+	CheckPoint(arr, n, coords);
 
 	std::cout << GetMaxBishop(arr, n, coords);
 }
@@ -81,7 +79,10 @@ int Bishop::GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, in
 			CopyArr(arr, n, newArr);
 			FillBoard(newArr, n, p);
 
-			int curCount{ GetMaxBishop(newArr, n, coords, count + 1) };
+			vector<Point> newCoords;
+			CheckPoint(newArr, n, newCoords);
+
+			int curCount{ GetMaxBishop(newArr, n, newCoords, count + 1) };
 			if (curCount > maxCount)
 			{
 				maxCount = curCount;
@@ -140,6 +141,26 @@ void Bishop::FillBoard(int arr[10][10], int n, const Point& p)
 			if (p.x + i < n)
 			{
 				arr[p.y + i][p.x + i] = 0;
+			}
+		}
+	}
+}
+
+/// <summary>
+/// 변경된 배열 상태를 확인하여 놓을 수 있는 새로운 지점을 탐색한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="coords">새로운 지점 리스트</param>
+void Bishop::CheckPoint(int arr[10][10], int n, vector<Point>& coords)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (arr[i][j] == 1)
+			{
+				coords.push_back(Point(j, i));
 			}
 		}
 	}
