@@ -66,11 +66,12 @@ void Bishop::Code()
 /// <param name="coords">비숍을 놓을 수 있는 좌표</param>
 /// <param name="count">현재 개수</param>
 /// <returns>비숍의 최대 개수</returns>
-int Bishop::GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, int count)
+int Bishop::GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, 
+	int count, int depth)
 {
 	int maxCount{ count };
 
-	for (int i = 0; i < coords.size(); i++)
+	for (int i = depth; i < coords.size(); i++)
 	{
 		const Point& p{ coords[i] };
 		if (arr[p.y][p.x] == 1)
@@ -79,10 +80,7 @@ int Bishop::GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, in
 			CopyArr(arr, n, newArr);
 			FillBoard(newArr, n, p);
 
-			vector<Point> newCoords;
-			CheckPoint(newArr, n, newCoords);
-
-			int curCount{ GetMaxBishop(newArr, n, newCoords, count + 1) };
+			int curCount{ GetMaxBishop(newArr, n, coords, count + 1, depth + 1) };
 			if (curCount > maxCount)
 			{
 				maxCount = curCount;
