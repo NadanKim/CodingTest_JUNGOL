@@ -52,10 +52,7 @@ void Bishop::Code()
 		}
 	}
 
-	vector<Point> coords;
-	CheckPoint(arr, n, coords);
-
-	std::cout << GetMaxBishop(arr, n, coords);
+	std::cout << GetMaxBishop(arr, n);
 }
 
 /// <summary>
@@ -64,30 +61,44 @@ void Bishop::Code()
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
 /// <param name="coords">비숍을 놓을 수 있는 좌표</param>
-/// <param name="count">현재 개수</param>
+int Bishop::GetMaxBishop(int arr[10][10], int n)
+{
+	return GetMaxByColors(arr, n, Color::White) + GetMaxByColors(arr, n, Color::Black);
+}
+
+/// <summary>
+/// 보드를 색별로 구분하여 비숍이 들어갈 수 있는 최대 개수를 구한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="color">보드의 색</param>
+/// <param name="count">개수</param>
 /// <returns>비숍의 최대 개수</returns>
-int Bishop::GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, 
-	int count, int depth)
+int Bishop::GetMaxByColors(int arr[10][10], int n, Color color, int count)
 {
 	int maxCount{ count };
 
-	for (int i = depth; i < coords.size(); i++)
+	int colorNum{ static_cast<int>(color) };
+	int newArr[10][10];
+	for (int i = 0; i < n; i++)
 	{
-		const Point& p{ coords[i] };
-		if (arr[p.y][p.x] == 1)
+		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
+		for (int j = (colorNum + i) % 2; j < n; j += 2)
 		{
-			int newArr[10][10];
-			CopyArr(arr, n, newArr);
-			FillBoard(newArr, n, p);
-
-			int curCount{ GetMaxBishop(newArr, n, coords, count + 1, depth + 1) };
-			if (curCount > maxCount)
+			if (arr[i][j] == 1)
 			{
-				maxCount = curCount;
+				CopyArr(arr, n, newArr);
+				FillBoard(newArr, n, j, i);
+
+				int curCount{ GetMaxByColors(newArr, n, color, count + 1) };
+				if (curCount > maxCount)
+				{
+					maxCount = curCount;
+				}
 			}
 		}
 	}
-	
+
 	return maxCount;
 }
 
@@ -110,55 +121,36 @@ void Bishop::CopyArr(int src[10][10], int n, int dst[10][10])
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
-/// <param name="p">좌표</param>
-void Bishop::FillBoard(int arr[10][10], int n, const Point& p)
+/// <param name="x">x 좌표</param>
+/// <param name="y">y 좌표</param>
+void Bishop::FillBoard(int arr[10][10], int n, int x, int y)
 {
 	for (int i = 0; i < n; i++)
 	{
-		if (p.y - i >= 0)
+		if (y - i >= 0)
 		{
 			// 좌상단
-			if (p.x - i >= 0)
+			if (x - i >= 0)
 			{
-				arr[p.y - i][p.x - i] = 0;
+				arr[y - i][x - i] = 0;
 			}
 			// 우상단
-			if (p.x + i < n)
+			if (x + i < n)
 			{
-				arr[p.y - i][p.x + i] = 0;
+				arr[y - i][x + i] = 0;
 			}
 		}
-		if (p.y + i < n)
+		if (y + i < n)
 		{
 			// 좌하단
-			if (p.x - i >= 0)
+			if (x - i >= 0)
 			{
-				arr[p.y + i][p.x - i] = 0;
+				arr[y + i][x - i] = 0;
 			}
 			// 우하단
-			if (p.x + i < n)
+			if (x + i < n)
 			{
-				arr[p.y + i][p.x + i] = 0;
-			}
-		}
-	}
-}
-
-/// <summary>
-/// 변경된 배열 상태를 확인하여 놓을 수 있는 새로운 지점을 탐색한다.
-/// </summary>
-/// <param name="arr">배열</param>
-/// <param name="n">배열의 길이</param>
-/// <param name="coords">새로운 지점 리스트</param>
-void Bishop::CheckPoint(int arr[10][10], int n, vector<Point>& coords)
-{
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (arr[i][j] == 1)
-			{
-				coords.push_back(Point(j, i));
+				arr[y + i][x + i] = 0;
 			}
 		}
 	}

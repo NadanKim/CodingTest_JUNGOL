@@ -1,27 +1,22 @@
 #pragma once
 #include <iostream>
 #include <algorithm>
-#include <vector>
 
 #include "../../Base.h"
-
-using std::vector;
 
 class Bishop : public Base
 {
 private:
-	struct Point
+	enum class Color : int
 	{
-		Point(int x, int y) : x(x), y(y) {}
-
-		int x, y;
+		White = 0,
+		Black = 1
 	};
 
-	int GetMaxBishop(int arr[10][10], int n, const vector<Point>& coords, 
-		int count = 0, int depth = 0);
+	int GetMaxBishop(int arr[10][10], int n);
+	int GetMaxByColors(int arr[10][10], int n, Color color, int count = 0);
 	void CopyArr(int src[10][10], int n, int dst[10][10]);
-	void FillBoard(int arr[10][10], int n, const Point& p);
-	void CheckPoint(int arr[10][10], int n, vector<Point>& coords);
+	void FillBoard(int arr[10][10], int n, int x, int y);
 
 protected:
 	void Code() override;
