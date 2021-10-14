@@ -52,7 +52,38 @@ void Bishop::Code()
 		}
 	}
 
-	std::cout << GetMaxBishop(arr, n);
+	map<Color, vector<Point>> coordsMap;
+	FindCoordsByColor(arr, n, coordsMap, Color::White);
+	FindCoordsByColor(arr, n, coordsMap, Color::Black);
+
+	std::cout << GetMaxBishop(arr, n, coordsMap);
+}
+
+/// <summary>
+/// 색상으로 구분하여 비숍을 놓을 수 있는 좌표를 찾는다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="coordsMap">좌표 맵</param>
+/// <param name="color">색상</param>
+void Bishop::FindCoordsByColor(int arr[10][10], int n, map<Color, vector<Point>>& coordsMap, Color color)
+{
+	vector<Point> coords;
+
+	int colorNum{ static_cast<int>(color) };
+	for (int i = 0; i < n; i++)
+	{
+		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
+		for (int j = (colorNum + i) % 2; j < n; j += 2)
+		{
+			if (arr[i][j] == 1)
+			{
+				coords.push_back(Point(j, i));
+			}
+		}
+	}
+
+	coordsMap[color] = coords;
 }
 
 /// <summary>
@@ -61,9 +92,10 @@ void Bishop::Code()
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
 /// <param name="coords">비숍을 놓을 수 있는 좌표</param>
-int Bishop::GetMaxBishop(int arr[10][10], int n)
+int Bishop::GetMaxBishop(int arr[10][10], int n, map<Color, vector<Point>>& coordsMap)
 {
-	return GetMaxByColors(arr, n, Color::White) + GetMaxByColors(arr, n, Color::Black);
+	return GetMaxByColors(arr, n, coordsMap[Color::White], Color::White) 
+		+ GetMaxByColors(arr, n, coordsMap[Color::Black], Color::Black);
 }
 
 /// <summary>
@@ -71,30 +103,29 @@ int Bishop::GetMaxBishop(int arr[10][10], int n)
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
+/// <param name="coords">비숍을 놓을 수 있는 좌표</param>
 /// <param name="color">보드의 색</param>
 /// <param name="count">개수</param>
 /// <returns>비숍의 최대 개수</returns>
-int Bishop::GetMaxByColors(int arr[10][10], int n, Color color, int count)
+int Bishop::GetMaxByColors(int arr[10][10], int n, vector<Point> coords, Color color, int count)
 {
 	int maxCount{ count };
 
 	int colorNum{ static_cast<int>(color) };
-	int newArr[10][10];
 	for (int i = 0; i < n; i++)
 	{
 		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
 		for (int j = (colorNum + i) % 2; j < n; j += 2)
 		{
-			if (arr[i][j] == 1)
+			if (arr[i][j] == 1 && CheckBishop(arr, n, coords, j, i))
 			{
-				CopyArr(arr, n, newArr);
-				FillBoard(newArr, n, j, i);
-
-				int curCount{ GetMaxByColors(newArr, n, color, count + 1) };
+				arr[i][j] = 2;
+				int curCount{ GetMaxByColors(arr, n, coords, color, count + 1) };
 				if (curCount > maxCount)
 				{
 					maxCount = curCount;
 				}
+				arr[i][j] = 1;
 			}
 		}
 	}
@@ -103,55 +134,23 @@ int Bishop::GetMaxByColors(int arr[10][10], int n, Color color, int count)
 }
 
 /// <summary>
-/// 배열의 내용을 복사한다.
-/// </summary>
-/// <param name="src">기존 배열</param>
-/// <param name="n">배열의 길이</param>
-/// <param name="dst">복사할 배열</param>
-void Bishop::CopyArr(int src[10][10], int n, int dst[10][10])
-{
-	for (int i = 0; i < n; i++)
-	{
-		std::copy_n(src[i], n, dst[i]);
-	}
-}
-
-/// <summary>
-/// 주어진 좌표에 비숍을 배치하고 공격 범위를 채운다.
+/// 주어진 포인트를 기준으로 비숍을 놓을 수 있는지 여부를 반환한다.
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
+/// <param name="coords">비숍을 놓을 수 있는 좌표</param>
 /// <param name="x">x 좌표</param>
 /// <param name="y">y 좌표</param>
-void Bishop::FillBoard(int arr[10][10], int n, int x, int y)
+/// <returns>놓을 수 있는지 여부</returns>
+bool Bishop::CheckBishop(int arr[10][10], int n, vector<Point> coords, int x, int y)
 {
-	for (int i = 0; i < n; i++)
+	for (const Point& p : coords)
 	{
-		if (y - i >= 0)
+		if (arr[p.y][p.x] == 2 && std::abs(p.x - x) == std::abs(p.y - y))
 		{
-			// 좌상단
-			if (x - i >= 0)
-			{
-				arr[y - i][x - i] = 0;
-			}
-			// 우상단
-			if (x + i < n)
-			{
-				arr[y - i][x + i] = 0;
-			}
-		}
-		if (y + i < n)
-		{
-			// 좌하단
-			if (x - i >= 0)
-			{
-				arr[y + i][x - i] = 0;
-			}
-			// 우하단
-			if (x + i < n)
-			{
-				arr[y + i][x + i] = 0;
-			}
+			return false;
 		}
 	}
+
+	return true;
 }
