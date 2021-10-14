@@ -43,7 +43,7 @@ void Bishop::Code()
 
 	std::cin >> n;
 
-	int arr[10][10];
+	bool arr[10][10];
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -52,38 +52,7 @@ void Bishop::Code()
 		}
 	}
 
-	map<Color, vector<Point>> coordsMap;
-	FindCoordsByColor(arr, n, coordsMap, Color::White);
-	FindCoordsByColor(arr, n, coordsMap, Color::Black);
-
-	std::cout << GetMaxBishop(arr, n, coordsMap);
-}
-
-/// <summary>
-/// 색상으로 구분하여 비숍을 놓을 수 있는 좌표를 찾는다.
-/// </summary>
-/// <param name="arr">배열</param>
-/// <param name="n">배열의 길이</param>
-/// <param name="coordsMap">좌표 맵</param>
-/// <param name="color">색상</param>
-void Bishop::FindCoordsByColor(int arr[10][10], int n, map<Color, vector<Point>>& coordsMap, Color color)
-{
-	vector<Point> coords;
-
-	int colorNum{ static_cast<int>(color) };
-	for (int i = 0; i < n; i++)
-	{
-		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
-		for (int j = (colorNum + i) % 2; j < n; j += 2)
-		{
-			if (arr[i][j] == 1)
-			{
-				coords.push_back(Point(j, i));
-			}
-		}
-	}
-
-	coordsMap[color] = coords;
+	std::cout << GetMaxBishop(arr, n);
 }
 
 /// <summary>
@@ -92,10 +61,10 @@ void Bishop::FindCoordsByColor(int arr[10][10], int n, map<Color, vector<Point>>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
 /// <param name="coords">비숍을 놓을 수 있는 좌표</param>
-int Bishop::GetMaxBishop(int arr[10][10], int n, map<Color, vector<Point>>& coordsMap)
+int Bishop::GetMaxBishop(bool arr[10][10], int n)
 {
-	return GetMaxByColors(arr, n, coordsMap[Color::White], Color::White) 
-		+ GetMaxByColors(arr, n, coordsMap[Color::Black], Color::Black);
+	return GetMaxByColors(arr, n, Color::White) 
+		+ GetMaxByColors(arr, n, Color::Black);
 }
 
 /// <summary>
@@ -107,25 +76,28 @@ int Bishop::GetMaxBishop(int arr[10][10], int n, map<Color, vector<Point>>& coor
 /// <param name="color">보드의 색</param>
 /// <param name="count">개수</param>
 /// <returns>비숍의 최대 개수</returns>
-int Bishop::GetMaxByColors(int arr[10][10], int n, vector<Point> coords, Color color, int count)
+int Bishop::GetMaxByColors(bool arr[10][10], int n, Color color, int count)
 {
 	int maxCount{ count };
 
+	bool newArr[10][10];
 	int colorNum{ static_cast<int>(color) };
 	for (int i = 0; i < n; i++)
 	{
 		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
 		for (int j = (colorNum + i) % 2; j < n; j += 2)
 		{
-			if (arr[i][j] == 1 && CheckBishop(arr, n, coords, j, i))
+			if (arr[i][j])
 			{
-				arr[i][j] = 2;
-				int curCount{ GetMaxByColors(arr, n, coords, color, count + 1) };
+				CopyArr(arr, n, newArr);
+				ColorBishopRange(newArr, n, j, i);
+
+				int curCount{ GetMaxByColors(newArr, n, color, count + 1) };
 				if (curCount > maxCount)
 				{
 					maxCount = curCount;
+					break;
 				}
-				arr[i][j] = 1;
 			}
 		}
 	}
@@ -134,23 +106,56 @@ int Bishop::GetMaxByColors(int arr[10][10], int n, vector<Point> coords, Color c
 }
 
 /// <summary>
-/// 주어진 포인트를 기준으로 비숍을 놓을 수 있는지 여부를 반환한다.
+/// arr의 값을 newArr로 복사한다.
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열의 길이</param>
-/// <param name="coords">비숍을 놓을 수 있는 좌표</param>
+/// <param name="newArr">복사할 배열</param>
+void Bishop::CopyArr(bool arr[10][10], int n, bool newArr[10][10])
+{
+	for (int i = 0; i < n; i++)
+	{
+		std::copy_n(arr[i], n, newArr[i]);
+	}
+}
+
+/// <summary>
+/// 주어진 좌표를 기준으로 공격 범위를 둘 수 없는 것으로 변환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
 /// <param name="x">x 좌표</param>
 /// <param name="y">y 좌표</param>
-/// <returns>놓을 수 있는지 여부</returns>
-bool Bishop::CheckBishop(int arr[10][10], int n, vector<Point> coords, int x, int y)
+void Bishop::ColorBishopRange(bool arr[10][10], int n, int x, int y)
 {
-	for (const Point& p : coords)
+	arr[y][x] = false;
+
+	for (int i = 1; i < n; i++)
 	{
-		if (arr[p.y][p.x] == 2 && std::abs(p.x - x) == std::abs(p.y - y))
+		int up{ y - i }, down{ y + i };
+		int left{ x - i }, right{ x + i };
+
+		if (down < n)
 		{
-			return false;
+			if (right < n)
+			{
+				arr[down][right] = false;
+			}
+			if (left >= 0)
+			{
+				arr[down][left] = false;
+			}
+		}
+		if (up >= 0)
+		{
+			if (right < n)
+			{
+				arr[up][right] = false;
+			}
+			if (left >= 0)
+			{
+				arr[up][left] = false;
+			}
 		}
 	}
-
-	return true;
 }

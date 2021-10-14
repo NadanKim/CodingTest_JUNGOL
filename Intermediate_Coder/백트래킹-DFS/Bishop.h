@@ -1,14 +1,8 @@
 #pragma once
 #include <iostream>
 #include <algorithm>
-#include <vector>
-#include <cmath>
-#include <map>
 
 #include "../../Base.h"
-
-using std::vector;
-using std::map;
 
 class Bishop : public Base
 {
@@ -26,10 +20,10 @@ private:
 		int x, y;
 	};
 
-	void FindCoordsByColor(int arr[10][10], int n, map<Color, vector<Point>>& coordsMap, Color color);
-	int GetMaxBishop(int arr[10][10], int n, map<Color, vector<Point>>& coordsMap);
-	int GetMaxByColors(int arr[10][10], int n, vector<Point> coords, Color color, int count = 0);
-	bool CheckBishop(int arr[10][10], int n, vector<Point> coords, int x, int y);
+	int GetMaxBishop(bool arr[10][10], int n);
+	int GetMaxByColors(bool arr[10][10], int n, Color color, int count = 0);
+	void CopyArr(bool arr[10][10], int n, bool newArr[10][10]);
+	void ColorBishopRange(bool arr[10][10], int n, int x, int y);
 
 protected:
 	void Code() override;
