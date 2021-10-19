@@ -84,20 +84,26 @@ int Bishop::GetMaxByColors(bool arr[10][10], int n, Color color, int count)
 	int colorNum{ static_cast<int>(color) };
 	for (int i = 0; i < n; i++)
 	{
+		CopyArr(arr, n, newArr);
+
+		int curCount{ 0 };
 		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
 		for (int j = (colorNum + i) % 2; j < n; j += 2)
 		{
 			if (arr[i][j])
 			{
-				CopyArr(arr, n, newArr);
-				ColorBishopRange(newArr, n, j, i);
+				curCount++;
 
-				int curCount{ GetMaxByColors(newArr, n, color, count + 1) };
-				if (curCount > maxCount)
-				{
-					maxCount = curCount;
-					break;
-				}
+				ColorBishopRange(newArr, n, j, i);
+			}
+		}
+
+		if (curCount > 0)
+		{
+			curCount = GetMaxByColors(newArr, n, color, count + curCount);
+			if (curCount > maxCount)
+			{
+				maxCount = curCount;
 			}
 		}
 	}
