@@ -78,6 +78,23 @@ int Bishop::GetMaxBishop(bool arr[10][10], int n)
 /// <returns>비숍의 최대 개수</returns>
 int Bishop::GetMaxByColors(bool arr[10][10], int n, Color color, int count)
 {
+	int horizontalCount{ GetMaxByDirection(arr, n, color, Direction::Horizontal, count) };
+	int verticalCount{ GetMaxByDirection(arr, n, color, Direction::Vertical, count) };
+
+	return (horizontalCount > verticalCount ? horizontalCount : verticalCount);
+}
+
+/// <summary>
+/// 지정된 방향의 비숍을 한 번에 처리하여 최대 개수를 구해 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열의 길이</param>
+/// <param name="color">보드의 색</param>
+/// <param name="direction">한 번에 처리할 방향</param>
+/// <param name="count">개수</param>
+/// <returns>비숍의 최대 개수</returns>
+int Bishop::GetMaxByDirection(bool arr[10][10], int n, Color color, Direction direction, int count)
+{
 	int maxCount{ count };
 
 	bool newArr[10][10];
@@ -90,11 +107,14 @@ int Bishop::GetMaxByColors(bool arr[10][10], int n, Color color, int count)
 		// color 에 따라 매 라인의 시작 지점을 바꿔준다.
 		for (int j = (colorNum + i) % 2; j < n; j += 2)
 		{
-			if (arr[i][j])
+			// direction 에 따라 가로 혹은 세로 라인을 한 번에 처리한다.
+			int y{ direction == Direction::Horizontal ? i : j };
+			int x{ direction == Direction::Horizontal ? j : i };
+			if (arr[y][x])
 			{
 				curCount++;
 
-				ColorBishopRange(newArr, n, j, i);
+				ColorBishopRange(newArr, n, x, y);
 			}
 		}
 
