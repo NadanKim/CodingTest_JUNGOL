@@ -1049,7 +1049,7 @@
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Bishop.cpp">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClCompile>
-    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\CuboardDoor.cpp">
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\CupoardDoor.cpp">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClCompile>
   </ItemGroup>
@@ -2308,7 +2308,7 @@
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Bishop.h">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
-    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\CuboardDoor.h">
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\CupoardDoor.h">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
   </ItemGroup>

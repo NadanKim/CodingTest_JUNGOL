@@ -1,4 +1,4 @@
-﻿#include "CuboardDoor.h"
+﻿#include "CupoardDoor.h"
 
 /// <summary>
 /// 문제
@@ -45,7 +45,7 @@
 /// 
 /// http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=685&sca=3030
 /// </summary>
-void CuboardDoor::Code()
+void CupoardDoor::Code()
 {
 	int n;
 	std::cin >> n;
@@ -74,7 +74,7 @@ void CuboardDoor::Code()
 /// <param name="m">사용할 문 개수</param>
 /// <param name="depth">깊이</param>
 /// <returns>최소 이동 횟수</returns>
-int CuboardDoor::GetLeastMoveCount(int openDoor1, int openDoor2, int usingDoors[20], int m, int depth)
+int CupoardDoor::GetLeastMoveCount(int openDoor1, int openDoor2, int usingDoors[20], int m, int depth)
 {
 	if (depth == m)
 	{

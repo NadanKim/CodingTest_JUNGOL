@@ -5,7 +5,7 @@
 
 #include "../../Base.h"
 
-class CuboardDoor : public Base
+class CupoardDoor : public Base
 {
 private:
 	int GetLeastMoveCount(int openDoor1, int openDoor2, int usingDoors[20], int m, int depth = 0);
