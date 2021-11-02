@@ -213,6 +213,7 @@
     <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Bishop.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\CupoardDoor.cpp" />
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\DNACombination.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\NQueen.cpp" />
@@ -567,6 +568,7 @@
     <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Bishop.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\CupoardDoor.h" />
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\DNACombination.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\NQueen.h" />
