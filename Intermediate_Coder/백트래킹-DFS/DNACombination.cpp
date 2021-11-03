@@ -140,6 +140,12 @@ string DNACombination::CombineDNA(string originDNA, string addDNA)
 			}
 		}
 
+		// 안에 완전히 넣어지는 경우를 제외한다.
+		if (restIdx == addSize && i + restIdx < originSize)
+		{
+			notCombined = true;
+		}
+
 		if (notCombined)
 		{
 			continue;
