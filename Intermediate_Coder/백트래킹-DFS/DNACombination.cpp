@@ -76,10 +76,11 @@ void DNACombination::Code()
 /// <param name="n">배열의 길이</param>
 /// <param name="combination">조합 결과</param>
 /// <returns>조합의 길이</returns>
-size_t DNACombination::GetMinLengthOfCombination(string arr[7], int n, string combination)
+size_t DNACombination::GetMinLengthOfCombination(string arr[7], int n, string prevDNA, string combination)
 {
 	if (n == 0)
 	{
+		std::cout << combination << "     " << combination.size() << '\n';
 		return combination.size();
 	}
 
@@ -88,7 +89,10 @@ size_t DNACombination::GetMinLengthOfCombination(string arr[7], int n, string co
 	for (int i = 0; i < n; i++)
 	{
 		CopyArrWithoutIdx(arr, newArr, n, i);
-		size_t length{ GetMinLengthOfCombination(newArr, n - 1, CombineDNA(combination, arr[i])) };
+		size_t length{ GetMinLengthOfCombination(newArr, 
+			n - 1, 
+			arr[i], 
+			CombineDNA(combination, prevDNA, arr[i])) };
 		if (length < minLength)
 		{
 			minLength = length;
@@ -119,39 +123,43 @@ void DNACombination::CopyArrWithoutIdx(string arr[7], string copyArr[7], int n, 
 /// 기존 DNA와 새 DNA를 조합한다.
 /// </summary>
 /// <param name="originDNA">기존 DNA</param>
+/// <param name="prevDNA">직전에 추가한 DNA</param>
 /// <param name="addDNA">새로 추가된 DNA</param>
 /// <returns>조합된 DNA</returns>
-string DNACombination::CombineDNA(string originDNA, string addDNA)
+string DNACombination::CombineDNA(string originDNA, string prevDNA, string addDNA)
 {
 	size_t originSize{ originDNA.size() };
+	size_t prevSize{ prevDNA.size() };
 	size_t addSize{ addDNA.size() };
 	size_t restIdx{ 0 };
 
-	for (size_t i = 0; i < originSize; i++)
+	for (size_t i = 1; i <= prevSize; i++)
 	{
-		bool notCombined{ false };
-		for (restIdx = 0; restIdx < addSize && i + restIdx < originSize; restIdx++)
+		bool isCombined{ true };
+		int curIdx{ 0 };
+		for (int j = originSize - i; curIdx < addSize && j + curIdx < originSize; curIdx++)
 		{
 			// 중간에 다른 값이 있으면 포함되지 않는다.
-			if (originDNA[i + restIdx] != addDNA[restIdx])
+			if (originDNA[j + curIdx] != addDNA[curIdx])
 			{
-				notCombined = true;
+				isCombined = false;
 				break;
 			}
 		}
 
 		// 안에 완전히 넣어지는 경우를 제외한다.
-		if (restIdx == addSize && i + restIdx < originSize)
+		if (curIdx == addSize) // TODO: 이 부분 처리 해야함
 		{
-			notCombined = true;
+			isCombined = false;
 		}
 
-		if (notCombined)
+		if (isCombined)
 		{
-			continue;
+			if (curIdx > restIdx)
+			{
+				restIdx = curIdx;
+			}
 		}
-
-		break;
 	}
 
 	return originDNA.append(addDNA.substr(restIdx));
