@@ -80,7 +80,6 @@ size_t DNACombination::GetMinLengthOfCombination(string arr[7], int n, string pr
 {
 	if (n == 0)
 	{
-		std::cout << combination << "     " << combination.size() << '\n';
 		return combination.size();
 	}
 
@@ -133,7 +132,7 @@ string DNACombination::CombineDNA(string originDNA, string prevDNA, string addDN
 	size_t addSize{ addDNA.size() };
 	size_t restIdx{ 0 };
 
-	for (size_t i = 1; i <= prevSize; i++)
+	for (size_t i = 1; i <= prevSize && i <= addSize; i++)
 	{
 		bool isCombined{ true };
 		int curIdx{ 0 };
@@ -145,12 +144,6 @@ string DNACombination::CombineDNA(string originDNA, string prevDNA, string addDN
 				isCombined = false;
 				break;
 			}
-		}
-
-		// 안에 완전히 넣어지는 경우를 제외한다.
-		if (curIdx == addSize) // TODO: 이 부분 처리 해야함
-		{
-			isCombined = false;
 		}
 
 		if (isCombined)
