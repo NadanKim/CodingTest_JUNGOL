@@ -216,6 +216,7 @@
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\DNACombination.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.cpp" />
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Janggi.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\NQueen.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Sudoku.cpp" />
     <ClCompile Include="Intermediate_Coder\분할정복\BinarySearch.cpp" />
@@ -571,6 +572,7 @@
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\DNACombination.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\GoodSequence.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\HamiltonPath.h" />
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Janggi.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\NQueen.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Sudoku.h" />
     <ClInclude Include="Intermediate_Coder\분할정복\BinarySearch.h" />

@@ -1055,6 +1055,9 @@
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\DNACombination.cpp">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Janggi.cpp">
+      <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2315,6 +2318,9 @@
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\DNACombination.h">
+      <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Janggi.h">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
   </ItemGroup>
