@@ -36,12 +36,12 @@ void Janggi::Code()
 
 	bool visited[101][101]{};
 	std::cout << GetLeastMoveCount(xMoveDir, yMoveDir, 
-		visited, 
+		visited, false,
 		n, m, r, c, s, k);
 }
 
 int Janggi::GetLeastMoveCount(int xMoveDir[8], int yMoveDir[8], 
-	bool visited[101][101],
+	bool visited[101][101], bool isIn,
 	int n, int m, int r, int c, int s, int k, int count)
 {
 	if (r == s && c == k)
@@ -50,19 +50,51 @@ int Janggi::GetLeastMoveCount(int xMoveDir[8], int yMoveDir[8],
 	}
 
 	int leastCount{ 999'999'999 };
-	for (int i = 0; i < 8; i++)
+
+	if (std::abs(r - s) <= 3 && std::abs(c - k) <= 3)
 	{
-		int newR{ r + xMoveDir[i] }, newC{ c + yMoveDir[i] };
-		if (newR < 1 || newR > n || newC < 1 || newC > m
-			|| visited[newR][newC])
+		for (int i = 0; i < 8; i++)
 		{
-			continue;
+			int newR{ r + xMoveDir[i] }, newC{ c + yMoveDir[i] };
+			if (newR < 1 || newR > n || newC < 1 || newC > m
+				|| visited[newR][newC])
+			{
+				continue;
+			}
+
+			visited[newR][newC] = true;
+
+			int curCount{ GetLeastMoveCount(xMoveDir, yMoveDir,
+				visited, true,
+				n, m, newR, newC, s, k, count + 1) };
+			if (curCount < leastCount)
+			{
+				leastCount = curCount;
+			}
+
+			visited[newR][newC] = false;
+		}
+	}
+	else
+	{
+		int newR{ r }, newC{ c };
+		int dist{ 999'999 };
+		for (int i = 0; i < 8; i++)
+		{
+			int xDiff{ r + xMoveDir[i] - s }, yDiff{ c + yMoveDir[i] - k };
+			int curDist{ xDiff * xDiff + yDiff * yDiff };
+			if (curDist < dist)
+			{
+				dist = curDist;
+				newR = r + xMoveDir[i];
+				newC = c + yMoveDir[i];
+			}
 		}
 
 		visited[newR][newC] = true;
 
 		int curCount{ GetLeastMoveCount(xMoveDir, yMoveDir,
-			visited,
+			visited, false,
 			n, m, newR, newC, s, k, count + 1) };
 		if (curCount < leastCount)
 		{
