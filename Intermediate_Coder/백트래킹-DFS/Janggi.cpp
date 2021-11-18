@@ -28,11 +28,8 @@ void Janggi::Code()
 	int n, m;
 	std::cin >> n >> m;
 
-	int r, c, s, k;
-	std::cin >> r >> c >> s >> k;
-
-	int xMoveDir[8]{ -2, -1, 1, 2, 2, 1, -1, -2 };
-	int yMoveDir[8]{ -1, -2, -2, -1, 1, 2, 2, 1 };
+	Point horse, soldier;
+	std::cin >> horse >> soldier;
 
 	int** visited = new int* [n + 1];
 	for (int i = 0; i <= n; i++)
@@ -43,9 +40,9 @@ void Janggi::Code()
 			visited[i][j] = 999'999'999;
 		}
 	}
-	std::cout << GetLeastMoveCount(xMoveDir, yMoveDir, 
-		visited, false,
-		n, m, r, c, s, k);
+
+	std::cout << GetLeastMoveCount(visited, n, m, horse, soldier);
+
 	for (int i = 0; i <= n; i++)
 	{
 		delete[] visited[i];
@@ -53,11 +50,22 @@ void Janggi::Code()
 	delete[] visited;
 }
 
-int Janggi::GetLeastMoveCount(int xMoveDir[8], int yMoveDir[8], 
-	int** visited,
-	int n, int m, int r, int c, int s, int k, int count)
+/// <summary>
+/// 말이 병사를 잡는 최소 이동 횟수를 반환한다.
+/// </summary>
+/// <param name="visited">말이 방문한 위치 정보</param>
+/// <param name="n">판의 행의 수</param>
+/// <param name="m">판의 열의 수</param>
+/// <param name="horse">말의 위치</param>
+/// <param name="soldier">병사의 위치</param>
+/// <param name="count">이동 횟수</param>
+/// <returns>최소 이동 횟수</returns>
+int Janggi::GetLeastMoveCount(int** visited, int n, int m, Point horse, const Point& soldier, int count)
 {
-	if (r == s && c == k)
+	static int xMoveDir[8]{ -2, -1, 1, 2, 2, 1, -1, -2 };
+	static int yMoveDir[8]{ -1, -2, -2, -1, 1, 2, 2, 1 };
+
+	if (horse == soldier)
 	{
 		return count;
 	}
@@ -65,18 +73,19 @@ int Janggi::GetLeastMoveCount(int xMoveDir[8], int yMoveDir[8],
 	int leastCount{ 999'999'999 };
 	for (int i = 0; i < 8; i++)
 	{
-		int newR{ r + xMoveDir[i] }, newC{ c + yMoveDir[i] };
-		if (newR < 1 || newR > n || newC < 1 || newC > m
-			|| visited[newR][newC] <= count)
+		Point newPos{ horse };
+		newPos.x += xMoveDir[i];
+		newPos.y += yMoveDir[i];
+
+		if (IsOutOfBoard(newPos, n, m)
+			|| visited[newPos.y][newPos.x] <= count)
 		{
 			continue;
 		}
 
-		visited[newR][newC] = count;
+		visited[newPos.y][newPos.x] = count;
 
-		int curCount{ GetLeastMoveCount(xMoveDir, yMoveDir,
-			visited,
-			n, m, newR, newC, s, k, count + 1) };
+		int curCount{ GetLeastMoveCount(visited, n, m, newPos, soldier, count + 1) };
 		if (curCount < leastCount)
 		{
 			leastCount = curCount;
@@ -84,4 +93,18 @@ int Janggi::GetLeastMoveCount(int xMoveDir[8], int yMoveDir[8],
 	}
 	
 	return leastCount;
+}
+
+/// <summary>
+/// 말이 보드 밖으로 나갔는지 여부를 반환한다.
+/// </summary>
+/// <param name="p">확인할 말의 좌표</param>
+/// <returns>보드 밖으로 나갔는지 여부</returns>
+bool Janggi::IsOutOfBoard(const Point& p, int n, int m)
+{
+	if (p.x < 1) return true;
+	if (n < p.x) return true;
+	if (p.y < 1) return true;
+	if (m < p.y) return true;
+	return false;
 }
