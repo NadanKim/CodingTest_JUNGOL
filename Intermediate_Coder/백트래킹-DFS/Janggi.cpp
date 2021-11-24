@@ -31,11 +31,11 @@ void Janggi::Code()
 	Point horse, soldier;
 	std::cin >> horse >> soldier;
 
-	int** visited = new int* [n + 1];
-	for (int i = 0; i <= n; i++)
+	int** visited = new int* [m + 1];
+	for (int i = 1; i <= m; i++)
 	{
-		visited[i] = new int[m + 1];
-		for (int j = 0; j <= m; j++)
+		visited[i] = new int[n + 1];
+		for (int j = 1; j <= n; j++)
 		{
 			visited[i][j] = 999'999'999;
 		}
@@ -43,7 +43,7 @@ void Janggi::Code()
 
 	std::cout << GetLeastMoveCount(visited, n, m, horse, soldier);
 
-	for (int i = 0; i <= n; i++)
+	for (int i = 1; i <= m; i++)
 	{
 		delete[] visited[i];
 	}
