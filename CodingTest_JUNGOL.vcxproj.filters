@@ -1058,6 +1058,9 @@
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Janggi.cpp">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.cpp">
+      <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1263,6 +1266,9 @@
     </Filter>
     <Filter Include="Intermediate_Coder\백트래킹-DFS">
       <UniqueIdentifier>{10f6696e-de48-4d50-b673-2453b8d1ae37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Intermediate_Coder\그래프탐색-DFS">
+      <UniqueIdentifier>{cfe6fed1-bf89-4cdd-8825-eecd06548222}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2322,6 +2328,9 @@
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Janggi.h">
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.h">
+      <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
