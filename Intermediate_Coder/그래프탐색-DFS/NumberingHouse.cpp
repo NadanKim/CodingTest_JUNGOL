@@ -115,31 +115,45 @@ int NumberingHouse::Numbering(int** arr, int n, map<int, int>& result)
 /// <param name="result">단지 번호 붙인 결과</param>
 void NumberingHouse::Counting(int** arr, int n, int x, int y, int number, map<int, int>& result)
 {
-	if (arr[y][x] != 0)
+	if (result.find(number) == result.end())
 	{
-		if (result.find(number) == result.end())
-		{
-			result[number] = 0;
-		}
-		result[number]++;
-
-		arr[y][x] = 0;
+		result[number] = 0;
 	}
+	result[number]++;
 
-	for (int i = -1; i <= 1; i += 2)
+	arr[y][x] = 0;
+
+	queue<Point> q;
+	q.push(Point(x, y));
+
+	while (!q.empty())
 	{
-		if (0 <= x + i && x + i < n)
+		Point curPos = q.front();
+		q.pop();
+
+		int oldX{ curPos.x }, oldY{ curPos.y };
+		for (int i = -1; i <= 1; i += 2)
 		{
-			if (arr[y][x + i] != 0)
+			int newX{ oldX + i }, newY{ oldY + i };
+			if (0 <= newX && newX < n)
 			{
-				Counting(arr, n, x + i, y, number, result);
+				if (arr[oldY][newX] != 0)
+				{
+					result[number]++;
+					arr[oldY][newX] = 0;
+
+					q.push(Point(newX, oldY));
+				}
 			}
-		}
-		if (0 <= y + i && y + i < n)
-		{
-			if (arr[y + i][x] != 0)
+			if (0 <= newY && newY < n)
 			{
-				Counting(arr, n, x, y + i, number, result);
+				if (arr[newY][oldX] != 0)
+				{
+					result[number]++;
+					arr[newY][oldX] = 0;
+
+					q.push(Point(oldX, newY));
+				}
 			}
 		}
 	}
