@@ -4,12 +4,14 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#include <string>
 
 #include "../../Base.h"
 
 using std::map;
 using std::vector;
 using std::queue;
+using std::string;
 
 class NumberingHouse : public Base
 {

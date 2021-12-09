@@ -45,13 +45,13 @@ void NumberingHouse::Code()
 	{
 		arr[i] = new int[n];
 
-		int temp;
+		string temp;
 		std::cin >> temp;
 
 		for (int j = n - 1; j >= 0; j--)
 		{
-			arr[i][j] = temp % 10;
-			temp /= 10;
+			int tempValue = temp[j] - '0';
+			arr[i][j] = tempValue % 10;
 		}
 	}
 
