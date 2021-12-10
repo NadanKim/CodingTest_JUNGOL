@@ -115,12 +115,7 @@ int NumberingHouse::Numbering(int** arr, int n, map<int, int>& result)
 /// <param name="result">단지 번호 붙인 결과</param>
 void NumberingHouse::Counting(int** arr, int n, int x, int y, int number, map<int, int>& result)
 {
-	if (result.find(number) == result.end())
-	{
-		result[number] = 0;
-	}
-	result[number]++;
-
+	result[number] = 1;
 	arr[y][x] = 0;
 
 	queue<Point> q;
