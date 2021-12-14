@@ -1061,6 +1061,9 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.cpp">
       <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\CheckArea.cpp">
+      <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2330,6 +2333,9 @@
       <Filter>Intermediate_Coder\백트래킹-DFS</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.h">
+      <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\CheckArea.h">
       <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
     </ClInclude>
   </ItemGroup>
