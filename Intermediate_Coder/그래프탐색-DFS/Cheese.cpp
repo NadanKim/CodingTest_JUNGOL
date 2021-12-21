@@ -99,27 +99,27 @@ int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 	{
 		for (int j = 0; j < m; j++)
 		{
-			if (IsSideCheese(arr, n, m, j, i))
+			if (arr[i][j] == '1' && IsSideCheese(arr, n, m, j, i))
 			{
 				CheckSideCheese(arr, n, m, j, i);
 			}
 		}
 	}
-	//std::cout << "------------------\n";
-	//for (int i = 0; i < n; i++)
-	//{
-	//	for (int j = 0; j < m; j++)
-	//	{
-	//		if (arr[i][j] == '0')
-	//			std::cout << "  ";
-	//		else if (arr[i][j] == '1')
-	//			std::cout << "1 ";
-	//		else
-	//			std::cout << "C ";
-	//	}
-	//	std::cout << '\n';
-	//}
-	//std::cout << "------------------\n\n";
+	std::cout << "------------------\n";
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (arr[i][j] == '0')
+				std::cout << "  ";
+			else if (arr[i][j] == '1')
+				std::cout << "1 ";
+			else
+				std::cout << "C ";
+		}
+		std::cout << '\n';
+	}
+	std::cout << "------------------\n\n";
 	MeltCheese(arr, n, m);
 	return CountCheese(arr, n, m);
 }
@@ -135,14 +135,42 @@ int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 /// <returns>외곽에 있는지 여부</returns>
 bool Cheese::IsSideCheese(char** arr, int n, int m, int x, int y)
 {
-	if (arr[y][x] == '1')
+	if (x >= m || y >= n)
 	{
-		if (x == 0 || arr[y][x - 1] == '0') return true;
-		if (x == m - 1 || arr[y][x + 1] == '0') return true;
-		if (y == 0 || arr[y - 1][x] == '0') return true;
-		if (y == n - 1 || arr[y + 1][x] == '0') return true;
+		return false;
 	}
-	return false;
+
+	if (x == 0 || x == m - 1 || y == 0 || y == n - 1)
+	{
+		return true;
+	}
+
+	bool result{ false };
+	if (arr[y][x - 1] == '0')
+	{
+		arr[y][x - 1] = 't';
+		result = IsSideCheese(arr, n, m, x - 1, y);
+		arr[y][x - 1] = '0';
+	}
+	if (!result && arr[y][x + 1] == '0')
+	{
+		arr[y][x + 1] = 't';
+		result = IsSideCheese(arr, n, m, x + 1, y);
+		arr[y][x + 1] = '0';
+	}
+	if (!result && arr[y - 1][x] == '0')
+	{
+		arr[y - 1][x] = 't';
+		result = IsSideCheese(arr, n, m, x, y - 1);
+		arr[y - 1][x] = '0';
+	}
+	if (!result && arr[y + 1][x] == '0')
+	{
+		arr[y + 1][x] = 't';
+		result = IsSideCheese(arr, n, m, x, y + 1);
+		arr[y + 1][x] = '0';
+	}
+	return result;
 }
 
 /// <summary>
