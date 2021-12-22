@@ -95,82 +95,89 @@ void Cheese::Code()
 /// <param name="m">배열 가로 길이</param>
 int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 {
-	for (int i = 0; i < n; i++)
+	// 배열 위, 아래 빈 공간 검사 시작
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		if (IsCheese(arr, n, m, i, 0))
 		{
-			if (arr[i][j] == '1' && IsSideCheese(arr, n, m, j, i))
-			{
-				CheckSideCheese(arr, n, m, j, i);
-			}
+			arr[0][i] = 'c';
+		}
+		else if (IsAir(arr, n, m, i, 0))
+		{
+			CheckSideCheese(arr, n, m, i, 0);
+		}
+		
+		if (IsCheese(arr, n, m, i, n - 1))
+		{
+			arr[n - 1][i] = 'c';
+		}
+		else if (IsAir(arr, n, m, i, n - 1))
+		{
+			CheckSideCheese(arr, n, m, i, n - 1);
 		}
 	}
-	std::cout << "------------------\n";
+
+	// 배열 왼쪽, 오른쪽 빈 공간 검사 시작
 	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < m; j++)
+		if (IsCheese(arr, n, m, 0, i))
 		{
-			if (arr[i][j] == '0')
-				std::cout << "  ";
-			else if (arr[i][j] == '1')
-				std::cout << "1 ";
-			else
-				std::cout << "C ";
+			arr[i][0] = 'c';
 		}
-		std::cout << '\n';
+		else if (IsAir(arr, n, m, 0, i))
+		{
+			CheckSideCheese(arr, n, m, 0, i);
+		}
+
+		if (IsCheese(arr, n, m, m - 1, i))
+		{
+			arr[i][m - 1] = 'c';
+		}
+		else if (IsAir(arr, n, m, m - 1, i))
+		{
+			CheckSideCheese(arr, n, m, m - 1, i);
+		}
 	}
-	std::cout << "------------------\n\n";
+
 	MeltCheese(arr, n, m);
+	RefreshAir(arr, n, m);
 	return CountCheese(arr, n, m);
 }
 
 /// <summary>
-/// 해당 위치의 치즈가 외곽에 있는 것인지 여부를 반환한다.
+/// 해당 지점이 치즈인지 여부를 반환한다.
 /// </summary>
 /// <param name="arr">배열</param>
 /// <param name="n">배열 세로 길이</param>
 /// <param name="m">배열 가로 길이</param>
 /// <param name="x">확인할 x 좌표</param>
 /// <param name="y">확인할 y 좌표</param>
-/// <returns>외곽에 있는지 여부</returns>
-bool Cheese::IsSideCheese(char** arr, int n, int m, int x, int y)
+/// <returns>치즈인지 여부</returns>
+bool Cheese::IsCheese(char** arr, int n, int m, int x, int y)
 {
-	if (x >= m || y >= n)
+	if (0 <= x && x < m && 0 <= y && y < n)
 	{
-		return false;
+		return arr[y][x] == '1';
 	}
+	return false;
+}
 
-	if (x == 0 || x == m - 1 || y == 0 || y == n - 1)
+/// <summary>
+/// 해당 지점이 외부인지 여부를 반환한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열 세로 길이</param>
+/// <param name="m">배열 가로 길이</param>
+/// <param name="x">확인할 x 좌표</param>
+/// <param name="y">확인할 y 좌표</param>
+/// <returns>외부인지 여부</returns>
+bool Cheese::IsAir(char** arr, int n, int m, int x, int y)
+{
+	if (0 <= x && x < m && 0 <= y && y < n)
 	{
-		return true;
+		return arr[y][x] == '0';
 	}
-
-	bool result{ false };
-	if (arr[y][x - 1] == '0')
-	{
-		arr[y][x - 1] = 't';
-		result = IsSideCheese(arr, n, m, x - 1, y);
-		arr[y][x - 1] = '0';
-	}
-	if (!result && arr[y][x + 1] == '0')
-	{
-		arr[y][x + 1] = 't';
-		result = IsSideCheese(arr, n, m, x + 1, y);
-		arr[y][x + 1] = '0';
-	}
-	if (!result && arr[y - 1][x] == '0')
-	{
-		arr[y - 1][x] = 't';
-		result = IsSideCheese(arr, n, m, x, y - 1);
-		arr[y - 1][x] = '0';
-	}
-	if (!result && arr[y + 1][x] == '0')
-	{
-		arr[y + 1][x] = 't';
-		result = IsSideCheese(arr, n, m, x, y + 1);
-		arr[y + 1][x] = '0';
-	}
-	return result;
+	return false;
 }
 
 /// <summary>
@@ -191,17 +198,66 @@ void Cheese::CheckSideCheese(char** arr, int n, int m, int x, int y)
 		Point p = s.top();
 		s.pop();
 
-		arr[p.y][p.x] = 'c';
+		arr[p.y][p.x] = 'e';
 
 		for (int i = -1; i <= 1; i += 2)
 		{
-			if (IsSideCheese(arr, n, m, p.x + i, p.y))
+			if (IsCheese(arr, n, m, p.x + i, p.y))
+			{
+				arr[p.y][p.x + i] = 'c';
+			}
+			else if (IsAir(arr, n, m, p.x + i, p.y))
 			{
 				s.push(Point(p.x + i, p.y));
 			}
-			if (IsSideCheese(arr, n, m, p.x, p.y + i))
+
+			if (IsCheese(arr, n, m, p.x, p.y + i))
+			{
+				arr[p.y + i][p.x] = 'c';
+			}
+			else if (IsAir(arr, n, m, p.x, p.y + i))
 			{
 				s.push(Point(p.x, p.y + i));
+			}
+		}
+	}
+}
+
+/// <summary>
+/// 배열 내 녹일 치즈를 제거한다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열 세로 길이</param>
+/// <param name="m">배열 가로 길이</param>
+void Cheese::MeltCheese(char** arr, int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (arr[i][j] == 'c')
+			{
+				arr[i][j] = '0';
+			}
+		}
+	}
+}
+
+/// <summary>
+/// 확인했던 외부 공기를 원래 상태로 돌린다.
+/// </summary>
+/// <param name="arr">배열</param>
+/// <param name="n">배열 세로 길이</param>
+/// <param name="m">배열 가로 길이</param>
+void Cheese::RefreshAir(char** arr, int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (arr[i][j] == 'e')
+			{
+				arr[i][j] = '0';
 			}
 		}
 	}
@@ -228,24 +284,4 @@ int Cheese::CountCheese(char** arr, int n, int m)
 		}
 	}
 	return count;
-}
-
-/// <summary>
-/// 배열 내 녹일 치즈를 제거한다.
-/// </summary>
-/// <param name="arr">배열</param>
-/// <param name="n">배열 세로 길이</param>
-/// <param name="m">배열 가로 길이</param>
-void Cheese::MeltCheese(char** arr, int n, int m)
-{
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < m; j++)
-		{
-			if (arr[i][j] == 'c')
-			{
-				arr[i][j] = '0';
-			}
-		}
-	}
 }

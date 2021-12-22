@@ -17,10 +17,12 @@ private:
 	};
 
 	int GetCheeseMeltingCount(char** arr, int n, int m);
-	bool IsSideCheese(char** arr, int n, int m, int x, int y);
+	bool IsCheese(char** arr, int n, int m, int x, int y);
+	bool IsAir(char** arr, int n, int m, int x, int y);
 	void CheckSideCheese(char** arr, int n, int m, int x, int y);
-	int CountCheese(char** arr, int n, int m);
 	void MeltCheese(char** arr, int n, int m);
+	void RefreshAir(char** arr, int n, int m);
+	int CountCheese(char** arr, int n, int m);
 
 protected:
 	void Code() override;
