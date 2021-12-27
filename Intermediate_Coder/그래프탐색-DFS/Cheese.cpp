@@ -70,12 +70,12 @@ void Cheese::Code()
 	while (true)
 	{
 		hour++;
+		count = CountCheese(arr, n, m);
 		int curCount{ GetCheeseMeltingCount(arr, n, m) };
 		if (curCount == 0)
 		{
 			break;
 		}
-		count = curCount;
 	}
 
 	std::cout << hour << '\n' << count;
