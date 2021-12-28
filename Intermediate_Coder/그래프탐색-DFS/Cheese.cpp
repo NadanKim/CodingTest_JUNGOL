@@ -95,9 +95,9 @@ void Cheese::Code()
 /// <param name="m">배열 가로 길이</param>
 int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 {
-	// 배열 위, 아래 빈 공간 검사 시작
 	for (int i = 0; i < m; i++)
 	{
+		// 배열의 위쪽 테두리 검사
 		if (IsCheese(arr, n, m, i, 0))
 		{
 			arr[0][i] = 'c';
@@ -107,6 +107,7 @@ int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 			CheckSideCheese(arr, n, m, i, 0);
 		}
 		
+		// 배열의 아래쪽 테두리 검사
 		if (IsCheese(arr, n, m, i, n - 1))
 		{
 			arr[n - 1][i] = 'c';
@@ -115,11 +116,8 @@ int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 		{
 			CheckSideCheese(arr, n, m, i, n - 1);
 		}
-	}
 
-	// 배열 왼쪽, 오른쪽 빈 공간 검사 시작
-	for (int i = 0; i < n; i++)
-	{
+		// 배열의 왼쪽 테두리 검사
 		if (IsCheese(arr, n, m, 0, i))
 		{
 			arr[i][0] = 'c';
@@ -129,6 +127,7 @@ int Cheese::GetCheeseMeltingCount(char** arr, int n, int m)
 			CheckSideCheese(arr, n, m, 0, i);
 		}
 
+		// 배열의 오른쪽 테두리 검사
 		if (IsCheese(arr, n, m, m - 1, i))
 		{
 			arr[i][m - 1] = 'c';
