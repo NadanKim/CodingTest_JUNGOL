@@ -216,6 +216,7 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\RangeBasedFor.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\STLVector1.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\STLVector2.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Bishop.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\CupoardDoor.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\DNACombination.cpp" />
@@ -577,6 +578,7 @@
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\RangeBasedFor.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\STLVector1.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\STLVector2.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Bishop.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\CupoardDoor.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\DNACombination.h" />
