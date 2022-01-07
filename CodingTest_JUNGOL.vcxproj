@@ -215,6 +215,7 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\Cheese.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\MazeExploration.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\OrderByHeight.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\RangeBasedFor.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\STLVector1.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\STLVector2.cpp" />
@@ -578,6 +579,7 @@
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\Cheese.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\MazeExploration.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\OrderByHeight.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\RangeBasedFor.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\STLVector1.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\STLVector2.h" />
