@@ -122,7 +122,10 @@ int OrderByHeight::GetStudentCountBehind(const vector<Student>& students, int n,
 
 			for (int bhdStudent : students[curStudent].behinds)
 			{
-				s.push(bhdStudent);
+				if (behindStudents.find(bhdStudent) == behindStudents.end())
+				{
+					s.push(bhdStudent);
+				}
 			}
 		}
 
@@ -159,7 +162,10 @@ int OrderByHeight::GetStudentCountForward(const vector<Student>& students, int n
 
 			for (int fwdStudent : students[curStudent].forwards)
 			{
-				s.push(fwdStudent);
+				if (forwardStudents.find(fwdStudent) == forwardStudents.end())
+				{
+					s.push(fwdStudent);
+				}
 			}
 		}
 
