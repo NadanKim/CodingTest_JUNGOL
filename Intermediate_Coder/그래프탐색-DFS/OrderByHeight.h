@@ -17,6 +17,9 @@ private:
 	{
 		set<int> from;
 		set<int> to;
+
+		set<int> fromIndirectly;
+		set<int> toIndirectly;
 	};
 
 protected:

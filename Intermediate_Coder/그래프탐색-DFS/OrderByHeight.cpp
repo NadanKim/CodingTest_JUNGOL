@@ -78,10 +78,11 @@ void OrderByHeight::Code()
 
 			for (int j = 1; j <= n; j++)
 			{
-				if (students[j].to.find(target) != students[j].to.end())
+				if (students[j].to.find(target) != students[j].to.end()
+					|| students[j].toIndirectly.find(target) != students[j].toIndirectly.end())
 				{
-					students[j].to.insert(to);
-					students[to].from.insert(j);
+					students[j].toIndirectly.insert(to);
+					students[to].fromIndirectly.insert(j);
 					s.push(j);
 				}
 			}
@@ -91,6 +92,9 @@ void OrderByHeight::Code()
 	int cnt{ 0 };
 	for (int i = 1; i <= n; i++)
 	{
+		students[i].from.insert(students[i].fromIndirectly.begin(), students[i].fromIndirectly.end());
+		students[i].to.insert(students[i].toIndirectly.begin(), students[i].toIndirectly.end());
+
 		if (students[i].from.size() + students[i].to.size() == n - 1)
 		{
 			cnt++;
