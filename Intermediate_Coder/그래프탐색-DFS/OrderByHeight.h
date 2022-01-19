@@ -2,25 +2,26 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-#include <set>
 
 #include "../../Base.h"
 
 using std::vector;
 using std::stack;
-using std::set;
 
 class OrderByHeight : public Base
 {
 private:
 	struct Student
 	{
-		set<int> from;
-		set<int> to;
+		Student() : knownCount(0), isChecked(false) {}
 
-		set<int> fromIndirectly;
-		set<int> toIndirectly;
+		vector<int> forwards;
+		int knownCount;
+		bool isChecked;
 	};
+
+	int GetKnownStudentCount(vector<Student>& students, int n);
+	void ResetCheckedStudents(vector<Student>& students, int n);
 
 protected:
 	void Code() override;

@@ -61,45 +61,76 @@ void OrderByHeight::Code()
 	vector<Student> students(n + 1, Student());
 	for (int i = 0; i < m; i++)
 	{
-		int from, to;
+		int behind, forward;
 
-		std::cin >> from >> to;
+		std::cin >> behind >> forward;
 
-		students[from].to.insert(to);
-		students[to].from.insert(from);
+		students[behind].forwards.push_back(forward);
+	}
+
+	std::cout << GetKnownStudentCount(students, n);
+}
+
+/// <summary>
+/// 자신의 키를 알고 있는 학생의 수를 반환한다.
+/// </summary>
+/// <param name="students">학생 정보 리스트</param>
+/// <param name="n">학생의 수</param>
+/// <returns>자신의 키를 아는 학생의 수</returns>
+int OrderByHeight::GetKnownStudentCount(vector<Student>& students, int n)
+{
+	int knownStudentCount{ 0 };
+
+	for (int i = 1; i <= n; i++)
+	{
+		if (students[i].forwards.empty())
+		{
+			continue;
+		}
 
 		stack<int> s;
-		s.push(from);
+		s.push(i);
 
 		while (!s.empty())
 		{
-			int target{ s.top() };
+			int curStudent{ s.top() };
 			s.pop();
 
-			for (int j = 1; j <= n; j++)
+			for (int nextStudent : students[curStudent].forwards)
 			{
-				if (students[j].to.find(target) != students[j].to.end()
-					|| students[j].toIndirectly.find(target) != students[j].toIndirectly.end())
+				if (!students[nextStudent].isChecked)
 				{
-					students[j].toIndirectly.insert(to);
-					students[to].fromIndirectly.insert(j);
-					s.push(j);
+					students[i].knownCount++;
+					students[nextStudent].knownCount++;
+					students[nextStudent].isChecked = true;
+					s.push(nextStudent);
 				}
 			}
 		}
+
+		ResetCheckedStudents(students, n);
 	}
 
-	int cnt{ 0 };
 	for (int i = 1; i <= n; i++)
 	{
-		students[i].from.insert(students[i].fromIndirectly.begin(), students[i].fromIndirectly.end());
-		students[i].to.insert(students[i].toIndirectly.begin(), students[i].toIndirectly.end());
-
-		if (students[i].from.size() + students[i].to.size() == n - 1)
+		if (students[i].knownCount == n - 1)
 		{
-			cnt++;
+			knownStudentCount++;
 		}
 	}
 
-	std::cout << cnt;
+	return knownStudentCount;
+}
+
+/// <summary>
+/// 각 학생의 확인 여부를 초기화한다.
+/// </summary>
+/// <param name="students">학생 정보 리스트</param>
+/// <param name="n">학생의 수</param>
+void OrderByHeight::ResetCheckedStudents(vector<Student>& students, int n)
+{
+	for (int i = 1; i <= n; i++)
+	{
+		students[i].isChecked = false;
+	}
 }
