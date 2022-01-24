@@ -16,6 +16,7 @@ private:
 		Student() : upCount(0), downCount(0), isChecked(false) {}
 
 		vector<int> betterFriends;
+		vector<int> worseFriends;
 
 		int upCount;
 		int downCount;
@@ -23,7 +24,9 @@ private:
 		bool isChecked;
 	};
 
-	void CheckStudentRanking(vector<Student>& students, int n);
+	void CheckStudentRanking(vector<Student>& students, int n, int x);
+	void CheckBetterStudents(vector<Student>& students, int x);
+	void CheckWorseStudents(vector<Student>& students, int x);
 	void ResetCheckedStudents(vector<Student>& students, int n);
 
 protected:

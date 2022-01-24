@@ -60,10 +60,11 @@ void Ranking::Code()
 	{
 		std::cin >> a >> b;
 
+		students[a].worseFriends.push_back(b);
 		students[b].betterFriends.push_back(a);
 	}
 
-	CheckStudentRanking(students, n);
+	CheckStudentRanking(students, n, x);
 
 	int bestRanking{ 1 + students[x].upCount }, worstRanking{ n - students[x].downCount };
 	std::cout << bestRanking << ' ' << worstRanking;
@@ -74,36 +75,65 @@ void Ranking::Code()
 /// </summary>
 /// <param name="students">학생 정보 리스트</param>
 /// <param name="n">학생의 수</param>
-void Ranking::CheckStudentRanking(vector<Student>& students, int n)
+/// <param name="x">확인할 학생의 번호</param>
+void Ranking::CheckStudentRanking(vector<Student>& students, int n, int x)
 {
-	for (int i = 1; i <= n; i++)
+	CheckBetterStudents(students, x);
+	ResetCheckedStudents(students, n);
+	CheckWorseStudents(students, x);
+}
+
+/// <summary>
+/// 기준 학생보다 잘 한 학생을 확인하여 순위를 체크한다.
+/// </summary>
+/// <param name="students">학생 정보 리스트</param>
+/// <param name="x">확인할 학생의 번호</param>
+void Ranking::CheckBetterStudents(vector<Student>& students, int x)
+{
+	stack<int> s;
+	s.push(x);
+
+	while (!s.empty())
 	{
-		if (students[i].betterFriends.empty())
+		int curStudent{ s.top() };
+		s.pop();
+
+		for (int nextStudent : students[curStudent].betterFriends)
 		{
-			continue;
-		}
-
-		stack<int> s;
-		s.push(i);
-
-		while (!s.empty())
-		{
-			int curStudent{ s.top() };
-			s.pop();
-
-			for (int nextStudent : students[curStudent].betterFriends)
+			if (!students[nextStudent].isChecked)
 			{
-				if (!students[nextStudent].isChecked)
-				{
-					students[i].upCount++;
-					students[nextStudent].downCount++;
-					students[nextStudent].isChecked = true;
-					s.push(nextStudent);
-				}
+				students[x].upCount++;
+				students[nextStudent].isChecked = true;
+				s.push(nextStudent);
 			}
 		}
+	}
+}
 
-		ResetCheckedStudents(students, n);
+/// <summary>
+/// 기준 학생보다 못 한 학생을 확인하여 순위를 체크한다.
+/// </summary>
+/// <param name="students">학생 정보 리스트</param>
+/// <param name="x">확인할 학생의 번호</param>
+void Ranking::CheckWorseStudents(vector<Student>& students, int x)
+{
+	stack<int> s;
+	s.push(x);
+
+	while (!s.empty())
+	{
+		int curStudent{ s.top() };
+		s.pop();
+
+		for (int nextStudent : students[curStudent].worseFriends)
+		{
+			if (!students[nextStudent].isChecked)
+			{
+				students[x].downCount++;
+				students[nextStudent].isChecked = true;
+				s.push(nextStudent);
+			}
+		}
 	}
 }
 
