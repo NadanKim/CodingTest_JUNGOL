@@ -69,5 +69,58 @@
 /// </summary>
 void Robot::Code()
 {
-	
+	int n, r1, r2;
+	std::cin >> n >> r1 >> r2;
+
+	vector<vector<WayInfo>> rooms(n + 1, vector<WayInfo>());
+
+	int from, to, cost;
+	for (int i = 1; i < n; i++)
+	{
+		std::cin >> from >> to >> cost;
+
+		rooms[from].push_back(WayInfo(to, cost));
+		rooms[to].push_back(WayInfo(from, cost));
+	}
+
+	bool* isChecked = new bool[n] {};
+	std::cout << GetMinimumDistance(rooms, isChecked, n, r1, r2);
+	delete[] isChecked;
+}
+
+/// <summary>
+/// 두 로봇이 통신 가능한 최소 이동 거리를 구하여 반환한다.
+/// </summary>
+/// <param name="rooms">방 정보</param>
+/// <param name="isChecked">방문 여부</param>
+/// <param name="n">방 개수</param>
+/// <param name="r1">로봇1 위치</param>
+/// <param name="r2">로봇2 위치</param>
+/// <param name="total">총 이동 거리</param>
+/// <param name="maximum">경로간 단일 최대 이동 거리</param>
+/// <returns>최소 이동 거리</returns>
+int Robot::GetMinimumDistance(const vector<vector<WayInfo>>& rooms, bool isChecked[], int n,
+	int r1, int r2, int total, int maximum)
+{
+	if (r1 == r2)
+	{
+		return total - maximum;
+	}
+
+	int result{ 0 };
+	if (!isChecked[r1])
+	{
+		isChecked[r1] = true;
+
+		for (const WayInfo& room : rooms[r1])
+		{
+			result = GetMinimumDistance(rooms, isChecked, n, room.to, r2, total + room.cost, std::max(maximum, room.cost));
+			if (result > 0)
+			{
+				break;
+			}
+		}
+	}
+
+	return result;
 }
