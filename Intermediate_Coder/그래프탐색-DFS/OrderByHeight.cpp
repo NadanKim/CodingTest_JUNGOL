@@ -66,7 +66,6 @@ void OrderByHeight::Code()
 		std::cin >> behind >> forward;
 
 		students[behind].forwards.push_back(forward);
-		students[forward].behinds.push_back(behind);
 	}
 
 	std::cout << GetKnownStudentCount(students, n);
@@ -78,16 +77,43 @@ void OrderByHeight::Code()
 /// <param name="students">학생 정보 리스트</param>
 /// <param name="n">학생의 수</param>
 /// <returns>자신의 키를 아는 학생의 수</returns>
-int OrderByHeight::GetKnownStudentCount(const vector<Student>& students, int n)
+int OrderByHeight::GetKnownStudentCount(vector<Student>& students, int n)
 {
 	int knownStudentCount{ 0 };
 
 	for (int i = 1; i <= n; i++)
 	{
-		int behindStudentCount{ GetStudentCountBehind(students,n,i) };
-		int forwardStudentCount{ GetStudentCountForward(students,n,i) };
+		if (students[i].forwards.empty())
+		{
+			continue;
+		}
 
-		if (behindStudentCount + forwardStudentCount + 1 == n)
+		stack<int> s;
+		s.push(i);
+
+		while (!s.empty())
+		{
+			int curStudent{ s.top() };
+			s.pop();
+
+			for (int nextStudent : students[curStudent].forwards)
+			{
+				if (!students[nextStudent].isChecked)
+				{
+					students[i].knownCount++;
+					students[nextStudent].knownCount++;
+					students[nextStudent].isChecked = true;
+					s.push(nextStudent);
+				}
+			}
+		}
+
+		ResetCheckedStudents(students, n);
+	}
+
+	for (int i = 1; i <= n; i++)
+	{
+		if (students[i].knownCount == n - 1)
 		{
 			knownStudentCount++;
 		}
@@ -97,41 +123,14 @@ int OrderByHeight::GetKnownStudentCount(const vector<Student>& students, int n)
 }
 
 /// <summary>
-/// 자신보다 뒤에 있는 학생의 수를 반환한다.
+/// 각 학생의 확인 여부를 초기화한다.
 /// </summary>
 /// <param name="students">학생 정보 리스트</param>
 /// <param name="n">학생의 수</param>
-/// <param name="studentNumber">현재 확인중인 학생의 번호</param>
-/// <returns>자신보다 뒤에 있는 학생의 수</returns>
-int OrderByHeight::GetStudentCountBehind(const vector<Student>& students, int n, int studentNumber)
+void OrderByHeight::ResetCheckedStudents(vector<Student>& students, int n)
 {
-	const Student& curStudent{ students[studentNumber] };
-	int behindStudentCount{ static_cast<int>(curStudent.behinds.size()) };
-
-	for (int behindStudentNumber : curStudent.behinds)
+	for (int i = 1; i <= n; i++)
 	{
-		behindStudentCount += GetStudentCountBehind(students, n, behindStudentNumber);
+		students[i].isChecked = false;
 	}
-
-	return behindStudentCount;
-}
-
-/// <summary>
-/// 자신보다 앞에 있는 학생의 수를 반환한다.
-/// </summary>
-/// <param name="students">학생 정보 리스트</param>
-/// <param name="n">학생의 수</param>
-/// <param name="studentNumber">현재 확인중인 학생의 번호</param>
-/// <returns>자신보다 앞에 있는 학생의 수</returns>
-int OrderByHeight::GetStudentCountForward(const vector<Student>& students, int n, int studentNumber)
-{
-	const Student& curStudent{ students[studentNumber] };
-	int forwardStudentCount{ static_cast<int>(curStudent.forwards.size()) };
-
-	for (int forwardStudentNumber : curStudent.forwards)
-	{
-		forwardStudentCount += GetStudentCountForward(students, n, forwardStudentNumber);
-	}
-
-	return forwardStudentCount;
 }

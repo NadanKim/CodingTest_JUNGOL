@@ -217,6 +217,8 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\OrderByHeight.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\RangeBasedFor.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\Ranking.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\Robot.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\STLVector1.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\STLVector2.cpp" />
     <ClCompile Include="Intermediate_Coder\백트래킹-DFS\Bishop.cpp" />
@@ -581,6 +583,8 @@
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\NumberingHouse.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\OrderByHeight.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\RangeBasedFor.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\Ranking.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\Robot.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\STLVector1.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\STLVector2.h" />
     <ClInclude Include="Intermediate_Coder\백트래킹-DFS\Bishop.h" />

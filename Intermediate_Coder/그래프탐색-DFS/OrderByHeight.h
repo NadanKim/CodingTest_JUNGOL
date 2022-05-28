@@ -1,23 +1,27 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <stack>
 
 #include "../../Base.h"
 
 using std::vector;
+using std::stack;
 
 class OrderByHeight : public Base
 {
 private:
 	struct Student
 	{
-		vector<int> behinds;
+		Student() : knownCount(0), isChecked(false) {}
+
 		vector<int> forwards;
+		int knownCount;
+		bool isChecked;
 	};
 
-	int GetKnownStudentCount(const vector<Student>& students, int n);
-	int GetStudentCountBehind(const vector<Student>& students, int n, int studentNumber);
-	int GetStudentCountForward(const vector<Student>& students, int n, int studentNumber);
+	int GetKnownStudentCount(vector<Student>& students, int n);
+	void ResetCheckedStudents(vector<Student>& students, int n);
 
 protected:
 	void Code() override;
