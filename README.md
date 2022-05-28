@@ -155,7 +155,7 @@ Base 클래스를 인터페이스로 정의하고 문제 클래스가 Base 클�
 
 | 장기 2 | 저글링 방사능 오염 | 보물선 | 토마토(고) | 화염에서탈출(SLIKAR) | 경로 찾기 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| ◇ | ◇ | ◇ | ◇ | ◇ | ◇ |
+| [◆](https://github.com/NadanKim/CodingTest_JUNGOL/blob/main/Intermediate_Coder/%EA%B7%B8%EB%9E%98%ED%94%84%ED%83%90%EC%83%89-BFS/Janggi2.cpp) | ◇ | ◇ | ◇ | ◇ | ◇ |
 
 | 소수와 함께 하는 여행 | 로봇 | 버스 갈아타기 |
 |:---:|:---:|:---:|
