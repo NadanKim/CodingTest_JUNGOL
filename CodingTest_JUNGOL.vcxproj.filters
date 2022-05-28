@@ -1088,6 +1088,9 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\Robot.cpp">
       <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.cpp">
+      <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -1296,6 +1299,9 @@
     </Filter>
     <Filter Include="Intermediate_Coder\그래프탐색-DFS">
       <UniqueIdentifier>{cfe6fed1-bf89-4cdd-8825-eecd06548222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Intermediate_Coder\그래프탐색-BFS">
+      <UniqueIdentifier>{aa89f8ea-06dc-451b-b1e0-2fe670c2503e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2385,6 +2391,9 @@
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\Robot.h">
       <Filter>Intermediate_Coder\그래프탐색-DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.h">
+      <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
