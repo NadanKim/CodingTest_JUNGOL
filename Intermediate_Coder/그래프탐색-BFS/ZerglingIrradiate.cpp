@@ -84,7 +84,7 @@ void ZerglingIrradiate::Code()
 int ZerglingIrradiate::Irradiate(int** map, Point mapSize, Point atkCoord)
 {
 	// 최초 공격 지점에 저글링이 없으면 0을 반환한다.
-	if (!IsZergling(map, atkCoord.x, atkCoord.y))
+	if (!IsInMap(mapSize, atkCoord.x, atkCoord.y) || !IsZergling(map, atkCoord.x, atkCoord.y))
 	{
 		return 0;
 	}
