@@ -46,20 +46,16 @@ void ZerglingIrradiate::Code()
 
 	// 맵 생성 및 초기화
 	int** map = new int* [mapSize.y];
+	string mapInfo;
 	for (int i = 0; i < mapSize.y; i++)
 	{
 		map[i] = new int[mapSize.x];
-		std::cin >> map[i][0];
-	}
+		std::cin >> mapInfo;
 
-	// 맵 분해 및 적용
-	for (int i = 0; i < mapSize.y; i++)
-	{
-		int mapInfo{ map[i][0] };
-		for (int j = mapSize.x - 1; j >= 0; j--)
+		// 입력된 맵 정보를 숫자로 변환
+		for (int j = 0; j < mapInfo.size(); j++)
 		{
-			map[i][j] = mapInfo % 10;
-			mapInfo /= 10;
+			map[i][j] = mapInfo[j] - '0';
 		}
 	}
 
