@@ -66,6 +66,10 @@ void ZerglingIrradiate::Code()
 	Point atkCoord;
 	std::cin >> atkCoord.x >> atkCoord.y;
 
+	// 배열이 0부터 시작하므로 좌표 조정
+	atkCoord.x -= 1;
+	atkCoord.y -= 1;
+
 	std::cout << Irradiate(map, mapSize, atkCoord) << '\n';
 	std::cout << CountZerglins(map, mapSize);
 }
@@ -80,7 +84,7 @@ void ZerglingIrradiate::Code()
 int ZerglingIrradiate::Irradiate(int** map, Point mapSize, Point atkCoord)
 {
 	// 최초 공격 지점에 저글링이 없으면 0을 반환한다.
-	if (!IsZergling(map, atkCoord.x, atkCoord.x))
+	if (!IsZergling(map, atkCoord.x, atkCoord.y))
 	{
 		return 0;
 	}
@@ -97,6 +101,11 @@ int ZerglingIrradiate::Irradiate(int** map, Point mapSize, Point atkCoord)
 		Point p{ q.front() };
 		q.pop();
 
+		if (!IsZergling(map, p.x, p.y))
+		{
+			continue;
+		}
+
 		if (p.time > totalAtkTime)
 		{
 			totalAtkTime = p.time;
@@ -105,19 +114,19 @@ int ZerglingIrradiate::Irradiate(int** map, Point mapSize, Point atkCoord)
 		map[p.y][p.x] = 0;
 
 		// 4 방향에 대해서 전염을 진행한다.
-		if (IsInMap(map, mapSize, p.x - 1, p.y) && IsZergling(map, p.x - 1, p.y))
+		if (IsInMap(mapSize, p.x - 1, p.y) && IsZergling(map, p.x - 1, p.y))
 		{
 			q.push(Point(p.x - 1, p.y, p.time + 1));
 		}
-		else if (IsInMap(map, mapSize, p.x + 1, p.y) && IsZergling(map, p.x + 1, p.y))
+		if (IsInMap(mapSize, p.x + 1, p.y) && IsZergling(map, p.x + 1, p.y))
 		{
 			q.push(Point(p.x + 1, p.y, p.time + 1));
 		}
-		else if (IsInMap(map, mapSize, p.x, p.y - 1) && IsZergling(map, p.x, p.y - 1))
+		if (IsInMap(mapSize, p.x, p.y - 1) && IsZergling(map, p.x, p.y - 1))
 		{
 			q.push(Point(p.x, p.y - 1, p.time + 1));
 		}
-		else if (IsInMap(map, mapSize, p.x, p.y + 1) && IsZergling(map, p.x, p.y + 1))
+		if (IsInMap(mapSize, p.x, p.y + 1) && IsZergling(map, p.x, p.y + 1))
 		{
 			q.push(Point(p.x, p.y + 1, p.time + 1));
 		}
@@ -129,14 +138,15 @@ int ZerglingIrradiate::Irradiate(int** map, Point mapSize, Point atkCoord)
 /// <summary>
 /// 주어진 좌표가 맵 범위에 포함되는지 여부를 반환한다.
 /// </summary>
-/// <param name="map">맵 배열</param>
 /// <param name="mapSize">맵 크기</param>
 /// <param name="x">확인 할 x 좌표</param>
 /// <param name="y">확인 할 y 좌표</param>
 /// <returns>맵 포함 여부</returns>
-bool ZerglingIrradiate::IsInMap(int** map, Point mapSize, int x, int y)
+bool ZerglingIrradiate::IsInMap(Point mapSize, int x, int y)
 {
-	return false;
+	if (x < 0 || mapSize.x <= x) return false;
+	if (y < 0 || mapSize.y <= y) return false;
+	return true;
 }
 
 /// <summary>
@@ -157,7 +167,7 @@ bool ZerglingIrradiate::IsZergling(int** map, int x, int y)
 /// <param name="map">맵 배열</param>
 /// <param name="mapSize">맵 크기</param>
 /// <returns>저글리의 수</returns>
-int ZerglingIrradiate::CountZerglins(int** map, Point mapSize) const
+int ZerglingIrradiate::CountZerglins(int** map, Point mapSize)
 {
 	int count{ 0 };
 	for (int i = 0; i < mapSize.y; i++)

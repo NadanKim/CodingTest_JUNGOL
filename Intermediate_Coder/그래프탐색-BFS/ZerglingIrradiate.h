@@ -19,9 +19,9 @@ private:
 	};
 
 	int Irradiate(int** map, Point mapSize, Point atkCoord);
-	bool IsInMap(int** map, Point mapSize, int x, int y);
+	bool IsInMap(Point mapSize, int x, int y);
 	bool IsZergling(int** map, int x, int y);
-	int CountZerglins(int** map, Point mapSize) const;
+	int CountZerglins(int** map, Point mapSize);
 
 protected:
 	void Code() override;
