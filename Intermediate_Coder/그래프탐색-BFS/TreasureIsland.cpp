@@ -48,12 +48,6 @@ void TreasureIsland::Code()
 	}
 
 	std::cout << GetShortestWayToTreasure(map, x, y);
-
-	for (int i = 0; i < y; i++)
-	{
-		delete[] map[i];
-	}
-	delete[] map;
 }
 
 int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
@@ -61,9 +55,7 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 	vector<Point> possibleList;
 	FindPossiblePosition(map, x, y, possibleList);
 
-	set<Point> checked;
-
-	int dist{ 9'999 };
+	int dist{ 0 };
 
 	int possibleLandCnt{ static_cast<int>(possibleList.size()) };
 	for (int i = 0; i < possibleLandCnt; i++)
@@ -75,19 +67,10 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 				continue;
 			}
 
-			if (checked.find(Point(j, i)) != checked.end()
-				|| checked.find(Point(i, j)) != checked.end())
-			{
-				continue;
-			}
-
-			checked.insert(Point(i, j));
-			checked.insert(Point(j, i));
-
 			int curDist{ GetShortestWayBetweenTwoPosition(map, x, y,
 				Point(possibleList[i].x, possibleList[i].y), Point(possibleList[j].x, possibleList[j].y)) };
 
-			if (curDist < dist)
+			if (curDist != 9'999 && curDist > dist)
 			{
 				dist = curDist;
 			}
@@ -108,7 +91,12 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 /// <returns>거리(기본 값:9,999)</returns>
 int TreasureIsland::GetShortestWayBetweenTwoPosition(char map[50][50], int x, int y, const Point& p1, const Point& p2)
 {
-	bool passCheck[50][50]{};
+	int passCheck[50][50]{};
+	for (int i = 0; i < y; i++)
+	{
+		std::fill_n(passCheck[i], x, 9'999);
+	}
+
 	int dist{ 9'999 };
 
 	queue<Point> q;
@@ -119,7 +107,31 @@ int TreasureIsland::GetShortestWayBetweenTwoPosition(char map[50][50], int x, in
 		Point p{ q.front() };
 		q.pop();
 
-		// p2로 이동하는 처리 추가
+		if (p.x == p2.x && p.y == p2.y)
+		{
+			if (p.dist < dist)
+			{
+				dist = p.dist;
+			}
+		}
+		passCheck[p.y][p.x] = p.dist;
+
+		if (p.x - 1 >= 0 && map[p.y][p.x - 1] == 'L' && passCheck[p.y][p.x - 1] > p.dist + 1)
+		{
+			q.push(Point(p.x - 1, p.y, p.dist + 1));
+		}
+		if (p.x + 1 < x && map[p.y][p.x + 1] == 'L' && passCheck[p.y][p.x + 1] > p.dist + 1)
+		{
+			q.push(Point(p.x + 1, p.y, p.dist + 1));
+		}
+		if (p.y - 1 >= 0 && map[p.y - 1][p.x] == 'L' && passCheck[p.y - 1][p.x] > p.dist + 1)
+		{
+			q.push(Point(p.x, p.y - 1, p.dist + 1));
+		}
+		if (p.y + 1 < y && map[p.y + 1][p.x] == 'L' && passCheck[p.y + 1][p.x] > p.dist + 1)
+		{
+			q.push(Point(p.x, p.y + 1, p.dist + 1));
+		}
 	}
 
 	return dist;

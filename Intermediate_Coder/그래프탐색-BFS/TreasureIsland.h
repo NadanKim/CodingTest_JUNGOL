@@ -2,13 +2,11 @@
 #include <iostream>
 #include <queue>
 #include <vector>
-#include <set>
 
 #include "../../Base.h"
 
 using std::queue;
 using std::vector;
-using std::set;
 
 class TreasureIsland : public Base
 {
