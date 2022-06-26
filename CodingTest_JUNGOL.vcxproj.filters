@@ -1094,6 +1094,9 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\ZerglingIrradiate.cpp">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.cpp">
+      <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2399,6 +2402,9 @@
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\ZerglingIrradiate.h">
+      <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.h">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
   </ItemGroup>
