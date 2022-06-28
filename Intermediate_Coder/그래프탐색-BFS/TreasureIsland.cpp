@@ -55,10 +55,9 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 	vector<Point> possibleList;
 	FindPossiblePosition(map, x, y, possibleList);
 
-	set<pair<int, int>> s;
-
 	int dist{ 0 };
 	int possibleLandCnt{ static_cast<int>(possibleList.size()) };
+
 	for (int i = 0; i < possibleLandCnt; i++)
 	{
 		for (int j = 0; j < possibleLandCnt; j++)
@@ -67,15 +66,6 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 			{
 				continue;
 			}
-
-			if (s.find(pair<int, int>(i, j)) != s.end()
-				|| s.find(pair<int, int>(j, i)) != s.end())
-			{
-				continue;
-			}
-
-			s.insert(pair<int, int>(i, j));
-			s.insert(pair<int, int>(j, i));
 
 			int curDist{ GetShortestWayBetweenTwoPosition(map, x, y,
 				Point(possibleList[i].x, possibleList[i].y), Point(possibleList[j].x, possibleList[j].y)) };
@@ -160,11 +150,6 @@ void TreasureIsland::FindPossiblePosition(char map[50][50], int x, int y, vector
 	{
 		for (int j = 0; j < x; j++)
 		{
-			if (map[i][j] != 'L')
-			{
-				continue;
-			}
-
 			if (IsEdgeLand(map, x, y, j, i))
 			{
 				possibleList.push_back(Point(j, i));
@@ -174,32 +159,34 @@ void TreasureIsland::FindPossiblePosition(char map[50][50], int x, int y, vector
 }
 
 /// <summary>
-/// 삼면이 바다인 땅인지 여부를 반환한다.
+/// 바다와 인접한 땅인지 여부를 반환한다.
 /// </summary>
 /// <param name="map">맵</param>
 /// <param name="x">맵 x 크기</param>
 /// <param name="y">맵 y 크기</param>
 /// <param name="tx">확인할 x 좌표</param>
 /// <param name="ty">확인할 y 좌표</param>
-/// <returns>삼면이 바다인지 여부</returns>
+/// <returns>바다와 인접 여부</returns>
 bool TreasureIsland::IsEdgeLand(char map[50][50], int x, int y, int tx, int ty)
 {
-	int waterCnt{ 0 };
-	if (tx == 0 || map[ty][tx - 1] == 'W')
+	if (map[ty][tx] == 'L')
 	{
-		waterCnt++;
+		if (tx == 0 || map[ty][tx - 1] == 'W')
+		{
+			return true;
+		}
+		if (tx == x - 1 || map[ty][tx + 1] == 'W')
+		{
+			return true;
+		}
+		if (ty == 0 || map[ty - 1][tx] == 'W')
+		{
+			return true;
+		}
+		if (ty == y - 1 || map[ty + 1][tx] == 'W')
+		{
+			return true;
+		}
 	}
-	if (tx == x - 1 || map[ty][tx + 1] == 'W')
-	{
-		waterCnt++;
-	}
-	if (ty == 0 || map[ty - 1][tx] == 'W')
-	{
-		waterCnt++;
-	}
-	if (ty == y - 1 || map[ty + 1][tx] == 'W')
-	{
-		waterCnt++;
-	}
-	return waterCnt == 3;
+	return false;
 }
