@@ -55,8 +55,9 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 	vector<Point> possibleList;
 	FindPossiblePosition(map, x, y, possibleList);
 
-	int dist{ 0 };
+	set<pair<int, int>> s;
 
+	int dist{ 0 };
 	int possibleLandCnt{ static_cast<int>(possibleList.size()) };
 	for (int i = 0; i < possibleLandCnt; i++)
 	{
@@ -66,6 +67,15 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 			{
 				continue;
 			}
+
+			if (s.find(pair<int, int>(i, j)) != s.end()
+				|| s.find(pair<int, int>(j, i)) != s.end())
+			{
+				continue;
+			}
+
+			s.insert(pair<int, int>(i, j));
+			s.insert(pair<int, int>(j, i));
 
 			int curDist{ GetShortestWayBetweenTwoPosition(map, x, y,
 				Point(possibleList[i].x, possibleList[i].y), Point(possibleList[j].x, possibleList[j].y)) };
