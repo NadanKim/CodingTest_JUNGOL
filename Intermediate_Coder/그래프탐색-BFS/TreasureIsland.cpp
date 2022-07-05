@@ -34,26 +34,23 @@
 /// </summary>
 void TreasureIsland::Code()
 {
-	int x, y;
+	std::cin >> m >> n;
 
-	std::cin >> y >> x;
-
-	char map[50][50]{};
-	for (int i = 0; i < y; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < x; j++)
+		for (int j = 0; j < n; j++)
 		{
 			std::cin >> map[i][j];
 		}
 	}
 
-	std::cout << GetShortestWayToTreasure(map, x, y);
+	std::cout << GetShortestWayToTreasure();
 }
 
-int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
+int TreasureIsland::GetShortestWayToTreasure()
 {
 	vector<Point> possibleList;
-	FindPossiblePosition(map, x, y, possibleList);
+	FindPossiblePosition(possibleList);
 
 	int dist{ 0 };
 	int possibleLandCnt{ static_cast<int>(possibleList.size()) };
@@ -67,8 +64,9 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 				continue;
 			}
 
-			int curDist{ GetShortestWayBetweenTwoPosition(map, x, y,
-				Point(possibleList[i].x, possibleList[i].y), Point(possibleList[j].x, possibleList[j].y)) };
+			int curDist{ GetShortestWayBetweenTwoPosition(
+				Point(possibleList[i].x, possibleList[i].y),
+				Point(possibleList[j].x, possibleList[j].y)) };
 
 			if (curDist != 9'999 && curDist > dist)
 			{
@@ -83,18 +81,14 @@ int TreasureIsland::GetShortestWayToTreasure(char map[50][50], int x, int y)
 /// <summary>
 /// 두 지점 사이 거리를 반환한다.
 /// </summary>
-/// <param name="map">맵</param>
-/// <param name="x">맵 x 크기</param>
-/// <param name="y">맵 y 크기</param>
 /// <param name="p1">지점 1</param>
 /// <param name="p2">지점 2</param>
 /// <returns>거리(기본 값:9,999)</returns>
-int TreasureIsland::GetShortestWayBetweenTwoPosition(char map[50][50], int x, int y, const Point& p1, const Point& p2)
+int TreasureIsland::GetShortestWayBetweenTwoPosition(const Point& p1, const Point& p2)
 {
-	int passCheck[50][50]{};
-	for (int i = 0; i < y; i++)
+	for (int i = 0; i < m; i++)
 	{
-		std::fill_n(passCheck[i], x, 9'999);
+		std::fill_n(passCheck[i], n, 9'999);
 	}
 
 	int dist{ 9'999 };
@@ -120,7 +114,7 @@ int TreasureIsland::GetShortestWayBetweenTwoPosition(char map[50][50], int x, in
 		{
 			q.push(Point(p.x - 1, p.y, p.dist + 1));
 		}
-		if (p.x + 1 < x && map[p.y][p.x + 1] == 'L' && passCheck[p.y][p.x + 1] > p.dist + 1)
+		if (p.x + 1 < n && map[p.y][p.x + 1] == 'L' && passCheck[p.y][p.x + 1] > p.dist + 1)
 		{
 			q.push(Point(p.x + 1, p.y, p.dist + 1));
 		}
@@ -128,7 +122,7 @@ int TreasureIsland::GetShortestWayBetweenTwoPosition(char map[50][50], int x, in
 		{
 			q.push(Point(p.x, p.y - 1, p.dist + 1));
 		}
-		if (p.y + 1 < y && map[p.y + 1][p.x] == 'L' && passCheck[p.y + 1][p.x] > p.dist + 1)
+		if (p.y + 1 < m && map[p.y + 1][p.x] == 'L' && passCheck[p.y + 1][p.x] > p.dist + 1)
 		{
 			q.push(Point(p.x, p.y + 1, p.dist + 1));
 		}
@@ -140,53 +134,17 @@ int TreasureIsland::GetShortestWayBetweenTwoPosition(char map[50][50], int x, in
 /// <summary>
 /// 보물이 있을 수 있는 땅 리스트를 찾는다.
 /// </summary>
-/// <param name="map">맵</param>
-/// <param name="x">맵 x 크기</param>
-/// <param name="y">맵 y 크기</param>
 /// <param name="possibleList">보물이 있을 수 있는 땅 리스트</param>
-void TreasureIsland::FindPossiblePosition(char map[50][50], int x, int y, vector<Point>& possibleList)
+void TreasureIsland::FindPossiblePosition(vector<Point>& possibleList)
 {
-	for (int i = 0; i < y; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < x; j++)
+		for (int j = 0; j < n; j++)
 		{
-			if (IsEdgeLand(map, x, y, j, i))
+			if (map[i][j] == 'L')
 			{
 				possibleList.push_back(Point(j, i));
 			}
 		}
 	}
-}
-
-/// <summary>
-/// 바다와 인접한 땅인지 여부를 반환한다.
-/// </summary>
-/// <param name="map">맵</param>
-/// <param name="x">맵 x 크기</param>
-/// <param name="y">맵 y 크기</param>
-/// <param name="tx">확인할 x 좌표</param>
-/// <param name="ty">확인할 y 좌표</param>
-/// <returns>바다와 인접 여부</returns>
-bool TreasureIsland::IsEdgeLand(char map[50][50], int x, int y, int tx, int ty)
-{
-	if (map[ty][tx] == 'L')
-	{
-		if (tx == 0 || map[ty][tx - 1] == 'W')
-		{
-			return true;
-		}
-		if (tx == x - 1 || map[ty][tx + 1] == 'W')
-		{
-			return true;
-		}
-		if (ty == 0 || map[ty - 1][tx] == 'W')
-		{
-			return true;
-		}
-		if (ty == y - 1 || map[ty + 1][tx] == 'W')
-		{
-			return true;
-		}
-	}
-	return false;
 }

@@ -20,11 +20,15 @@ private:
 		Point(int x, int y, int dist = 0) : x(x), y(y), dist(dist) {}
 	};
 
-	int GetShortestWayToTreasure(char map[50][50], int x, int y);
-	int GetShortestWayBetweenTwoPosition(char map[50][50], int x, int y, const Point& p1, const Point& p2);
-	void FindPossiblePosition(char map[50][50], int x, int y, vector<Point>& possibleList);
-	bool IsEdgeLand(char map[50][50], int x, int y, int tx, int ty);
+	int GetShortestWayToTreasure();
+	int GetShortestWayBetweenTwoPosition(const Point& p1, const Point& p2);
+	void FindPossiblePosition(vector<Point>& possibleList);
 
 protected:
 	void Code() override;
+
+private:
+	int n, m;
+	char map[50][50]{};
+	int passCheck[50][50]{};
 };
