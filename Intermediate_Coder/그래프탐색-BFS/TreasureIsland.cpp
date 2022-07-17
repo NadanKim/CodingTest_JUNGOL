@@ -57,21 +57,10 @@ int TreasureIsland::GetShortestWayToTreasure()
 
 	for (int i = 0; i < possibleLandCnt; i++)
 	{
-		for (int j = 0; j < possibleLandCnt; j++)
+		int curDist{ GetCostFromPosition(Point(possibleList[i].x, possibleList[i].y)) };
+		if (curDist != 9'999 && dist < curDist)
 		{
-			if (i == j)
-			{
-				continue;
-			}
-
-			int curDist{ GetShortestWayBetweenTwoPosition(
-				Point(possibleList[i].x, possibleList[i].y),
-				Point(possibleList[j].x, possibleList[j].y)) };
-
-			if (curDist != 9'999 && curDist > dist)
-			{
-				dist = curDist;
-			}
+			dist = curDist;
 		}
 	}
 
@@ -79,56 +68,54 @@ int TreasureIsland::GetShortestWayToTreasure()
 }
 
 /// <summary>
-/// 두 지점 사이 거리를 반환한다.
+/// 시작 지점에서 전 맵을 돌아다닐 때 가장 먼 곳의 비용
 /// </summary>
-/// <param name="p1">지점 1</param>
-/// <param name="p2">지점 2</param>
-/// <returns>거리(기본 값:9,999)</returns>
-int TreasureIsland::GetShortestWayBetweenTwoPosition(const Point& p1, const Point& p2)
+/// <param name="startPosition">시작 지점</param>
+/// <returns>비용(기본 값:9,999)</returns>
+int TreasureIsland::GetCostFromPosition(const Point& startPosition)
 {
 	for (int i = 0; i < m; i++)
 	{
-		std::fill_n(passCheck[i], n, 9'999);
+		std::fill_n(costMap[i], n, LIMITED);
 	}
-
-	int dist{ 9'999 };
+	costMap[startPosition.y][startPosition.x] = 0;
 
 	queue<Point> q;
-	q.push(p1);
+	q.push(startPosition);
 
 	while (!q.empty())
 	{
 		Point p{ q.front() };
 		q.pop();
 
-		if (p.x == p2.x && p.y == p2.y)
+		for (int i = 0; i < 4; i++)
 		{
-			if (p.dist < dist)
-			{
-				dist = p.dist;
-			}
-		}
-		passCheck[p.y][p.x] = p.dist;
+			int newX{ p.x + xDir[i] };
+			int newY{ p.y + yDir[i] };
 
-		if (p.x - 1 >= 0 && map[p.y][p.x - 1] == 'L' && passCheck[p.y][p.x - 1] > p.dist + 1)
-		{
-			q.push(Point(p.x - 1, p.y, p.dist + 1));
-		}
-		if (p.x + 1 < n && map[p.y][p.x + 1] == 'L' && passCheck[p.y][p.x + 1] > p.dist + 1)
-		{
-			q.push(Point(p.x + 1, p.y, p.dist + 1));
-		}
-		if (p.y - 1 >= 0 && map[p.y - 1][p.x] == 'L' && passCheck[p.y - 1][p.x] > p.dist + 1)
-		{
-			q.push(Point(p.x, p.y - 1, p.dist + 1));
-		}
-		if (p.y + 1 < m && map[p.y + 1][p.x] == 'L' && passCheck[p.y + 1][p.x] > p.dist + 1)
-		{
-			q.push(Point(p.x, p.y + 1, p.dist + 1));
+			if (0 <= newX && newX < m && 0 <= newY && newY < n
+				&& map[newY][newX] == 'L'
+				&& p.cost + 1 < costMap[newY][newX])
+			{
+				costMap[newY][newX] = p.cost + 1;
+				q.push(Point(newX, newY, p.cost + 1));
+			}
 		}
 	}
 
-	return dist;
+	int cost{ 0 };
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (costMap[i][j] != LIMITED)
+			{
+				cost = std::max(cost, costMap[i][j]);
+			}
+		}
+	}
+
+	return cost;
 }
 
 /// <summary>
