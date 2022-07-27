@@ -47,20 +47,28 @@ void TreasureIsland::Code()
 	std::cout << GetShortestWayToTreasure();
 }
 
+/// <summary>
+/// 보물이 있을 수 있는 가장 가까운 거리를 반환한다.
+/// </summary>
+/// <returns>보물이 있을 수 있는 가장 가까운 거리</returns>
 int TreasureIsland::GetShortestWayToTreasure()
 {
-	vector<Point> possibleList;
-	FindPossiblePosition(possibleList);
-
 	int dist{ 0 };
-	int possibleLandCnt{ static_cast<int>(possibleList.size()) };
 
-	for (int i = 0; i < possibleLandCnt; i++)
+	for (int i = 0; i < m; i++)
 	{
-		int curDist{ GetCostFromPosition(Point(possibleList[i].x, possibleList[i].y)) };
-		if (curDist != 9'999 && dist < curDist)
+		for (int j = 0; j < n; j++)
 		{
-			dist = curDist;
+			if (map[i][j] != 'L')
+			{
+				continue;
+			}
+
+			int curDist{ GetCostFromPosition(Point(j, i)) };
+			if (curDist != 9'999 && dist < curDist)
+			{
+				dist = curDist;
+			}
 		}
 	}
 
@@ -93,7 +101,7 @@ int TreasureIsland::GetCostFromPosition(const Point& startPosition)
 			int newX{ p.x + xDir[i] };
 			int newY{ p.y + yDir[i] };
 
-			if (0 <= newX && newX < m && 0 <= newY && newY < n
+			if (0 <= newX && newX < n && 0 <= newY && newY < m
 				&& map[newY][newX] == 'L'
 				&& p.cost + 1 < costMap[newY][newX])
 			{
@@ -116,22 +124,4 @@ int TreasureIsland::GetCostFromPosition(const Point& startPosition)
 	}
 
 	return cost;
-}
-
-/// <summary>
-/// 보물이 있을 수 있는 땅 리스트를 찾는다.
-/// </summary>
-/// <param name="possibleList">보물이 있을 수 있는 땅 리스트</param>
-void TreasureIsland::FindPossiblePosition(vector<Point>& possibleList)
-{
-	for (int i = 0; i < m; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (map[i][j] == 'L')
-			{
-				possibleList.push_back(Point(j, i));
-			}
-		}
-	}
 }

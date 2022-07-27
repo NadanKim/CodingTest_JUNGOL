@@ -23,7 +23,6 @@ private:
 
 	int GetShortestWayToTreasure();
 	int GetCostFromPosition(const Point& startPosition);
-	void FindPossiblePosition(vector<Point>& possibleList);
 
 protected:
 	void Code() override;
