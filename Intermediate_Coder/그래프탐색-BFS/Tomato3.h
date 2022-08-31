@@ -15,7 +15,7 @@ private:
 		int day;
 
 		Point() : x(0), y(0), day(0) {}
-		Point(int x, int y, int cost = 0) : x(x), y(y), day(cost) {}
+		Point(int x, int y, int day = 0) : x(x), y(y), day(day) {}
 	};
 
 	int CalculateDoneDay();
