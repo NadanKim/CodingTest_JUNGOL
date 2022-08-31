@@ -33,7 +33,7 @@ private:
 	int xDir[4]{ 0, 0, -1, 1 };
 	int yDir[4]{ -1, 1, 0, 0 };
 
-	int n, m;
+	int n{}, m{};
 	char map[50][50]{};
 	int costMap[50][50]{};
 };

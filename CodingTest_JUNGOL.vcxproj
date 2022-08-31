@@ -212,6 +212,7 @@
     <ClCompile Include="Beginner_Coder\재귀\RollDice1.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Tomato3.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\ZerglingIrradiate.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-DFS\CheckArea.cpp" />
@@ -581,6 +582,7 @@
     <ClInclude Include="Beginner_Coder\재귀\RollDice1.h" />
     <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Tomato3.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\ZerglingIrradiate.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-DFS\CheckArea.h" />
