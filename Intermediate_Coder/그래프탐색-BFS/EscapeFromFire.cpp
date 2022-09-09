@@ -131,11 +131,6 @@ int EscapeFromFire::CalculateEscapeMinutes()
 		Point p{ q.front() };
 		q.pop();
 
-		if (!PossibleToGo(p.x, p.y, p.minute))
-		{
-			continue;
-		}
-
 		for (int i = 0; i < 4; i++)
 		{
 			int nextX{ p.x + xDir[i] }, nextY{ p.y + yDir[i] };
@@ -147,6 +142,9 @@ int EscapeFromFire::CalculateEscapeMinutes()
 				{
 					return nextMinute;
 				}
+
+				SetPassWay(nextX, nextY, nextMinute);
+
 				q.push({ nextX, nextY, nextMinute });
 			}
 		}
@@ -169,6 +167,20 @@ bool EscapeFromFire::IsInMap(int x, int y)
 }
 
 /// <summary>
+/// 맵 크기 개수를 넘지 않는 맵 인덱스를 반환한다.
+/// </summary>
+/// <param name="curMinute">확인할 시간</param>
+/// <returns>유효한 맵 인덱스</returns>
+int EscapeFromFire::GetProperMapIndex(int curMinute)
+{
+	if (curMinute < 0)
+		return 0;
+	if (curMinute >= maps.size())
+		return maps.size() - 1;
+	return curMinute;
+}
+
+/// <summary>
 /// 불 태울 수 있는지 여부를 반환한다.
 /// </summary>
 /// <param name="x">x 좌표</param>
@@ -177,6 +189,8 @@ bool EscapeFromFire::IsInMap(int x, int y)
 /// <returns>태울 수 있는지 여부</returns>
 bool EscapeFromFire::PossibleToFire(int x, int y, int curMinute)
 {
+	curMinute = GetProperMapIndex(curMinute);
+
 	return maps[curMinute].map[y][x] != 'X'
 		&& maps[curMinute].map[y][x] != 'D'
 		&& maps[curMinute].map[y][x] != '*';
@@ -191,8 +205,25 @@ bool EscapeFromFire::PossibleToFire(int x, int y, int curMinute)
 /// <returns>이동 가능 여부</returns>
 bool EscapeFromFire::PossibleToGo(int x, int y, int curMinute)
 {
+	int nextMinute = GetProperMapIndex(curMinute + 1);
+	curMinute = GetProperMapIndex(curMinute);
+
 	return maps[curMinute].map[y][x] != 'X'
-		&& maps[curMinute].map[y][x] != '*';
+		&& maps[curMinute].map[y][x] != '*'
+		&& maps[nextMinute].map[y][x] != 'X'
+		&& maps[nextMinute].map[y][x] != '*';
+}
+
+/// <summary>
+/// 지나간 길로 돌아가지 않도록 표시한다.
+/// </summary>
+/// <param name="x">x 좌표</param>
+/// <param name="y">y 좌표</param>
+/// <param name="curMinute">진행 시간</param>
+void EscapeFromFire::SetPassWay(int x, int y, int curMinute)
+{
+	curMinute = GetProperMapIndex(curMinute);
+	maps[curMinute].map[y][x] = 'X';
 }
 
 /// <summary>

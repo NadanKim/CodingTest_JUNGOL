@@ -29,9 +29,12 @@ private:
 	int CalculateEscapeMinutes();
 
 	bool IsInMap(int x, int y);
-	bool PossibleToFire(int x, int y, int curMinute);
+	int GetProperMapIndex(int curMinute);
 
+	bool PossibleToFire(int x, int y, int curMinute);
 	bool PossibleToGo(int x, int y, int curMinute);
+
+	void SetPassWay(int x, int y, int curMinute);
 	bool IsArrive(int x, int y);
 
 protected:
