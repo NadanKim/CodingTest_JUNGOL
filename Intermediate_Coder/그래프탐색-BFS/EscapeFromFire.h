@@ -2,7 +2,6 @@
 #include <iostream>
 #include <queue>
 #include <vector>
-#include <algorithm>
 
 #include "../../Base.h"
 
@@ -21,21 +20,11 @@ private:
 		Point(int x, int y, int day = 0) : x(x), y(y), minute(day) {}
 	};
 
-	struct MapInfo
-	{
-		char map[50][50];
-	};
-
-	MapInfo& GetOrAddMap(int curMinute);
-	MapInfo& GetProperMap(int curMinute);
-
-	void CalculateFire();
+	void SimulateFire();
 	int CalculateEscapeMinutes();
 
-	bool PossibleToFire(int x, int y, int curMinute);
+	bool PossibleToFire(int x, int y);
 	bool PossibleToGo(int x, int y, int curMinute);
-
-	void SetPassWay(int x, int y, int curMinute);
 
 	bool IsInMap(int x, int y);
 	bool IsArrive(int x, int y);
@@ -47,8 +36,12 @@ private:
 	const int xDir[4]{ 0, 0, -1, 1 };
 	const int yDir[4]{ -1, 1, 0, 0 };
 
+	const int EMPTY{ 999'999'999 };
+	const int BLOCK{ -1 };
+
 	int r{}, c{};
-	vector<MapInfo> maps;
+	char map[50][50]{};
+	int fireSimulatedMap[50][50]{};
 
 	queue<Point> q;
 	Point startPos;
