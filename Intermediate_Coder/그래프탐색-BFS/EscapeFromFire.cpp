@@ -50,19 +50,19 @@ void EscapeFromFire::Code()
 {
 	std::cin >> r >> c;
 
-	maps.push_back(MapInfo());
+	MapInfo& curMap{ GetOrAddMap(0) };
 	for (int i = 0; i < r; i++)
 	{
 		for (int j = 0; j < c; j++)
 		{
-			std::cin >> maps[0].map[i][j];
+			std::cin >> curMap.map[i][j];
 
-			if (maps[0].map[i][j] == 'S')
+			if (curMap.map[i][j] == 'S')
 			{
 				startPos = { j, i };
 			}
 
-			if (maps[0].map[i][j] == 'D')
+			if (curMap.map[i][j] == 'D')
 			{
 				endPos = { j, i };
 			}
@@ -79,15 +79,54 @@ void EscapeFromFire::Code()
 }
 
 /// <summary>
+/// 주어진 시간에 맞는 맵을 반환한다. 없으면 생성해서 반환한다.
+/// </summary>
+/// <param name="curMinute">확인할 시간</param>
+/// <returns>맵 정보</returns>
+EscapeFromFire::MapInfo& EscapeFromFire::GetOrAddMap(int curMinute)
+{
+	curMinute = std::max(0, curMinute);
+
+	if (curMinute < maps.size())
+		return maps[curMinute];
+
+	const int maxIndex{ static_cast<int>(maps.size()) - 1 };
+	for (int i = maxIndex; i < curMinute; i++)
+	{
+		maps.push_back(MapInfo());
+		if (i >= 0)
+		{
+			maps[i + 1] = maps[i];
+		}
+	}
+
+	return maps[curMinute];
+}
+
+/// <summary>
+/// 주어진 시간에 따라 적절한 맵을 반환한다.
+/// </summary>
+/// <param name="curMinute">확인할 시간</param>
+/// <returns>맵 정보</returns>
+EscapeFromFire::MapInfo& EscapeFromFire::GetProperMap(int curMinute)
+{
+	const int maxIndex{ static_cast<int>(maps.size()) - 1 };
+	curMinute = std::min(maxIndex, std::max(0, curMinute));
+
+	return maps[curMinute];
+}
+
+/// <summary>
 /// 불이 번지는 과정을 저장한다.
 /// </summary>
 void EscapeFromFire::CalculateFire()
 {
+	const MapInfo& firstMap{ GetProperMap(0) };
 	for (int i = 0; i < r; i++)
 	{
 		for (int j = 0; j < c; j++)
 		{
-			if (maps[0].map[i][j] == '*')
+			if (firstMap.map[i][j] == '*')
 			{
 				q.push({ j, i });
 			}
@@ -106,12 +145,8 @@ void EscapeFromFire::CalculateFire()
 			{
 				int nextMinute{ p.minute + 1 };
 
-				while (maps.size() <= nextMinute)
-				{
-					maps.push_back(maps[p.minute]);
-				}
-
-				maps[nextMinute].map[nextY][nextX] = '*';
+				MapInfo& curMap{ GetOrAddMap(nextMinute) };
+				curMap.map[nextY][nextX] = '*';
 
 				q.push({ nextX, nextY, nextMinute });
 			}
@@ -154,33 +189,6 @@ int EscapeFromFire::CalculateEscapeMinutes()
 }
 
 /// <summary>
-/// 맵 범위에 벗어나는지 여부를 반환한다.
-/// </summary>
-/// <param name="x">x 좌표</param>
-/// <param name="y">y 좌표</param>
-/// <returns>맵을 벗어나는지 여부</returns>
-bool EscapeFromFire::IsInMap(int x, int y)
-{
-	bool xInMap{ 0 <= x && x < c };
-	bool yInMap{ 0 <= y && y < r };
-	return xInMap && yInMap;
-}
-
-/// <summary>
-/// 맵 크기 개수를 넘지 않는 맵 인덱스를 반환한다.
-/// </summary>
-/// <param name="curMinute">확인할 시간</param>
-/// <returns>유효한 맵 인덱스</returns>
-int EscapeFromFire::GetProperMapIndex(int curMinute)
-{
-	if (curMinute < 0)
-		return 0;
-	if (curMinute >= maps.size())
-		return maps.size() - 1;
-	return curMinute;
-}
-
-/// <summary>
 /// 불 태울 수 있는지 여부를 반환한다.
 /// </summary>
 /// <param name="x">x 좌표</param>
@@ -189,11 +197,11 @@ int EscapeFromFire::GetProperMapIndex(int curMinute)
 /// <returns>태울 수 있는지 여부</returns>
 bool EscapeFromFire::PossibleToFire(int x, int y, int curMinute)
 {
-	curMinute = GetProperMapIndex(curMinute);
+	const MapInfo& curMap{ GetProperMap(curMinute) };
 
-	return maps[curMinute].map[y][x] != 'X'
-		&& maps[curMinute].map[y][x] != 'D'
-		&& maps[curMinute].map[y][x] != '*';
+	return curMap.map[y][x] != 'X'
+		&& curMap.map[y][x] != 'D'
+		&& curMap.map[y][x] != '*';
 }
 
 /// <summary>
@@ -205,13 +213,13 @@ bool EscapeFromFire::PossibleToFire(int x, int y, int curMinute)
 /// <returns>이동 가능 여부</returns>
 bool EscapeFromFire::PossibleToGo(int x, int y, int curMinute)
 {
-	int nextMinute = GetProperMapIndex(curMinute + 1);
-	curMinute = GetProperMapIndex(curMinute);
+	const MapInfo& curMap{ GetProperMap(curMinute) };
+	const MapInfo& nextMap{ GetProperMap(curMinute + 1) };
 
-	return maps[curMinute].map[y][x] != 'X'
-		&& maps[curMinute].map[y][x] != '*'
-		&& maps[nextMinute].map[y][x] != 'X'
-		&& maps[nextMinute].map[y][x] != '*';
+	return curMap.map[y][x] != 'X'
+		&& curMap.map[y][x] != '*'
+		&& nextMap.map[y][x] != 'X'
+		&& nextMap.map[y][x] != '*';
 }
 
 /// <summary>
@@ -222,8 +230,22 @@ bool EscapeFromFire::PossibleToGo(int x, int y, int curMinute)
 /// <param name="curMinute">진행 시간</param>
 void EscapeFromFire::SetPassWay(int x, int y, int curMinute)
 {
-	curMinute = GetProperMapIndex(curMinute);
-	maps[curMinute].map[y][x] = 'X';
+	MapInfo& curMap{ GetProperMap(curMinute) };
+
+	curMap.map[y][x] = 'X';
+}
+
+/// <summary>
+/// 맵 범위에 벗어나는지 여부를 반환한다.
+/// </summary>
+/// <param name="x">x 좌표</param>
+/// <param name="y">y 좌표</param>
+/// <returns>맵을 벗어나는지 여부</returns>
+bool EscapeFromFire::IsInMap(int x, int y)
+{
+	bool xInMap{ 0 <= x && x < c };
+	bool yInMap{ 0 <= y && y < r };
+	return xInMap && yInMap;
 }
 
 /// <summary>

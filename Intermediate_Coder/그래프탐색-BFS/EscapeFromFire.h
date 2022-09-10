@@ -2,6 +2,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <algorithm>
 
 #include "../../Base.h"
 
@@ -25,16 +26,18 @@ private:
 		char map[50][50];
 	};
 
+	MapInfo& GetOrAddMap(int curMinute);
+	MapInfo& GetProperMap(int curMinute);
+
 	void CalculateFire();
 	int CalculateEscapeMinutes();
-
-	bool IsInMap(int x, int y);
-	int GetProperMapIndex(int curMinute);
 
 	bool PossibleToFire(int x, int y, int curMinute);
 	bool PossibleToGo(int x, int y, int curMinute);
 
 	void SetPassWay(int x, int y, int curMinute);
+
+	bool IsInMap(int x, int y);
 	bool IsArrive(int x, int y);
 
 protected:
