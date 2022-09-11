@@ -50,45 +50,72 @@ void EscapeFromFire::Code()
 {
 	std::cin >> r >> c;
 
+	char ch;
 	for (int i = 0; i < r; i++)
 	{
 		for (int j = 0; j < c; j++)
 		{
-			std::cin >> map[i][j];
+			std::cin >> ch;
+			map[i][j] = EMPTY;
 
-			fireSimulatedMap[i][j] = EMPTY;
-
-			if (map[i][j] == 'S')
+			if (ch == 'S')
 			{
 				startPos = { j, i };
+				map[i][j] = BLOCK;
 			}
-
-			if (map[i][j] == 'D')
+			else if (ch == 'D')
 			{
 				endPos = { j, i };
-				fireSimulatedMap[i][j] = BLOCK;
+				map[i][j] = BLOCK;
 			}
-
-			if (map[i][j] == 'X')
+			else if (ch == 'X')
 			{
-				fireSimulatedMap[i][j] = BLOCK;
+				map[i][j] = BLOCK;
 			}
-
-			if (map[i][j] == '*')
+			else if (ch == '*')
 			{
-				fireSimulatedMap[i][j] = 0;
+				map[i][j] = BLOCK;
 				q.push({ j, i });
 			}
 		}
 	}
 
 	SimulateFire();
+	//std::cout << "------------------\n";
+	//for (int i = 0; i < r; i++)
+	//{
+	//	for (int j = 0; j < c; j++)
+	//	{
+	//		if (i == startPos.y && j == startPos.x)
+	//		{
+	//			std::cout << 'S';
+	//		}
+	//		else if (i == endPos.y && j == endPos.x)
+	//		{
+	//			std::cout << 'D';
+	//		}
+	//		else if (map[i][j] == BLOCK)
+	//		{
+	//			std::cout << 'X';
+	//		}
+	//		else if (map[i][j] == EMPTY)
+	//		{
+	//			std::cout << '.';
+	//		}
+	//		else
+	//		{
+	//			std::cout << map[i][j];
+	//		}
+	//	}
+	//	std::cout << '\n';
+	//}
+	//std::cout << "------------------\n";
 
-	int minutes{ CalculateEscapeMinutes() };
-	if (minutes < 0)
+	int escapeTime{ CalculateEscapeTime() };
+	if (escapeTime == BLOCK)
 		std::cout << "impossible";
 	else
-		std::cout << minutes;
+		std::cout << escapeTime;
 }
 
 /// <summary>
@@ -104,23 +131,25 @@ void EscapeFromFire::SimulateFire()
 		for (int i = 0; i < 4; i++)
 		{
 			int nextX{ p.x + xDir[i] }, nextY{ p.y + yDir[i] };
-			if (IsInMap(nextX, nextY) && PossibleToFire(nextX, nextY))
+			int nextTick{ p.tick + 1 };
+			if (IsInMap(nextX, nextY) && map[nextY][nextX] == EMPTY)
 			{
-				int nextMinute{ p.minute + 1 };
+				map[nextY][nextX] = nextTick;
 
-				fireSimulatedMap[nextY][nextX] = nextMinute;
-
-				q.push({ nextX, nextY, nextMinute });
+				q.push({ nextX, nextY, nextTick });
 			}
 		}
 	}
+
+	// 사람은 집에 들어갈 수 있도록 수정
+	map[endPos.y][endPos.x] = EMPTY;
 }
 
 /// <summary>
 /// 탈출하는 데 걸리는 시간을 반환한다.
 /// </summary>
 /// <returns>탈출한 시간(불가능한 경우 -1)</returns>
-int EscapeFromFire::CalculateEscapeMinutes()
+int EscapeFromFire::CalculateEscapeTime()
 {
 	q.push(startPos);
 	while (!q.empty())
@@ -131,34 +160,22 @@ int EscapeFromFire::CalculateEscapeMinutes()
 		for (int i = 0; i < 4; i++)
 		{
 			int nextX{ p.x + xDir[i] }, nextY{ p.y + yDir[i] };
-			int nextMinute{ p.minute + 1 };
-
-			if (IsInMap(nextX, nextY) && PossibleToGo(nextX, nextY, nextMinute))
+			int nextTick{ p.tick + 1 };
+			if (IsInMap(nextX, nextY) && PossibleToGo(nextX, nextY, nextTick))
 			{
 				if (IsArrive(nextX, nextY))
 				{
-					return nextMinute;
+					return nextTick;
 				}
 
-				q.push({ nextX, nextY, nextMinute });
+				q.push({ nextX, nextY, nextTick });
+
+				map[nextY][nextX] = BLOCK;
 			}
 		}
-
-		map[p.y][p.x] = 'X';
 	}
 
-	return -1;
-}
-
-/// <summary>
-/// 불 태울 수 있는지 여부를 반환한다.
-/// </summary>
-/// <param name="x">x 좌표</param>
-/// <param name="y">y 좌표</param>
-/// <returns>태울 수 있는지 여부</returns>
-bool EscapeFromFire::PossibleToFire(int x, int y)
-{
-	return fireSimulatedMap[y][x] == EMPTY;
+	return BLOCK;
 }
 
 /// <summary>
@@ -170,8 +187,8 @@ bool EscapeFromFire::PossibleToFire(int x, int y)
 /// <returns>이동 가능 여부</returns>
 bool EscapeFromFire::PossibleToGo(int x, int y, int curMinute)
 {
-	bool isOnFire{ fireSimulatedMap[y][x] != BLOCK && curMinute >= fireSimulatedMap[y][x] };
-	bool isOnRock{ map[y][x] == 'X' };
+	bool isOnFire{ curMinute >= map[y][x] };
+	bool isOnRock{ map[y][x] == BLOCK };
 	return !isOnFire && !isOnRock;
 }
 
