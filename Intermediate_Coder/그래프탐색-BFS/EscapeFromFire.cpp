@@ -81,35 +81,6 @@ void EscapeFromFire::Code()
 	}
 
 	SimulateFire();
-	//std::cout << "------------------\n";
-	//for (int i = 0; i < r; i++)
-	//{
-	//	for (int j = 0; j < c; j++)
-	//	{
-	//		if (i == startPos.y && j == startPos.x)
-	//		{
-	//			std::cout << 'S';
-	//		}
-	//		else if (i == endPos.y && j == endPos.x)
-	//		{
-	//			std::cout << 'D';
-	//		}
-	//		else if (map[i][j] == BLOCK)
-	//		{
-	//			std::cout << 'X';
-	//		}
-	//		else if (map[i][j] == EMPTY)
-	//		{
-	//			std::cout << '.';
-	//		}
-	//		else
-	//		{
-	//			std::cout << map[i][j];
-	//		}
-	//	}
-	//	std::cout << '\n';
-	//}
-	//std::cout << "------------------\n";
 
 	int escapeTime{ CalculateEscapeTime() };
 	if (escapeTime == BLOCK)
