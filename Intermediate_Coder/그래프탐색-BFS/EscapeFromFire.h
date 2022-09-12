@@ -14,16 +14,16 @@ private:
 	struct Point
 	{
 		int x, y;
-		int tick;
+		int turn;
 
-		Point() : x(0), y(0), tick(0) {}
-		Point(int x, int y, int tick = 0) : x(x), y(y), tick(tick) {}
+		Point() : x(0), y(0), turn(0) {}
+		Point(int x, int y, int turn = 0) : x(x), y(y), turn(turn) {}
 	};
 
 	void SimulateFire();
 	int CalculateEscapeTime();
 
-	bool PossibleToGo(int x, int y, int tick);
+	bool PossibleToGo(int x, int y, int turn);
 
 	bool IsInMap(int x, int y);
 	bool IsArrive(int x, int y);

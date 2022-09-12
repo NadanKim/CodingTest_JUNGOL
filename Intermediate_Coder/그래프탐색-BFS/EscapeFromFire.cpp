@@ -102,12 +102,12 @@ void EscapeFromFire::SimulateFire()
 		for (int i = 0; i < 4; i++)
 		{
 			int nextX{ p.x + xDir[i] }, nextY{ p.y + yDir[i] };
-			int nextTick{ p.tick + 1 };
+			int nextTurn{ p.turn + 1 };
 			if (IsInMap(nextX, nextY) && map[nextY][nextX] == EMPTY)
 			{
-				map[nextY][nextX] = nextTick;
+				map[nextY][nextX] = nextTurn;
 
-				q.push({ nextX, nextY, nextTick });
+				q.push({ nextX, nextY, nextTurn });
 			}
 		}
 	}
@@ -131,15 +131,15 @@ int EscapeFromFire::CalculateEscapeTime()
 		for (int i = 0; i < 4; i++)
 		{
 			int nextX{ p.x + xDir[i] }, nextY{ p.y + yDir[i] };
-			int nextTick{ p.tick + 1 };
-			if (IsInMap(nextX, nextY) && PossibleToGo(nextX, nextY, nextTick))
+			int nextTurn{ p.turn + 1 };
+			if (IsInMap(nextX, nextY) && PossibleToGo(nextX, nextY, nextTurn))
 			{
 				if (IsArrive(nextX, nextY))
 				{
-					return nextTick;
+					return nextTurn;
 				}
 
-				q.push({ nextX, nextY, nextTick });
+				q.push({ nextX, nextY, nextTurn });
 
 				map[nextY][nextX] = BLOCK;
 			}
@@ -154,13 +154,11 @@ int EscapeFromFire::CalculateEscapeTime()
 /// </summary>
 /// <param name="x">x 좌표</param>
 /// <param name="y">y 좌표</param>
-/// <param name="curMinute">진행 시간</param>
+/// <param name="turn">진행 턴</param>
 /// <returns>이동 가능 여부</returns>
-bool EscapeFromFire::PossibleToGo(int x, int y, int curMinute)
+bool EscapeFromFire::PossibleToGo(int x, int y, int turn)
 {
-	bool isOnFire{ curMinute >= map[y][x] };
-	bool isOnRock{ map[y][x] == BLOCK };
-	return !isOnFire && !isOnRock;
+	return turn < map[y][x];
 }
 
 /// <summary>
