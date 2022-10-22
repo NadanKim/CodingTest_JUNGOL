@@ -212,6 +212,7 @@
     <ClCompile Include="Beginner_Coder\재귀\RollDice1.cpp" />
     <ClCompile Include="Beginner_Coder\재귀\RollDice2.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\EscapeFromFire.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Tomato3.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.cpp" />
@@ -583,6 +584,7 @@
     <ClInclude Include="Beginner_Coder\재귀\RollDice1.h" />
     <ClInclude Include="Beginner_Coder\재귀\RollDice2.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\EscapeFromFire.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Tomato3.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.h" />
@@ -881,10 +883,6 @@
     <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction304.h" />
     <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction305.h" />
     <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction306.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.cpp" />
-    <None Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

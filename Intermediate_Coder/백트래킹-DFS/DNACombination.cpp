@@ -136,7 +136,7 @@ string DNACombination::CombineDNA(string originDNA, string prevDNA, string addDN
 	{
 		bool isCombined{ true };
 		int curIdx{ 0 };
-		for (int j = originSize - i; curIdx < addSize && j + curIdx < originSize; curIdx++)
+		for (size_t j = originSize - i; curIdx < addSize && j + curIdx < originSize; curIdx++)
 		{
 			// 중간에 다른 값이 있으면 포함되지 않는다.
 			if (originDNA[j + curIdx] != addDNA[curIdx])

@@ -1,15 +1,59 @@
 #pragma once
 #include <iostream>
 #include <queue>
-#include <string>
+#include <vector>
+#include <algorithm>
 
 #include "../../Base.h"
 
 using std::queue;
-using std::string;
+using std::vector;
 
 class FindRoute : public Base
 {
 protected:
-	void Code() override;
+	struct Route
+	{
+		int index = 0;
+		vector<int> route;
+		
+		Route() {}
+		Route(int index) : index(index) { route.push_back(index); }
+		Route(int index, const Route& other)
+			: index(index)
+		{
+			for (int otherIndex : other.route)
+			{
+				route.push_back(otherIndex);
+			}
+			route.push_back(index);
+		}
+
+		bool IsInRoute(int newIndex)
+		{
+			// 자신이 가진 인덱스와 같은 건 허용하지 않는다.
+			if (newIndex == index)
+			{
+				return false;
+			}
+
+			return std::find(route.begin(), route.end(), newIndex) != route.end();
+		}
+	};
+
+public:
+	virtual void Code() override;
+
+private:
+	bool FindHamingRoute();
+	bool IsHamingDistance(int index1, int index2);
+
+private:
+	int n, k;
+	int a, b;
+
+	vector<int> allData;
+	queue<Route> q;
+
+	Route result;
 };

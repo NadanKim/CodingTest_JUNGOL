@@ -116,7 +116,7 @@ bool Tomato3::IsInBox(int x, int y)
 /// <returns>토마토가 다 익었는지 여부</returns>
 bool Tomato3::IsAllDone()
 {
-	for (int i = 0, val; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
 		{

@@ -48,5 +48,94 @@
 /// </summary>
 void FindRoute::Code()
 {
-	
+	std::cin >> n >> k;
+
+	allData.reserve(n);
+	for (int i = 0, data; i < n; i++)
+	{
+		std::cin >> data;
+		allData.emplace_back(data);
+	}
+
+	std::cin >> a >> b;
+
+	// a, b를 인덱스로 바꿔준다.
+	a--; b--;
+
+	if (FindHamingRoute())
+	{
+		for (int index : result.route)
+		{
+			std::cout << index + 1 << ' ';
+		}
+	}
+	else
+	{
+		std::cout << -1;
+	}
+}
+
+/// <summary>
+/// a 번째에서 b로의 경로를 찾는다.
+/// </summary>
+/// <returns>경로 존재 여부</returns>
+bool FindRoute::FindHamingRoute()
+{
+	q.push(Route(a));
+
+	while (q.empty() == false)
+	{
+		Route curRoute = q.front();
+		q.pop();
+
+		for (int i = 0; i < n; i++)
+		{
+			if (curRoute.IsInRoute(i) == false
+				&& IsHamingDistance(curRoute.index, i))
+			{
+				Route newRoute(i, curRoute);
+
+				if (i == b)
+				{
+					result = newRoute;
+					return true;
+				}
+
+				q.push(newRoute);
+			}
+		}
+	}
+
+	return false;
+}
+
+/// <summary>
+/// 두 코드간의 해밍 거리를 반환한다.
+/// </summary>
+/// <param name="index1">코드 1의 인덱스</param>
+/// <param name="index2">코드 2의 인덱스</param>
+/// <returns>해밍 경로인지 여부</returns>
+bool FindRoute::IsHamingDistance(int index1, int index2)
+{
+	int hamingDistance = 0;
+
+	int data1 = allData[index1];
+	int data2 = allData[index2];
+	for (int i = 0; i < k; i++)
+	{
+		int val1 = data1 % 10;
+		int val2 = data2 % 10;
+
+		hamingDistance += val1 != val2 ? 1 : 0;
+
+		if (hamingDistance > 1)
+		{
+			break;
+		}
+
+		data1 /= 10;
+		data2 /= 10;
+	}
+
+	return hamingDistance == 1;
 }
