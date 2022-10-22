@@ -882,6 +882,10 @@
     <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction305.h" />
     <ClInclude Include="Language_Coder\함수3\형성평가\FormativeFunction306.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.cpp" />
+    <None Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
