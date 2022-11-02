@@ -31,12 +31,6 @@ protected:
 
 		bool IsInRoute(int newIndex)
 		{
-			// 자신이 가진 인덱스와 같은 건 허용하지 않는다.
-			if (newIndex == index)
-			{
-				return false;
-			}
-
 			return std::find(route.begin(), route.end(), newIndex) != route.end();
 		}
 	};

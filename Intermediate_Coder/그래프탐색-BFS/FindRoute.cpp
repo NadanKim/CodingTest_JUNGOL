@@ -90,8 +90,12 @@ bool FindRoute::FindHamingRoute()
 
 		for (int i = 0; i < n; i++)
 		{
-			if (curRoute.IsInRoute(i) == false
-				&& IsHamingDistance(curRoute.index, i))
+			if (curRoute.IsInRoute(i))
+			{
+				continue;
+			}
+			
+			if(IsHamingDistance(curRoute.index, i))
 			{
 				Route newRoute(i, curRoute);
 
@@ -110,7 +114,7 @@ bool FindRoute::FindHamingRoute()
 }
 
 /// <summary>
-/// 두 코드간의 해밍 거리를 반환한다.
+/// 두 코드간의 해밍 여부를 반환한다.
 /// </summary>
 /// <param name="index1">코드 1의 인덱스</param>
 /// <param name="index2">코드 2의 인덱스</param>
