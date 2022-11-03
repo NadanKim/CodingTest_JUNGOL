@@ -51,7 +51,8 @@ void FindRoute::Code()
 	std::cin >> n >> k;
 
 	allData.reserve(n);
-	for (int i = 0, data; i < n; i++)
+	string data;
+	for (int i = 0; i < n; i++)
 	{
 		std::cin >> data;
 		allData.emplace_back(data);
@@ -123,22 +124,16 @@ bool FindRoute::IsHamingDistance(int index1, int index2)
 {
 	int hamingDistance = 0;
 
-	int data1 = allData[index1];
-	int data2 = allData[index2];
+	const string& data1 = allData[index1];
+	const string& data2 = allData[index2];
 	for (int i = 0; i < k; i++)
 	{
-		int val1 = data1 % 10;
-		int val2 = data2 % 10;
-
-		hamingDistance += val1 != val2 ? 1 : 0;
+		hamingDistance += data1[i] ^ data2[i];
 
 		if (hamingDistance > 1)
 		{
 			break;
 		}
-
-		data1 /= 10;
-		data2 /= 10;
 	}
 
 	return hamingDistance == 1;

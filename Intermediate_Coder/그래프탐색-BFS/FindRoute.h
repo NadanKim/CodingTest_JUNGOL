@@ -3,11 +3,13 @@
 #include <queue>
 #include <vector>
 #include <algorithm>
+#include <string>
 
 #include "../../Base.h"
 
 using std::queue;
 using std::vector;
+using std::string;
 
 class FindRoute : public Base
 {
@@ -46,7 +48,7 @@ private:
 	int n, k;
 	int a, b;
 
-	vector<int> allData;
+	vector<string> allData;
 	queue<Route> q;
 
 	Route result;
