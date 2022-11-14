@@ -51,11 +51,13 @@ void FindRoute::Code()
 	std::cin >> n >> k;
 
 	allData.reserve(n);
+	checkList.reserve(n);
 	string data;
 	for (int i = 0; i < n; i++)
 	{
 		std::cin >> data;
 		allData.emplace_back(data);
+		checkList.emplace_back(false);
 	}
 
 	std::cin >> a >> b;
@@ -83,6 +85,7 @@ void FindRoute::Code()
 bool FindRoute::FindHamingRoute()
 {
 	q.push(Route(a));
+	checkList[a] = true;
 
 	while (q.empty() == false)
 	{
@@ -91,14 +94,10 @@ bool FindRoute::FindHamingRoute()
 
 		for (int i = 0; i < n; i++)
 		{
-			if (curRoute.IsInRoute(i))
-			{
-				continue;
-			}
-			
-			if(IsHamingDistance(curRoute.index, i))
+			if(checkList[i] == false && IsHamingDistance(curRoute.index, i))
 			{
 				Route newRoute(i, curRoute);
+				checkList[i] = true;
 
 				if (i == b)
 				{

@@ -30,11 +30,6 @@ protected:
 			}
 			route.push_back(index);
 		}
-
-		bool IsInRoute(int newIndex)
-		{
-			return std::find(route.begin(), route.end(), newIndex) != route.end();
-		}
 	};
 
 public:
@@ -52,4 +47,6 @@ private:
 	queue<Route> q;
 
 	Route result;
+
+	vector<bool> checkList;
 };
