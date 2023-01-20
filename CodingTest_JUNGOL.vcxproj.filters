@@ -1106,6 +1106,9 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.cpp">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClCompile>
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TravelWithPrimeNumber.cpp">
+      <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Language_Coder">
@@ -2423,6 +2426,9 @@
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.h">
+      <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
+    </ClInclude>
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TravelWithPrimeNumber.h">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
   </ItemGroup>
