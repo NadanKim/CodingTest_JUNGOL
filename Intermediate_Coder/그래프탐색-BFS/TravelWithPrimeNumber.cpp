@@ -40,64 +40,92 @@
 void TravelWithPrimeNumber::Code()
 {
 	std::cin >> a >> b;
-}
 
-/// <summary>
-/// a 번째에서 b로의 경로를 찾는다.
-/// </summary>
-/// <returns>경로 존재 여부</returns>
-bool TravelWithPrimeNumber::FindHamingRoute()
-{
-	q.push(Route(a));
-	checkList[a] = true;
+	FindPrimeNumbers();
+
+	q.push(a);
+
+	int leastCount = 999'999'999;
 
 	while (q.empty() == false)
 	{
-		Route curRoute = q.front();
+		Data curData = q.front();
 		q.pop();
 
-		for (int i = 0; i < n; i++)
+		int baseNumber = 0;
+		int saveNumber = curData.GetNumber();
+		for (int i = 1000; i > 0; i /= 10)
 		{
-			if(checkList[i] == false && IsHamingDistance(curRoute.index, i))
+			int restNumber = curData.GetNumber() % i;
+			for (int j = 0; j < 10; j++)
 			{
-				Route newRoute(i, curRoute);
-				checkList[i] = true;
-
-				if (i == b)
+				if (i == 1000 && j == 0)
 				{
-					result = newRoute;
-					return true;
+					continue;
 				}
 
-				q.push(newRoute);
+				int curNumber = baseNumber + i * j + restNumber;
+				if (curData.IsPastNumber(curNumber))
+				{
+					continue;
+				}
+
+				if (IsPrimeNumber(curNumber) == false)
+				{
+					continue;
+				}
+
+				Data newData(curNumber);
+				newData.SetPastData(curData);
+
+				if (curNumber == b)
+				{
+					if (leastCount > newData.GetCount())
+					{
+						leastCount = newData.GetCount();
+					}
+					continue;
+				}
+
+				q.push(newData);
 			}
+
+			int temp = i * (saveNumber / i);
+			baseNumber += temp;
+			saveNumber -= temp;
 		}
 	}
 
-	return false;
+	std::cout << leastCount;
 }
 
 /// <summary>
-/// 두 코드간의 해밍 여부를 반환한다.
+/// 아르스토테네스의 체로 4자리 소수를 찾는다.
 /// </summary>
-/// <param name="index1">코드 1의 인덱스</param>
-/// <param name="index2">코드 2의 인덱스</param>
-/// <returns>해밍 경로인지 여부</returns>
-bool TravelWithPrimeNumber::IsHamingDistance(int index1, int index2)
+void TravelWithPrimeNumber::FindPrimeNumbers()
 {
-	int hamingDistance = 0;
+	bool numbers[10000];
 
-	const string& data1 = allData[index1];
-	const string& data2 = allData[index2];
-	for (int i = 0; i < k; i++)
+	std::fill_n(numbers, 10000, true);
+
+	// 0, 1은 제외해준다.
+	numbers[0] = numbers[1] = false;
+
+	for (int i = 2; i < 10000; i++)
 	{
-		hamingDistance += data1[i] ^ data2[i];
-
-		if (hamingDistance > 1)
+		if (numbers[i] == true)
 		{
-			break;
+			primeNumbers.push_back(i);
+
+			for (int j = i * 2; j < 10000; j += i)
+			{
+				numbers[j] = false;
+			}
 		}
 	}
+}
 
-	return hamingDistance == 1;
+bool TravelWithPrimeNumber::IsPrimeNumber(int number)
+{
+	return std::find(primeNumbers.cbegin(), primeNumbers.cend(), number) != primeNumbers.cend();
 }

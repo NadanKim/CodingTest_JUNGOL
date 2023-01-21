@@ -1,51 +1,61 @@
 #pragma once
 #include <iostream>
-#include <queue>
 #include <vector>
 #include <algorithm>
-#include <string>
+#include <queue>
 
 #include "../../Base.h"
 
-using std::queue;
 using std::vector;
-using std::string;
+using std::queue;
 
 class TravelWithPrimeNumber : public Base
 {
-protected:
-	struct Route
+private:
+	struct Data
 	{
-		int index = 0;
-		vector<int> route;
-		
-		Route() {}
-		Route(int index) : index(index) { route.push_back(index); }
-		Route(int index, const Route& other)
-			: index(index)
+	public:
+		Data(int number)
+			: number(number), count(0) 
 		{
-			for (int otherIndex : other.route)
-			{
-				route.push_back(otherIndex);
-			}
-			route.push_back(index);
+			pastNumbers.push_back(number);
 		}
+
+	public:
+		int GetNumber() { return number; }
+		int GetCount() { return count; }
+
+		void SetPastData(const Data& other)
+		{
+			count = other.count + 1;
+
+			for (int number : other.pastNumbers)
+			{
+				pastNumbers.push_back(number);
+			}
+		}
+
+		bool IsPastNumber(int number)
+		{
+			return std::find(pastNumbers.cbegin(), pastNumbers.cend(), number) != pastNumbers.cend();
+		}
+
+	private:
+		int number;
+		int count;
+
+		vector<int> pastNumbers;
 	};
 
 public:
 	virtual void Code() override;
 
 private:
-	bool FindHamingRoute();
-	bool IsHamingDistance(int index1, int index2);
+	void FindPrimeNumbers();
+	bool IsPrimeNumber(int number);
 
 private:
 	int a, b;
-
-	vector<string> allData;
-	queue<Route> q;
-
-	Route result;
-
-	vector<bool> checkList;
+	vector<int> primeNumbers;
+	queue<Data> q;
 };
