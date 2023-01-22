@@ -43,60 +43,7 @@ void TravelWithPrimeNumber::Code()
 
 	FindPrimeNumbers();
 
-	q.push(a);
-
-	int leastCount = 999'999'999;
-
-	while (q.empty() == false)
-	{
-		Data curData = q.front();
-		q.pop();
-
-		int baseNumber = 0;
-		int saveNumber = curData.GetNumber();
-		for (int i = 1000; i > 0; i /= 10)
-		{
-			int restNumber = curData.GetNumber() % i;
-			for (int j = 0; j < 10; j++)
-			{
-				if (i == 1000 && j == 0)
-				{
-					continue;
-				}
-
-				int curNumber = baseNumber + i * j + restNumber;
-				if (curData.IsPastNumber(curNumber))
-				{
-					continue;
-				}
-
-				if (IsPrimeNumber(curNumber) == false)
-				{
-					continue;
-				}
-
-				Data newData(curNumber);
-				newData.SetPastData(curData);
-
-				if (curNumber == b)
-				{
-					if (leastCount > newData.GetCount())
-					{
-						leastCount = newData.GetCount();
-					}
-					continue;
-				}
-
-				q.push(newData);
-			}
-
-			int temp = i * (saveNumber / i);
-			baseNumber += temp;
-			saveNumber -= temp;
-		}
-	}
-
-	std::cout << leastCount;
+	std::cout << GetCountToArrive();
 }
 
 /// <summary>
@@ -125,7 +72,98 @@ void TravelWithPrimeNumber::FindPrimeNumbers()
 	}
 }
 
+/// <summary>
+/// 정류장을 이동하는 데 걸리는 최소 횟수를 찾아 반환한다.
+/// </summary>
+/// <returns>최소 이동 횟수</returns>
+int TravelWithPrimeNumber::GetCountToArrive()
+{
+	q.push(Data(a));
+	pastNumbers.push_back(a);
+
+	int leastCount = 999'999'999;
+
+	while (q.empty() == false)
+	{
+		Data curData = q.front();
+		q.pop();
+
+		int baseNumber = 0;
+		int saveNumber = curData.GetNumber();
+		for (int i = 1000; i > 0; i /= 10)
+		{
+			int restNumber = curData.GetNumber() % i;
+			for (int j = 0; j < 10; j++)
+			{
+				int curNumber = baseNumber + i * j + restNumber;
+				if (IsInRange(curNumber) == false)
+				{
+					continue;
+				}
+
+				if (IsPastNumber(curNumber))
+				{
+					continue;
+				}
+
+				if (IsPrimeNumber(curNumber) == false)
+				{
+					continue;
+				}
+
+				int curCount = curData.GetCount() + 1;
+				if (leastCount < curCount)
+				{
+					continue;
+				}
+
+				if (curNumber == b)
+				{
+					leastCount = curCount;
+					continue;
+				}
+
+				q.push(Data(curNumber, curCount));
+				pastNumbers.push_back(curNumber);
+			}
+
+			int temp = i * (saveNumber / i);
+			baseNumber += temp;
+			saveNumber -= temp;
+		}
+	}
+
+	return leastCount;
+}
+
+/// <summary>
+/// 주어진 숫자가 4자리 숫자인지 검사한다.
+/// </summary>
+/// <param name="number">검사할 숫자</param>
+/// <returns>조건 충족 여부</returns>
+bool TravelWithPrimeNumber::IsInRange(int number)
+{
+	if (number < 1'000) return false;
+	if (number > 9'999) return false;
+	return true;
+}
+
+/// <summary>
+/// 주어진 숫자가 소수인지 검사한다.
+/// </summary>
+/// <param name="number">검사할 숫자</param>
+/// <returns>소수 여부</returns>
 bool TravelWithPrimeNumber::IsPrimeNumber(int number)
 {
 	return std::find(primeNumbers.cbegin(), primeNumbers.cend(), number) != primeNumbers.cend();
+}
+
+/// <summary>
+/// 주어진 숫자가 이전에 들어온 적 있는지 검사한다.
+/// </summary>
+/// <param name="number">검사할 숫자</param>
+/// <returns>들어온 적 있는지 여부</returns>
+bool TravelWithPrimeNumber::IsPastNumber(int number)
+{
+	return std::find(pastNumbers.cbegin(), pastNumbers.cend(), number) != pastNumbers.cend();
 }

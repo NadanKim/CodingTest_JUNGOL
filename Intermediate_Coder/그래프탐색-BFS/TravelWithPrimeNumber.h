@@ -15,36 +15,15 @@ private:
 	struct Data
 	{
 	public:
-		Data(int number)
-			: number(number), count(0) 
-		{
-			pastNumbers.push_back(number);
-		}
+		Data(int number, int count = 0) : number(number), count(count) {}
 
 	public:
 		int GetNumber() { return number; }
 		int GetCount() { return count; }
 
-		void SetPastData(const Data& other)
-		{
-			count = other.count + 1;
-
-			for (int number : other.pastNumbers)
-			{
-				pastNumbers.push_back(number);
-			}
-		}
-
-		bool IsPastNumber(int number)
-		{
-			return std::find(pastNumbers.cbegin(), pastNumbers.cend(), number) != pastNumbers.cend();
-		}
-
 	private:
 		int number;
 		int count;
-
-		vector<int> pastNumbers;
 	};
 
 public:
@@ -52,10 +31,14 @@ public:
 
 private:
 	void FindPrimeNumbers();
+	int GetCountToArrive();
+	bool IsInRange(int number);
+	bool IsPastNumber(int number);
 	bool IsPrimeNumber(int number);
 
 private:
 	int a, b;
 	vector<int> primeNumbers;
+	vector<int> pastNumbers;
 	queue<Data> q;
 };
