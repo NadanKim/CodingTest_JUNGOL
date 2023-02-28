@@ -214,6 +214,7 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\EscapeFromFire.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.cpp" />
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Robot.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Tomato3.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TravelWithPrimeNumber.cpp" />
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.cpp" />
@@ -587,6 +588,7 @@
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\EscapeFromFire.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\FindRoute.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Janggi2.h" />
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Robot.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Tomato3.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TravelWithPrimeNumber.h" />
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TreasureIsland.h" />
