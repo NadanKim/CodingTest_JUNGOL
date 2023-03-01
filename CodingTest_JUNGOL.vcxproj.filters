@@ -1109,7 +1109,7 @@
     <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\TravelWithPrimeNumber.cpp">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClCompile>
-    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\Robot.cpp">
+    <ClCompile Include="Intermediate_Coder\그래프탐색-BFS\RobotToMove.cpp">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClCompile>
   </ItemGroup>
@@ -2434,7 +2434,7 @@
     <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\TravelWithPrimeNumber.h">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
-    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\Robot.h">
+    <ClInclude Include="Intermediate_Coder\그래프탐색-BFS\RobotToMove.h">
       <Filter>Intermediate_Coder\그래프탐색-BFS</Filter>
     </ClInclude>
   </ItemGroup>

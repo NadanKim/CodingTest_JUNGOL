@@ -6,7 +6,7 @@
 
 using std::queue;
 
-class Robot : public Base
+class RobotToMove : public Base
 {
 protected:
 	struct Direction
@@ -22,17 +22,12 @@ protected:
 
 		Position() : x(0), y(0), cost(0), direction(0) {}
 
-		bool IsSameDirection(int dir)
-		{
-			return direction == dir;
-		}
-
 		int GetTurnCost(int dir)
 		{
 			int cost = 1;
 			
 			// 같은 방향은 코스트가 들지 않는다.
-			if (IsSameDirection(dir))
+			if (direction == dir)
 			{
 				cost = 0;
 			}

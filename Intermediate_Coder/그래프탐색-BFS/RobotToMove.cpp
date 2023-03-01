@@ -1,4 +1,4 @@
-﻿#include "Robot.h"
+﻿#include "RobotToMove.h"
 
 /// <summary>
 /// 문제
@@ -47,7 +47,7 @@
 /// 
 /// http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=285&sca=3040
 /// </summary>
-void Robot::Code()
+void RobotToMove::Code()
 {
 	std::cin >> m >> n;
 
@@ -68,10 +68,6 @@ void Robot::Code()
 	start.y--; start.x--; start.direction--;
 	end.y--; end.x--; end.direction--;
 
-	start.cost = 0;
-	start.sameCount = 1;
-	map[start.y][start.x] = false;
-
 	std::cout << GetLeastCostToGo();
 }
 
@@ -79,10 +75,11 @@ void Robot::Code()
 /// 이동하는데 필요한 최소 명령 횟수를 반환한다.
 /// </summary>
 /// <returns>최소 명령 횟수</returns>
-int Robot::GetLeastCostToGo()
+int RobotToMove::GetLeastCostToGo()
 {
 	int leastCost = 999'999'999;
 
+	visited[start.y][start.x][start.direction] = true;
 	q.push(start);
 
 	while (q.empty() == false)
@@ -92,24 +89,50 @@ int Robot::GetLeastCostToGo()
 
 		if (IsArrive(p))
 		{
-			if (leastCost > p.cost)
-			{
-				// 방향을 맞추는 비용을 더한다.
-				leastCost = p.cost + p.GetTurnCost(end.direction);
-			}
-			continue;
+			leastCost = p.cost;
+			break;
 		}
 
+		// 주어진 방향으로 이동을 시도한다.
+		for (int i = 1; i <= 3; i++)
+		{
+			Position newP{ p };
+
+			newP.x += directionToMove[newP.direction].x * i;
+			newP.y += directionToMove[newP.direction].y * i;
+			newP.cost++;
+
+			// 방문한 적 있는 방향은 무시한다.
+			if (visited[newP.y][newP.x][p.direction])
+			{
+				continue;
+			}
+
+			if (CanMoveTo(newP) == false)
+			{
+				break;
+			}
+			
+			visited[newP.y][newP.x][newP.direction] = true;
+			q.push(newP);
+		}
+
+		// 현재 위치에서 회전을 체크한다.
 		for (int i = 0; i < 4; i++)
 		{
-			Position newP{ p.x + directionToMove[i].x, p.y + directionToMove[i].y, p.cost + p.GetMoveCost(i), i, p.GetSameCount(i) };
-			newP.CheckSameCount();
-
-			if (CanMoveTo(newP))
+			// 위치, 방향이 체크된 적 있으면 무시한다.
+			if (visited[p.y][p.x][i])
 			{
-				q.push(newP);
-				map[newP.y][newP.x] = false;
+				continue;
 			}
+
+			Position newP{ p };
+
+			newP.direction = i;
+			newP.cost += p.GetTurnCost(i);
+
+			visited[newP.y][newP.x][i] = true;
+			q.push(newP);
 		}
 	}
 
@@ -121,9 +144,9 @@ int Robot::GetLeastCostToGo()
 /// </summary>
 /// <param name="p">확인할 지점</param>
 /// <returns>도착 여부</returns>
-bool Robot::IsArrive(const Position& p) const
+bool RobotToMove::IsArrive(const Position& p) const
 {
-	return p.x == end.x && p.y == end.y;
+	return p.x == end.x && p.y == end.y && p.direction == end.direction;
 }
 
 /// <summary>
@@ -131,7 +154,7 @@ bool Robot::IsArrive(const Position& p) const
 /// </summary>
 /// <param name="p">확인할 지점</param>
 /// <returns>이동 가능한지 여부</returns>
-bool Robot::CanMoveTo(const Position& p) const
+bool RobotToMove::CanMoveTo(const Position& p) const
 {
 	if (IsInMap(p) == false)
 	{
@@ -146,7 +169,7 @@ bool Robot::CanMoveTo(const Position& p) const
 /// </summary>
 /// <param name="p">확인할 지점</param>
 /// <returns>맵 안에 있는지 여부</returns>
-bool Robot::IsInMap(const Position& p) const
+bool RobotToMove::IsInMap(const Position& p) const
 {
 	if (p.x < 0) return false;
 	if (p.x >= n) return false;
