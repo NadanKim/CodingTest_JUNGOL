@@ -67,6 +67,19 @@ void ChangeBus::Code()
 {
 	Ready();
 
+	//for (int i = 0; i < m; i++)
+	//{
+	//	for (int j = 0; j < n; j++)
+	//	{
+	//		if (map[i][j] == MapStatus::Block)
+	//			std::cout << 0 << ' ';
+	//		else
+	//			std::cout << 1 << ' ';
+	//	}
+	//	std::cout << '\n';
+	//}
+	std::cout << GetLeastBusCnt();
+
 	Finish();
 }
 
@@ -74,17 +87,160 @@ void ChangeBus::Ready()
 {
 	std::cin >> m >> n;
 
+	map = new MapStatus * [m];
+	for (int i = 0; i < m; i++)
+	{
+		map[i] = new MapStatus[n] {};
+	}
+
 	std::cin >> k;
 	for (int i = 0; i < k; i++)
 	{
 		buses.push_back(BusLine());
 		std::cin >> buses[i];
+		MakeWay(buses[i]);
 	}
 
 	std::cin >> ps >> pe;
+
+	movement.push_back(Point(1, 0));
+	movement.push_back(Point(-1, 0));
+	movement.push_back(Point(0, 1));
+	movement.push_back(Point(0, -1));
+}
+
+void ChangeBus::MakeWay(const BusLine& bus)
+{
+	if (bus.dir == BusLine::MoveDirection::Horizontal)
+	{
+		for (int i = bus.start.x; i <= bus.end.x; i++)
+		{
+			map[i][bus.start.y] = MapStatus::Movable;
+		}
+	}
+	else
+	{
+		for (int i = bus.start.y; i <= bus.end.y; i++)
+		{
+			map[bus.start.x][i] = MapStatus::Movable;
+		}
+	}
 }
 
 void ChangeBus::Finish()
 {
 	buses.clear();
+
+	for (int i = 0; i < m; i++)
+	{
+		delete[] map[i];
+	}
+	delete[] map;
+}
+
+int ChangeBus::GetLeastBusCnt()
+{
+	int leastCnt = 999'999'999;
+
+	for (int i = 0; i < k; i++)
+	{
+		if (buses[i].CanGo(ps))
+		{
+			UserInfo newInfo;
+			newInfo.busId = i;
+			newInfo.pos = ps;
+			newInfo.busCnt = 1;
+			int curBusCnt = GetLeastBusCnt(newInfo);
+			if (curBusCnt < leastCnt)
+			{
+				leastCnt = curBusCnt;
+			}
+			RestoreWay();
+		}
+	}
+
+	return leastCnt;
+}
+
+int ChangeBus::GetLeastBusCnt(UserInfo startInfo)
+{
+	int leastCnt = 999'999'999;
+
+	q.push(startInfo);
+
+	while (q.empty() == false)
+	{
+		UserInfo curInfo = q.front();
+		q.pop();
+
+		for (const Point& moving : movement)
+		{
+			Point newPos = curInfo.pos;
+			newPos.x += moving.x;
+			newPos.y += moving.y;
+
+			if (IsInMap(newPos) == false)
+			{
+				continue;
+			}
+
+			if (map[newPos.x][newPos.y] != MapStatus::Movable)
+			{
+				continue;
+			}
+
+			map[newPos.x][newPos.y] = MapStatus::Removed;
+
+			if (IsArrive(newPos))
+			{
+				// 뭔가 생각 잘못한듯?
+			}
+
+			for (int i = 0; i < k; i++)
+			{
+				if (buses[i].CanGo(newPos))
+				{
+					UserInfo newInfo;
+					newInfo.busId = i;
+					newInfo.pos = newPos;
+					newInfo.busCnt = curInfo.busCnt;
+					if (i != curInfo.busId)
+					{
+						newInfo.busCnt++;
+					}
+					q.push(newInfo);
+				}
+			}
+		}
+	}
+
+	return leastCnt;
+}
+
+bool ChangeBus::IsInMap(const Point& pos)
+{
+	if (pos.x < 0) return false;
+	if (m <= pos.x) return false;
+	if (pos.y < 0) return false;
+	if (n <= pos.y) return false;
+	return true;
+}
+
+bool ChangeBus::IsArrive(const Point& pos)
+{
+	return pos.x == pe.x && pos.y == pe.y;
+}
+
+void ChangeBus::RestoreWay()
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (map[i][j] == MapStatus::Removed)
+			{
+				map[i][j] = MapStatus::Movable;
+			}
+		}
+	}
 }
