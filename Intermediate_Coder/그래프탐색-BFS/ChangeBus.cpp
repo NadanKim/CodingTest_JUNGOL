@@ -67,17 +67,19 @@ void ChangeBus::Code()
 {
 	Ready();
 
-	//for (int i = 0; i < m; i++)
-	//{
-	//	for (int j = 0; j < n; j++)
-	//	{
-	//		if (map[i][j] == MapStatus::Block)
-	//			std::cout << 0 << ' ';
-	//		else
-	//			std::cout << 1 << ' ';
-	//	}
-	//	std::cout << '\n';
-	//}
+	std::cout << "\n----------------------------\n";
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (map[i][j] == MapStatus::Movable)
+				std::cout << 1 << ' ';
+			else
+				std::cout << 0 << ' ';
+		}
+		std::cout << '\n';
+	}
+	std::cout << "----------------------------\n";
 	std::cout << GetLeastBusCnt();
 
 	Finish();
@@ -96,17 +98,20 @@ void ChangeBus::Ready()
 	std::cin >> k;
 	for (int i = 0; i < k; i++)
 	{
-		buses.push_back(BusLine());
-		std::cin >> buses[i];
-		MakeWay(buses[i]);
+		busList.push_back(BusLine());
+		std::cin >> busList[i];
+		MakeWay(busList[i]);
 	}
 
 	std::cin >> ps >> pe;
 
-	movement.push_back(Point(1, 0));
-	movement.push_back(Point(-1, 0));
-	movement.push_back(Point(0, 1));
-	movement.push_back(Point(0, -1));
+	movement.emplace(BusLine::MoveDirection::Horizontal, vector<Point>());
+	movement[BusLine::MoveDirection::Horizontal].push_back(Point(1, 0));
+	movement[BusLine::MoveDirection::Horizontal].push_back(Point(-1, 0));
+
+	movement.emplace(BusLine::MoveDirection::Vertical, vector<Point>());
+	movement[BusLine::MoveDirection::Vertical].push_back(Point(0, 1));
+	movement[BusLine::MoveDirection::Vertical].push_back(Point(0, -1));
 }
 
 void ChangeBus::MakeWay(const BusLine& bus)
@@ -115,21 +120,30 @@ void ChangeBus::MakeWay(const BusLine& bus)
 	{
 		for (int i = bus.start.x; i <= bus.end.x; i++)
 		{
-			map[i][bus.start.y] = MapStatus::Movable;
+			map[bus.start.y][i] = MapStatus::Movable;
 		}
 	}
 	else
 	{
 		for (int i = bus.start.y; i <= bus.end.y; i++)
 		{
-			map[bus.start.x][i] = MapStatus::Movable;
+			map[i][bus.start.x] = MapStatus::Movable;
 		}
 	}
 }
 
 void ChangeBus::Finish()
 {
-	buses.clear();
+	while (q.empty() == false)
+	{
+		q.pop();
+	}
+
+	movement[BusLine::MoveDirection::Horizontal].clear();
+	movement[BusLine::MoveDirection::Vertical].clear();
+	movement.clear();
+
+	busList.clear();
 
 	for (int i = 0; i < m; i++)
 	{
@@ -144,7 +158,7 @@ int ChangeBus::GetLeastBusCnt()
 
 	for (int i = 0; i < k; i++)
 	{
-		if (buses[i].CanGo(ps))
+		if (busList[i].CanGo(ps))
 		{
 			UserInfo newInfo;
 			newInfo.busId = i;
@@ -173,7 +187,13 @@ int ChangeBus::GetLeastBusCnt(UserInfo startInfo)
 		UserInfo curInfo = q.front();
 		q.pop();
 
-		for (const Point& moving : movement)
+		if (IsArrive(curInfo.pos))
+		{
+			leastCnt = curInfo.busCnt;
+			break;
+		}
+
+		for (const Point& moving : movement[busList[curInfo.busId].dir])
 		{
 			Point newPos = curInfo.pos;
 			newPos.x += moving.x;
@@ -184,21 +204,16 @@ int ChangeBus::GetLeastBusCnt(UserInfo startInfo)
 				continue;
 			}
 
-			if (map[newPos.x][newPos.y] != MapStatus::Movable)
+			if (map[newPos.y][newPos.x] != MapStatus::Movable)
 			{
 				continue;
 			}
 
-			map[newPos.x][newPos.y] = MapStatus::Removed;
-
-			if (IsArrive(newPos))
-			{
-				// 뭔가 생각 잘못한듯?
-			}
+			map[newPos.y][newPos.x] = MapStatus::Removed;
 
 			for (int i = 0; i < k; i++)
 			{
-				if (buses[i].CanGo(newPos))
+				if (busList[i].CanGo(newPos))
 				{
 					UserInfo newInfo;
 					newInfo.busId = i;
@@ -213,16 +228,16 @@ int ChangeBus::GetLeastBusCnt(UserInfo startInfo)
 			}
 		}
 	}
-
+	
 	return leastCnt;
 }
 
 bool ChangeBus::IsInMap(const Point& pos)
 {
 	if (pos.x < 0) return false;
-	if (m <= pos.x) return false;
+	if (n <= pos.x) return false;
 	if (pos.y < 0) return false;
-	if (n <= pos.y) return false;
+	if (m <= pos.y) return false;
 	return true;
 }
 

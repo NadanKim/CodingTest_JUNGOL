@@ -2,11 +2,13 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <unordered_map>
 
 #include "../../Base.h"
 
 using std::vector;
 using std::queue;
+using std::unordered_map;
 
 class ChangeBus : public Base
 {
@@ -21,7 +23,7 @@ private:
 
 		friend std::istream& operator>>(std::istream& is, Point& p)
 		{
-			is >> p.x >> p.y;
+			is >> p.y >> p.x;
 
 			// (0, 0) 부터 시작하도록 보정
 			p.x -= 1;
@@ -48,12 +50,9 @@ private:
 			{
 				if (pos.y == start.y)
 				{
-					for (int i = start.x; i <= end.x; i++)
+					if (start.x <= pos.x && pos.x <= end.x)
 					{
-						if (pos.x == i)
-						{
-							return true;
-						}
+						return true;
 					}
 				}
 			}
@@ -61,12 +60,9 @@ private:
 			{
 				if (pos.x == start.x)
 				{
-					for (int i = start.y; i <= end.y; i++)
+					if (start.y <= pos.y && pos.y <= end.y)
 					{
-						if (pos.y == i)
-						{
-							return true;
-						}
+						return true;
 					}
 				}
 			}
@@ -78,18 +74,35 @@ private:
 		Point start;
 		Point end;
 		MoveDirection dir;
-		
-		friend std::istream& operator>>(std::istream& is, BusLine& p)
-		{
-			is >> p.num >> p.start >> p.end;
 
-			if (p.start.x != p.end.x)
+	private:
+		void SwapStartEnd()
+		{
+			Point temp = start;
+			start.x = end.x;
+			start.y = end.y;
+			end = temp;
+		}
+		
+		friend std::istream& operator>>(std::istream& is, BusLine& bus)
+		{
+			is >> bus.num >> bus.start >> bus.end;
+
+			if (bus.start.x != bus.end.x)
 			{
-				p.dir = MoveDirection::Horizontal;
+				bus.dir = MoveDirection::Horizontal;
+				if (bus.end.x < bus.start.x)
+				{
+					bus.SwapStartEnd();
+				}
 			}
 			else
 			{
-				p.dir = MoveDirection::Vertical;
+				bus.dir = MoveDirection::Vertical;
+				if (bus.end.y < bus.start.y)
+				{
+					bus.SwapStartEnd();
+				}
 			}
 
 			return is;
@@ -131,8 +144,8 @@ private:
 	int m, n;
 	int k;
 	Point ps, pe;
-	vector<BusLine> buses;
-	vector<Point> movement;
+	vector<BusLine> busList;
+	unordered_map<BusLine::MoveDirection, vector<Point>> movement;
 	MapStatus** map;
 	queue<UserInfo> q;
 };
