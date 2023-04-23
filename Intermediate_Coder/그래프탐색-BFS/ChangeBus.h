@@ -23,7 +23,7 @@ private:
 
 		friend std::istream& operator>>(std::istream& is, Point& p)
 		{
-			is >> p.y >> p.x;
+			is >> p.x >> p.y;
 
 			// (0, 0) 부터 시작하도록 보정
 			p.x -= 1;

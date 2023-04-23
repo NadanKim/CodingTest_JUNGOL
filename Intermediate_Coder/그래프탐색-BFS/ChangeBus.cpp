@@ -87,7 +87,7 @@ void ChangeBus::Code()
 
 void ChangeBus::Ready()
 {
-	std::cin >> m >> n;
+	std::cin >> n >> m;
 
 	map = new MapStatus * [m];
 	for (int i = 0; i < m; i++)
@@ -209,20 +209,48 @@ int ChangeBus::GetLeastBusCnt(UserInfo startInfo)
 				continue;
 			}
 
+			if (busList[curInfo.busId].CanGo(newPos))
+			{
+				UserInfo newInfo;
+				newInfo.busId = curInfo.busId;
+				newInfo.pos = newPos;
+				newInfo.busCnt = curInfo.busCnt;
+				q.push(newInfo);
+			}
+		}
+
+		for (const Point& moving : movement[busList[curInfo.busId].dir])
+		{
+			Point newPos = curInfo.pos;
+			newPos.x += moving.x;
+			newPos.y += moving.y;
+
+			if (IsInMap(newPos) == false)
+			{
+				continue;
+			}
+
+			if (map[newPos.y][newPos.x] != MapStatus::Movable)
+			{
+				continue;
+			}
+
 			map[newPos.y][newPos.x] = MapStatus::Removed;
 
 			for (int i = 0; i < k; i++)
 			{
+				if (i == curInfo.busId)
+				{
+					continue;
+				}
+
 				if (busList[i].CanGo(newPos))
 				{
 					UserInfo newInfo;
 					newInfo.busId = i;
 					newInfo.pos = newPos;
 					newInfo.busCnt = curInfo.busCnt;
-					if (i != curInfo.busId)
-					{
-						newInfo.busCnt++;
-					}
+					newInfo.busCnt++;
 					q.push(newInfo);
 				}
 			}
