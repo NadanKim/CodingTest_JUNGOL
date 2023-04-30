@@ -44,32 +44,6 @@ private:
 
 		BusLine() : num(0), dir(MoveDirection::None) {}
 
-		bool CanGo(const Point& pos)
-		{
-			if (dir == BusLine::MoveDirection::Horizontal)
-			{
-				if (pos.y == start.y)
-				{
-					if (start.x <= pos.x && pos.x <= end.x)
-					{
-						return true;
-					}
-				}
-			}
-			else
-			{
-				if (pos.x == start.x)
-				{
-					if (start.y <= pos.y && pos.y <= end.y)
-					{
-						return true;
-					}
-				}
-			}
-
-			return false;
-		}
-
 		int num;
 		Point start;
 		Point end;
@@ -109,43 +83,16 @@ private:
 		}
 	};
 
-	struct UserInfo
-	{
-		UserInfo() : busId(-1), busCnt(0) {}
-
-		int busId;
-		Point pos;
-		int busCnt;
-	};
-
-	enum class MapStatus
-	{
-		Block,
-		Movable,
-		Removed,
-	};
-
 protected:
 	virtual void Code() override;
 
 private:
 	void Ready();
-	void MakeWay(const BusLine& bus);
 	void Finish();
-
-	int GetLeastBusCnt();
-	int GetLeastBusCnt(UserInfo startInfo);
-
-	bool IsInMap(const Point& pos);
-	bool IsArrive(const Point& pos);
-	void RestoreWay();
 
 private:
 	int m, n;
 	int k;
 	Point ps, pe;
 	vector<BusLine> busList;
-	unordered_map<BusLine::MoveDirection, vector<Point>> movement;
-	MapStatus** map;
-	queue<UserInfo> q;
 };

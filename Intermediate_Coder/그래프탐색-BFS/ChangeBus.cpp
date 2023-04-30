@@ -66,22 +66,10 @@
 void ChangeBus::Code()
 {
 	Ready();
-
-	std::cout << "\n----------------------------\n";
-	for (int i = 0; i < m; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (map[i][j] == MapStatus::Movable)
-				std::cout << 1 << ' ';
-			else
-				std::cout << 0 << ' ';
-		}
-		std::cout << '\n';
-	}
-	std::cout << "----------------------------\n";
-	std::cout << GetLeastBusCnt();
-
+	/// 처리 방법
+	/// 시작 점을 지나는 모든 버스를 큐에 넣고 횟수를 1 증가 시킨다.
+	/// Q 돌면서 버스 경로를 꺼내 경로에 도착지가 있으면 갈아탄 횟수를 적고 종료한다.
+	/// 그 외에는 지나치는 모든 버스 경로를 추가하고(갈아탄 리스트를 넣어 반복하지 않도록 구분 필요) 반복한다.
 	Finish();
 }
 
@@ -89,201 +77,17 @@ void ChangeBus::Ready()
 {
 	std::cin >> n >> m;
 
-	map = new MapStatus * [m];
-	for (int i = 0; i < m; i++)
-	{
-		map[i] = new MapStatus[n] {};
-	}
-
 	std::cin >> k;
 	for (int i = 0; i < k; i++)
 	{
 		busList.push_back(BusLine());
 		std::cin >> busList[i];
-		MakeWay(busList[i]);
 	}
 
 	std::cin >> ps >> pe;
-
-	movement.emplace(BusLine::MoveDirection::Horizontal, vector<Point>());
-	movement[BusLine::MoveDirection::Horizontal].push_back(Point(1, 0));
-	movement[BusLine::MoveDirection::Horizontal].push_back(Point(-1, 0));
-
-	movement.emplace(BusLine::MoveDirection::Vertical, vector<Point>());
-	movement[BusLine::MoveDirection::Vertical].push_back(Point(0, 1));
-	movement[BusLine::MoveDirection::Vertical].push_back(Point(0, -1));
-}
-
-void ChangeBus::MakeWay(const BusLine& bus)
-{
-	if (bus.dir == BusLine::MoveDirection::Horizontal)
-	{
-		for (int i = bus.start.x; i <= bus.end.x; i++)
-		{
-			map[bus.start.y][i] = MapStatus::Movable;
-		}
-	}
-	else
-	{
-		for (int i = bus.start.y; i <= bus.end.y; i++)
-		{
-			map[i][bus.start.x] = MapStatus::Movable;
-		}
-	}
 }
 
 void ChangeBus::Finish()
 {
-	while (q.empty() == false)
-	{
-		q.pop();
-	}
-
-	movement[BusLine::MoveDirection::Horizontal].clear();
-	movement[BusLine::MoveDirection::Vertical].clear();
-	movement.clear();
-
 	busList.clear();
-
-	for (int i = 0; i < m; i++)
-	{
-		delete[] map[i];
-	}
-	delete[] map;
-}
-
-int ChangeBus::GetLeastBusCnt()
-{
-	int leastCnt = 999'999'999;
-
-	for (int i = 0; i < k; i++)
-	{
-		if (busList[i].CanGo(ps))
-		{
-			UserInfo newInfo;
-			newInfo.busId = i;
-			newInfo.pos = ps;
-			newInfo.busCnt = 1;
-			int curBusCnt = GetLeastBusCnt(newInfo);
-			if (curBusCnt < leastCnt)
-			{
-				leastCnt = curBusCnt;
-			}
-			RestoreWay();
-		}
-	}
-
-	return leastCnt;
-}
-
-int ChangeBus::GetLeastBusCnt(UserInfo startInfo)
-{
-	int leastCnt = 999'999'999;
-
-	q.push(startInfo);
-
-	while (q.empty() == false)
-	{
-		UserInfo curInfo = q.front();
-		q.pop();
-
-		if (IsArrive(curInfo.pos))
-		{
-			leastCnt = curInfo.busCnt;
-			break;
-		}
-
-		for (const Point& moving : movement[busList[curInfo.busId].dir])
-		{
-			Point newPos = curInfo.pos;
-			newPos.x += moving.x;
-			newPos.y += moving.y;
-
-			if (IsInMap(newPos) == false)
-			{
-				continue;
-			}
-
-			if (map[newPos.y][newPos.x] != MapStatus::Movable)
-			{
-				continue;
-			}
-
-			if (busList[curInfo.busId].CanGo(newPos))
-			{
-				UserInfo newInfo;
-				newInfo.busId = curInfo.busId;
-				newInfo.pos = newPos;
-				newInfo.busCnt = curInfo.busCnt;
-				q.push(newInfo);
-			}
-		}
-
-		for (const Point& moving : movement[busList[curInfo.busId].dir])
-		{
-			Point newPos = curInfo.pos;
-			newPos.x += moving.x;
-			newPos.y += moving.y;
-
-			if (IsInMap(newPos) == false)
-			{
-				continue;
-			}
-
-			if (map[newPos.y][newPos.x] != MapStatus::Movable)
-			{
-				continue;
-			}
-
-			map[newPos.y][newPos.x] = MapStatus::Removed;
-
-			for (int i = 0; i < k; i++)
-			{
-				if (i == curInfo.busId)
-				{
-					continue;
-				}
-
-				if (busList[i].CanGo(newPos))
-				{
-					UserInfo newInfo;
-					newInfo.busId = i;
-					newInfo.pos = newPos;
-					newInfo.busCnt = curInfo.busCnt;
-					newInfo.busCnt++;
-					q.push(newInfo);
-				}
-			}
-		}
-	}
-	
-	return leastCnt;
-}
-
-bool ChangeBus::IsInMap(const Point& pos)
-{
-	if (pos.x < 0) return false;
-	if (n <= pos.x) return false;
-	if (pos.y < 0) return false;
-	if (m <= pos.y) return false;
-	return true;
-}
-
-bool ChangeBus::IsArrive(const Point& pos)
-{
-	return pos.x == pe.x && pos.y == pe.y;
-}
-
-void ChangeBus::RestoreWay()
-{
-	for (int i = 0; i < m; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (map[i][j] == MapStatus::Removed)
-			{
-				map[i][j] = MapStatus::Movable;
-			}
-		}
-	}
 }
