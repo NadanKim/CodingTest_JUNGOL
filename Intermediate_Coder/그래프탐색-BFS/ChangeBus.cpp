@@ -66,10 +66,7 @@
 void ChangeBus::Code()
 {
 	Ready();
-	/// 처리 방법
-	/// 시작 점을 지나는 모든 버스를 큐에 넣고 횟수를 1 증가 시킨다.
-	/// Q 돌면서 버스 경로를 꺼내 경로에 도착지가 있으면 갈아탄 횟수를 적고 종료한다.
-	/// 그 외에는 지나치는 모든 버스 경로를 추가하고(갈아탄 리스트를 넣어 반복하지 않도록 구분 필요) 반복한다.
+	std::cout << GetLeastBusCnt();
 	Finish();
 }
 
@@ -85,9 +82,93 @@ void ChangeBus::Ready()
 	}
 
 	std::cin >> ps >> pe;
+
+	// 시작 점을 지나는 버스를 다 체크해준다.
+	for (int i = 0; i < k; i++)
+	{
+		if (busList[i].IsInWay(ps))
+		{
+			q.push(CheckInfo(i, 1));
+
+			busList[i].checked = true;
+		}
+	}
 }
 
 void ChangeBus::Finish()
 {
 	busList.clear();
+}
+
+/// <summary>
+/// 버스를 갈아타는 최소 횟수를 찾아 반환한다.
+/// </summary>
+/// <returns>버스 횟수</returns>
+int ChangeBus::GetLeastBusCnt()
+{
+	int leastCnt{ 999'999'999 };
+
+	while (q.empty() == false)
+	{
+		CheckInfo curInfo = q.front();
+		q.pop();
+
+		const BusLine& curBus = busList[curInfo.busNum];
+		if (curBus.IsInWay(pe))
+		{
+			if (curInfo.cnt < leastCnt)
+			{
+				leastCnt = curInfo.cnt;
+			}
+
+			break;
+		}
+
+		if (curBus.dir == BusLine::MoveDirection::Horizontal)
+		{
+			Point newPos;
+			newPos.y = curBus.start.y;
+			for (newPos.x = curBus.start.x; newPos.x <= curBus.end.x; newPos.x++)
+			{
+				for (int i = 0; i < k; i++)
+				{
+					if (busList[i].checked)
+					{
+						continue;
+					}
+
+					if (busList[i].IsInWay(newPos))
+					{
+						q.push(CheckInfo(i, curInfo.cnt + 1));
+
+						busList[i].checked = true;
+					}
+				}
+			}
+		}
+		else
+		{
+			Point newPos;
+			newPos.x = curBus.start.x;
+			for (newPos.y = curBus.start.y; newPos.y <= curBus.end.y; newPos.y++)
+			{
+				for (int i = 0; i < k; i++)
+				{
+					if (busList[i].checked)
+					{
+						continue;
+					}
+
+					if (busList[i].IsInWay(newPos))
+					{
+						q.push(CheckInfo(i, curInfo.cnt + 1));
+
+						busList[i].checked = true;
+					}
+				}
+			}
+		}
+	}
+
+	return leastCnt;
 }
