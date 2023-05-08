@@ -75,10 +75,31 @@ void ChangeBus::Ready()
 	std::cin >> n >> m;
 
 	std::cin >> k;
+	// 가/세 따로 분리해서 체크할 수 있도록 로직 수정 필요
+	horizontalBusRangeList.resize(k);
+	verticalBusRangeList.resize(k);
 	for (int i = 0; i < k; i++)
 	{
 		busList.push_back(BusLine());
 		std::cin >> busList[i];
+
+		BusLine& curBus = busList[i];
+		if (curBus.dir == BusLine::MoveDirection::Horizontal)
+		{
+			horizontalBusRangeList[curBus.start.y].push_back(BusRange());
+			BusRange& curRange = *horizontalBusRangeList[curBus.start.y].rbegin();
+			curRange.busIdx = i;
+			curRange.range.x1 = curBus.start.x;
+			curRange.range.x2 = curBus.end.x;
+		}
+		else
+		{
+			horizontalBusRangeList[curBus.start.x].push_back(BusRange());
+			BusRange& curRange = *horizontalBusRangeList[curBus.start.x].rbegin();
+			curRange.busIdx = i;
+			curRange.range.y1 = curBus.start.y;
+			curRange.range.y2 = curBus.end.y;
+		}
 	}
 
 	std::cin >> ps >> pe;
@@ -98,6 +119,11 @@ void ChangeBus::Ready()
 void ChangeBus::Finish()
 {
 	busList.clear();
+
+	while (q.empty() == false)
+	{
+		q.pop();
+	}
 }
 
 /// <summary>
@@ -113,7 +139,7 @@ int ChangeBus::GetLeastBusCnt()
 		CheckInfo curInfo = q.front();
 		q.pop();
 
-		const BusLine& curBus = busList[curInfo.busNum];
+		const BusLine& curBus = busList[curInfo.busIdx];
 		if (curBus.IsInWay(pe))
 		{
 			if (curInfo.cnt < leastCnt)

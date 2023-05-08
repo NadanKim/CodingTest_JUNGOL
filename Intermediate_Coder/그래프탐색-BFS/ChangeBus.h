@@ -16,8 +16,17 @@ private:
 		Point() : x(0), y(0) {}
 		Point(int x, int y) : x(x), y(y) {}
 
-		int x;
-		int y;
+		union
+		{
+			int x;
+			int x1, y1;
+		};
+
+		union
+		{
+			int y;
+			int x2, y2;
+		};
 
 		friend std::istream& operator>>(std::istream& is, Point& p)
 		{
@@ -29,6 +38,14 @@ private:
 
 			return is;
 		}
+	};
+
+	struct BusRange
+	{
+		BusRange() : busIdx(0) {}
+
+		int busIdx;
+		Point range;
 	};
 
 	struct BusLine
@@ -106,9 +123,9 @@ private:
 
 	struct CheckInfo
 	{
-		CheckInfo(int busNum, int cnt) : busNum(busNum), cnt(cnt) {}
+		CheckInfo(int busIdx, int cnt) : busIdx(busIdx), cnt(cnt) {}
 
-		int busNum;
+		int busIdx;
 		int cnt;
 	};
 
@@ -126,5 +143,7 @@ private:
 	int k;
 	Point ps, pe;
 	vector<BusLine> busList;
+	vector<vector<BusRange>> horizontalBusRangeList;
+	vector<vector<BusRange>> verticalBusRangeList;
 	queue<CheckInfo> q;
 };
