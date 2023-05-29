@@ -75,9 +75,8 @@ void ChangeBus::Ready()
 	std::cin >> n >> m;
 
 	std::cin >> k;
-	// 가/세 따로 분리해서 체크할 수 있도록 로직 수정 필요
-	horizontalBusRangeList.resize(k);
-	verticalBusRangeList.resize(k);
+	horizontalBusList.resize(m);
+	verticalBusList.resize(n);
 	for (int i = 0; i < k; i++)
 	{
 		busList.push_back(BusLine());
@@ -86,19 +85,11 @@ void ChangeBus::Ready()
 		BusLine& curBus = busList[i];
 		if (curBus.dir == BusLine::MoveDirection::Horizontal)
 		{
-			horizontalBusRangeList[curBus.start.y].push_back(BusRange());
-			BusRange& curRange = *horizontalBusRangeList[curBus.start.y].rbegin();
-			curRange.busIdx = i;
-			curRange.range.x1 = curBus.start.x;
-			curRange.range.x2 = curBus.end.x;
+			horizontalBusList[curBus.start.y].push_back(i);
 		}
 		else
 		{
-			horizontalBusRangeList[curBus.start.x].push_back(BusRange());
-			BusRange& curRange = *horizontalBusRangeList[curBus.start.x].rbegin();
-			curRange.busIdx = i;
-			curRange.range.y1 = curBus.start.y;
-			curRange.range.y2 = curBus.end.y;
+			verticalBusList[curBus.start.x].push_back(i);
 		}
 	}
 
@@ -119,6 +110,8 @@ void ChangeBus::Ready()
 void ChangeBus::Finish()
 {
 	busList.clear();
+	horizontalBusList.clear();
+	verticalBusList.clear();
 
 	while (q.empty() == false)
 	{
@@ -154,21 +147,35 @@ int ChangeBus::GetLeastBusCnt()
 		{
 			Point newPos;
 			newPos.y = curBus.start.y;
+			// 가로 이동 시 세로로 이동하는 버스는 다 체크
 			for (newPos.x = curBus.start.x; newPos.x <= curBus.end.x; newPos.x++)
 			{
-				for (int i = 0; i < k; i++)
+				for (const int& verticalBusIdx : verticalBusList[newPos.x])
 				{
-					if (busList[i].checked)
+					if (busList[verticalBusIdx].checked)
 					{
 						continue;
 					}
 
-					if (busList[i].IsInWay(newPos))
+					if (busList[verticalBusIdx].IsInWay(newPos))
 					{
-						q.push(CheckInfo(i, curInfo.cnt + 1));
-
-						busList[i].checked = true;
+						q.push(CheckInfo(verticalBusIdx, curInfo.cnt + 1));
+						busList[verticalBusIdx].checked = true;
 					}
+				}
+			}
+			// 가로 이동하는데 길 겹치는 거 체크
+			for (const int& horizontalBusIdx : horizontalBusList[newPos.y])
+			{
+				if (busList[horizontalBusIdx].checked)
+				{
+					continue;
+				}
+
+				if (busList[horizontalBusIdx].IsInWay(curBus.start.x, curBus.end.x))
+				{
+					q.push(CheckInfo(horizontalBusIdx, curInfo.cnt + 1));
+					busList[horizontalBusIdx].checked = true;
 				}
 			}
 		}
@@ -176,21 +183,35 @@ int ChangeBus::GetLeastBusCnt()
 		{
 			Point newPos;
 			newPos.x = curBus.start.x;
+			// 세로 이동 시 가로로 이동하는 버스는 다 체크
 			for (newPos.y = curBus.start.y; newPos.y <= curBus.end.y; newPos.y++)
 			{
-				for (int i = 0; i < k; i++)
+				for (const int& horizontalBusIdx : horizontalBusList[newPos.y])
 				{
-					if (busList[i].checked)
+					if (busList[horizontalBusIdx].checked)
 					{
 						continue;
 					}
 
-					if (busList[i].IsInWay(newPos))
+					if (busList[horizontalBusIdx].IsInWay(newPos))
 					{
-						q.push(CheckInfo(i, curInfo.cnt + 1));
-
-						busList[i].checked = true;
+						q.push(CheckInfo(horizontalBusIdx, curInfo.cnt + 1));
+						busList[horizontalBusIdx].checked = true;
 					}
+				}
+			}
+			// 세로 이동하는데 길 겹치는 거 체크
+			for (const int& verticalBusIdx : verticalBusList[newPos.x])
+			{
+				if (busList[verticalBusIdx].checked)
+				{
+					continue;
+				}
+
+				if (busList[verticalBusIdx].IsInWay(curBus.start.y, curBus.end.y))
+				{
+					q.push(CheckInfo(verticalBusIdx, curInfo.cnt + 1));
+					busList[verticalBusIdx].checked = true;
 				}
 			}
 		}

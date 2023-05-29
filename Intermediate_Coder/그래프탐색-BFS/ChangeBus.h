@@ -16,17 +16,8 @@ private:
 		Point() : x(0), y(0) {}
 		Point(int x, int y) : x(x), y(y) {}
 
-		union
-		{
-			int x;
-			int x1, y1;
-		};
-
-		union
-		{
-			int y;
-			int x2, y2;
-		};
+		int x;
+		int y;
 
 		friend std::istream& operator>>(std::istream& is, Point& p)
 		{
@@ -38,14 +29,6 @@ private:
 
 			return is;
 		}
-	};
-
-	struct BusRange
-	{
-		BusRange() : busIdx(0) {}
-
-		int busIdx;
-		Point range;
 	};
 
 	struct BusLine
@@ -84,6 +67,19 @@ private:
 				}
 
 				return start.y <= p.y && p.y <= end.y;
+			}
+		}
+
+		// s: 작은 값, e: 큰 값
+		bool IsInWay(const int& s, const int& e)
+		{
+			if (dir == MoveDirection::Horizontal)
+			{
+				return !(e < start.x || end.x < s);
+			}
+			else
+			{
+				return !(e < start.y || end.y < s);
 			}
 		}
 
@@ -143,7 +139,7 @@ private:
 	int k;
 	Point ps, pe;
 	vector<BusLine> busList;
-	vector<vector<BusRange>> horizontalBusRangeList;
-	vector<vector<BusRange>> verticalBusRangeList;
+	vector<vector<int>> horizontalBusList;
+	vector<vector<int>> verticalBusList;
 	queue<CheckInfo> q;
 };
